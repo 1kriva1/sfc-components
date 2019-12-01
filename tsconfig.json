@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "sfc-components": [
+        "dist/sfc-components"
+      ],
+      "sfc-components/*": [
+        "dist/sfc-components/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
