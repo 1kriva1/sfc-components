@@ -10,7 +10,7 @@ import {SfcComponentsModule} from '../../projects/sfc-components/src/lib/sfc-com
   ],
   imports: [
     BrowserModule,
-    SfcComponentsModule
+    SfcComponentsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

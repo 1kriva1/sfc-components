@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sfc-components';
+
+  loginActive = true;
+
+
+  setLoginActive(loginActive) {
+    this.loginActive = loginActive;
+  }
 }
