@@ -1,0 +1,19 @@
+<div class="demo-container">
+    <h1>BUTTONS</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+            <div class="component-row">
+                <div>
+                    TEST
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

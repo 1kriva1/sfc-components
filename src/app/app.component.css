@@ -1,76 +1,102 @@
-/* .container {
-    margin: 0 auto;
-    max-width: 400px;
-    padding-top:15px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  
-  .form-field {
-    display: inline-block;
-    margin-bottom: 10px;
-  }
-  
-  .form-field label {
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-    margin-right: 5px;
-  }
-  
-  input {
-    height: 20px;
-    border-radius: 2px;
-  }
-  
-  input, textarea {
-    border: 1px solid grey;
-  } */
-
-
-.container {
-  margin: 0 auto;
-  max-width: 500px;
-  padding-top: 65px;
+.component-container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0px auto;
 }
 
-::ng-deep .auth-modal .modal-body {
-  min-width: 300px;
+.component-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-label {
-  width: 100px;
-  text-align: right;
+.component-row > div{
+  flex-basis: 50%;
 }
 
-.form-row {
-  width: 500px;
-  margin-bottom: 10px;
+.background{
+  margin: 40px 0;
+  padding: 50px;
 }
 
-.form-field {
-  margin-bottom: 5px;
+.dark-background{
+  background: #1A2225;
 }
 
-input ::ng-deep {
-  max-width: 120px;
-}
-
-.normal-input {
-  width: 150px;
-}
-
-h1 {
+.demo-container h1{
   text-align: center;
-  margin-bottom: 30px;
-  margin-top: 50px;
 }
 
-.modal-buttons {
-  margin-top: 20px;
-  margin-left: 50px;
+.dark-background h3 {
+color: white;
 }
+
+.demo-container .theme-switcher{
+text-align: center;
+}
+
+.demo-container .theme-switcher button{
+margin: 0 10px 0 10px;
+}
+
+/* ROUTER STYLES */
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin: 0 5px 0 5px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover, .header a.menu-active  {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+/* ROUTER END */
