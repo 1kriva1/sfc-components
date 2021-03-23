@@ -1,0 +1,176 @@
+:host {
+    display: inline-block;
+}
+
+.sfc-button {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 0;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.5s ease;
+    font-size: 12px;
+    color: #545e61;
+    border: solid 2px #545e61;
+}
+
+.sfc-button:hover {
+    color: #2bbbad;
+    border-color: #2bbbad;
+}
+
+.sfc-button.disabled {
+    pointer-events: none;
+}
+
+.button-text {
+    padding: 0 3px;
+}
+
+.button-text:empty {
+    display: none;
+}
+
+.sfc-button.small {
+    padding: 4px 12px;
+    font-size: 8px;
+}
+
+.sfc-button.medium {
+    padding: 6px 18px;
+    font-size: 12px;
+}
+
+.sfc-button.large {
+    padding: 8px 24px;
+    font-size: 16px;
+}
+
+/* TEXTED */
+
+.sfc-button.texted {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.sfc-button.disabled.texted {
+    color: #BDBDBD;
+}
+
+.sfc-button.texted.small {
+    font-size: 8px;
+}
+
+.sfc-button.texted.medium {
+    font-size: 12px;
+}
+
+.sfc-button.texted.large {
+    font-size: 16px;
+}
+
+/* END TEXTED */
+
+/* ROUNDED */
+
+.sfc-button.rounded {
+    border-radius: 50px;
+}
+
+.sfc-button.disabled.rounded {
+    color: #BDBDBD;
+    border-color: #BDBDBD;
+}
+
+/* END ROUNDED */
+
+/* CIRCLED */
+
+.sfc-button.circled {
+    border-radius: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sfc-button.disabled.circled {
+    color: #BDBDBD;
+    border-color: #BDBDBD;
+}
+
+.sfc-button.circled .button-text {
+    padding: 3px 0;
+    width: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sfc-button.circled.small {
+    font-size: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.sfc-button.circled.medium {
+    font-size: 12px;
+    width: 60px;
+    height: 60px;
+}
+
+.sfc-button.circled.large {
+    font-size: 16px;
+    width: 80px;
+    height: 80px;
+}
+
+/* END CIRCLED */
+
+/* BORDERED */
+
+.sfc-button.bordered {
+    border: solid 2px #545e61;
+    color: #545e61;
+}
+
+.sfc-button.bordered:hover {
+    border-color: #2bbbad;
+    color: #2bbbad;
+}
+
+.sfc-button.disabled.bordered {
+    color: #BDBDBD;
+    border-color: #BDBDBD;
+}
+
+/* END BORDERED */
+
+/* END FILLED */
+
+.sfc-button.filled {
+    background: #656D78;
+    color: white;
+    border: solid 2px #656D78;
+}
+
+.sfc-button.filled:hover {
+    background: #AAB2BD;
+    border-color: #AAB2BD;
+}
+
+.sfc-button.disabled.filled {
+    color: white;
+    border-color: #BDBDBD;
+    background: #BDBDBD;
+}
+
+/* END FILLED */

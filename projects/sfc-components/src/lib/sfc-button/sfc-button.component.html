@@ -1,0 +1,5 @@
+<a id="sfc-{{id}}" class="sfc-button" [ngClass]="buttonClasses" [ngStyle]="buttonStyles">
+    <i *ngIf="iconBefore" class="icon before" [ngClass]="getIconClass(iconBefore)"></i>
+    <span class="button-text">{{text}}</span>
+    <i *ngIf="iconAfter" class="icon after" [ngClass]="getIconClass(iconAfter)"></i>
+</a>

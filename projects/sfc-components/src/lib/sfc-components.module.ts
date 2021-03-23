@@ -5,13 +5,14 @@ import { SfcTabPanelComponent } from './sfc-tab/sfc-tab-panel.component';
 import { SfcModalComponent } from './sfc-modal/sfc-modal.component';
 import { SfcModalOpenOnClickDirective } from './sfc-modal/sfc-modal-open-on-click.directive';
 import { SfcModalService } from './sfc-modal/sfc-modal.service';
+import { ButtonComponent } from './sfc-button/sfc-button.component';
 
 @NgModule({
-  declarations: [SfcTabComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective],
+  declarations: [ButtonComponent, SfcTabComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective],
   imports: [
     CommonModule
   ],
-  exports: [SfcTabComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective]
+  exports: [ButtonComponent, SfcTabComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective]
 })
 export class SfcComponentsModule { 
 

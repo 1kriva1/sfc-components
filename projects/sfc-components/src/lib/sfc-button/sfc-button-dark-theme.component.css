@@ -1,0 +1,34 @@
+:host-context(.sfc-component-dark-theme) .sfc-button {
+    border-color: #CCD1D9;
+    color: #CCD1D9;
+}
+
+:host-context(.sfc-component-dark-theme) .sfc-button.disabled {
+    border-color: #656D78;
+    color: #656D78;
+}
+
+:host-context(.sfc-component-dark-theme) .sfc-button:hover {
+    border-color: #2bbbad;
+    color: #2bbbad;
+}
+
+/* FILLED */
+
+:host-context(.sfc-component-dark-theme) .sfc-button.filled {
+    background: #656D78;
+    color: white;
+    border: solid 2px #656D78;
+}
+
+:host-context(.sfc-component-dark-theme) .sfc-button.filled:hover {
+    background: #AAB2BD;
+    border-color: #AAB2BD;
+}
+
+:host-context(.sfc-component-dark-theme) .sfc-button.disabled.filled {
+    border-color: #BDBDBD;
+    background: #BDBDBD;
+}
+
+/* END FILLED */

@@ -1,20 +1,25 @@
 import { Route } from "@angular/router";
-import { ButtonsAppComponent } from "./buttons-app/buttons-app.component";
+import { ButtonAppComponent } from "./button-app/button-app.component";
+import { ModalAppComponent } from "./modal-app/modal-app.component";
 
 const indexRoute: Route = {
     path: "",
-    component: ButtonsAppComponent
+    component: ButtonAppComponent
 };
 
 const fallbackRoute: Route = {
     path: '**',
-    component: ButtonsAppComponent
+    component: ButtonAppComponent
 };
 
 export const routeConfig = [
     {
-        path: 'buttons-app',
-        component: ButtonsAppComponent
+        path: 'button-app',
+        component: ButtonAppComponent
+    },
+    {
+        path: 'modal-app',
+        component: ModalAppComponent
     },
     fallbackRoute,
     indexRoute

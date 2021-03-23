@@ -12,7 +12,8 @@
 }
 
 .component-row > div{
-  flex-basis: 50%;
+  flex-basis: 33%;
+  margin: 20px 0;
 }
 
 .background{

@@ -1,0 +1,547 @@
+<div class="demo-container">
+    <h1>BUTTONS</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <hr>
+            <h3>Default(bordered):</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="default-button-empty"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-text" text="Custom text"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-text-long" text="Custom text Custom text Custom text Custom text">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="default-button-icon-before-empty" icon-before="fa fa-star" text=""></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-icon-before" icon-before="fa fa-star" text="Custom text">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-icon-after" icon-before="fa fa-star" text="Custom text"
+                        icon-after="fa fa-car"></sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="default-button-icon-disabled" disabled="true" icon-after="fa fa-car"
+                        text="Disabled text">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-icon-disabled-empty" disabled="true" icon-after="fa fa-car" text="">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-disabled-long" disabled="true"
+                        text="Disabled text Disabled text Disabled text Disabled text">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="default-button-small" text="Small text" size="small">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-medium" text="Medium text" size="medium">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-large" text="Large text" size="large">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="default-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 60, height: 30}">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="default-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 160, height: 30}" icon-after="fa fa-car">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Filled:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="filled-button-empty" [types]="['filled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-text" text="Custom text" [types]="['filled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-text-long" text="Custom text Custom text Custom text Custom text"
+                        [types]="['filled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="filled-button-icon-before-empty" icon-before="fa fa-star" text=""
+                        [types]="['filled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-icon-before" icon-before="fa fa-star" text="Custom text"
+                        [types]="['filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-icon-after" icon-before="fa fa-star" text="Custom text"
+                        icon-after="fa fa-car" [types]="['filled']"></sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="filled-button-icon-disabled" disabled="true" icon-after="fa fa-car"
+                        text="Disabled text" [types]="['filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-icon-disabled-empty" disabled="true" icon-after="fa fa-car" text=""
+                        [types]="['filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-disabled-long" disabled="true"
+                        text="Disabled text Disabled text Disabled text Disabled text" [types]="['filled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="filled-button-small" text="Small text" size="small" [types]="['filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-medium" text="Medium text" size="medium" [types]="['filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-large" text="Large text" size="large" [types]="['filled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="filled-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 60, height: 30}" [types]="['filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="filled-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 160, height: 30}" icon-after="fa fa-car" [types]="['filled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Rounded:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-button-empty" [types]="['rounded']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-text" text="Custom text" [types]="['rounded']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-text-long" text="Custom text Custom text Custom text Custom text"
+                        [types]="['rounded']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-button-icon-before-empty" icon-before="fa fa-star" text=""
+                        [types]="['rounded']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-icon-before" icon-before="fa fa-star" text="Custom text"
+                        [types]="['rounded']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-icon-after" icon-before="fa fa-star" text="Custom text"
+                        icon-after="fa fa-car" [types]="['rounded']"></sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-button-icon-disabled" disabled="true" icon-after="fa fa-car"
+                        text="Disabled text" [types]="['rounded']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-icon-disabled-empty" disabled="true" icon-after="fa fa-car" text=""
+                        [types]="['rounded']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-disabled-long" disabled="true"
+                        text="Disabled text Disabled text Disabled text Disabled text" [types]="['rounded']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-button-small" text="Small text" size="small" [types]="['rounded']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-medium" text="Medium text" size="medium" [types]="['rounded']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-large" text="Large text" size="large" [types]="['rounded']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 60, height: 30}" [types]="['rounded']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 160, height: 30}" icon-after="fa fa-car" [types]="['rounded']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Circled:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="circled-button-empty" [types]="['circled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-text" text="Custom text" [types]="['circled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-text-long" text="Custom text Custom text Custom text Custom text"
+                        [types]="['circled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-button-icon-before-empty" icon-before="fa fa-star" text=""
+                        [types]="['circled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-icon-before" icon-before="fa fa-star" text="Custom text"
+                        [types]="['circled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-icon-after" icon-before="fa fa-star" text="Custom text"
+                        icon-after="fa fa-car" [types]="['circled']"></sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="circled-button-icon-disabled" disabled="true" icon-after="fa fa-car"
+                        text="Disabled text" [types]="['circled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-icon-disabled-empty" disabled="true" icon-after="fa fa-car" text=""
+                        [types]="['circled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-disabled-long" disabled="true"
+                        text="Disabled text Disabled text Disabled text Disabled text" [types]="['circled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="circled-button-small" text="Small text" size="small" [types]="['circled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-medium" text="Medium text" size="medium" [types]="['circled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-large" text="Large text" size="large" [types]="['circled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="circled-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 60, height: 60}" [types]="['circled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="circled-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 160, height: 160}" icon-after="fa fa-car" [types]="['circled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Texted:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="texted-button-empty" [types]="['texted']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-text" text="Custom text" [types]="['texted']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-text-long" text="Custom text Custom text Custom text Custom text"
+                        [types]="['texted']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="texted-button-icon-before-empty" icon-before="fa fa-star" text=""
+                        [types]="['texted']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-icon-before" icon-before="fa fa-star" text="Custom text"
+                        [types]="['texted']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-icon-after" icon-before="fa fa-star" text="Custom text"
+                        icon-after="fa fa-car" [types]="['texted']"></sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="texted-button-icon-disabled" disabled="true" icon-after="fa fa-car"
+                        text="Disabled text" [types]="['texted']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-icon-disabled-empty" disabled="true" icon-after="fa fa-car" text=""
+                        [types]="['texted']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-disabled-long" disabled="true"
+                        text="Disabled text Disabled text Disabled text Disabled text" [types]="['texted']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="texted-button-small" text="Small text" size="small" [types]="['texted']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-medium" text="Medium text" size="medium" [types]="['texted']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-large" text="Large text" size="large" [types]="['texted']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="texted-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 60, height: 60}" [types]="['texted']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="texted-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 160, height: 160}" icon-after="fa fa-car" [types]="['texted']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Rounded + Filled:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-filled-button-empty" [types]="['rounded', 'filled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-text" text="Custom text" [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-text-long"
+                        text="Custom text Custom text Custom text Custom text" [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-filled-button-icon-before-empty" icon-before="fa fa-star" text=""
+                        [types]="['rounded', 'filled']"></sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-icon-before" icon-before="fa fa-star" text="Custom text"
+                        [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-icon-after" icon-before="fa fa-star" text="Custom text"
+                        icon-after="fa fa-car" [types]="['rounded', 'filled']"></sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-filled-button-icon-disabled" disabled="true" icon-after="fa fa-car"
+                        text="Disabled text" [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-icon-disabled-empty" disabled="true" icon-after="fa fa-car"
+                        text="" [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-disabled-long" disabled="true"
+                        text="Disabled text Disabled text Disabled text Disabled text" [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-filled-button-small" text="Small text" size="small"
+                        [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-medium" text="Medium text" size="medium"
+                        [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-large" text="Large text" size="large"
+                        [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-button id="rounded-filled-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 60, height: 30}" [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+
+                <div>
+                    <sfc-button id="rounded-filled-button-custom-size" text="Custom size text"
+                        [custom-size]="{width: 160, height: 30}" icon-after="fa fa-car" [types]="['rounded', 'filled']">
+                    </sfc-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

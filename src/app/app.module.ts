@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import {SfcComponentsModule} from '../../projects/sfc-components/src/lib/sfc-components.module';
 import { RouterModule } from '@angular/router';
 import { routeConfig } from 'src/router-config';
-import { ButtonsAppComponent } from 'src/buttons-app/buttons-app.component';
+import { ButtonAppComponent } from 'src/button-app/button-app.component';
+import { ModalAppComponent } from 'src/modal-app/modal-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonsAppComponent
+    ButtonAppComponent,
+    ModalAppComponent
   ],
   imports: [
     BrowserModule,
