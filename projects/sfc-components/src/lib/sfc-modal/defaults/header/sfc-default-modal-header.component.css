@@ -1,0 +1,30 @@
+:host {
+    display: inline-flex;
+}
+
+.default-header {
+    /* min-width: 600px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.modal-header-label {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* CLOSE BUTTON */
+
+.button-close {
+    color: #545e61;
+    cursor: pointer;
+}
+
+.button-close:hover {
+    color: #434A54;
+}
+
+/* END CLOSE BUTTON */

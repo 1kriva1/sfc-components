@@ -3,6 +3,7 @@ import { DebugElement } from '@angular/core';
 import { ButtonComponent } from './sfc-button.component';
 import { SfcComponentsModule } from '../sfc-components.module';
 import { ButtonType, CommonConstants, ComponentSize, StyleClass } from '../common/constants/common-constants';
+import { UIUtils } from '../common/utils/ui-utils';
 
 describe('Component: Button', () => {
 
@@ -114,8 +115,8 @@ describe('Component: Button', () => {
 
         const button = fixture.nativeElement.querySelector('a');
 
-        expect(button.offsetWidth).toEqual(12);
-        expect(button.offsetHeight).toEqual(30);
+        expect(button.style.width).toEqual(UIUtils.getCssLikePx(12));
+        expect(button.style.height).toEqual(UIUtils.getCssLikePx(30));
     }));
 
     it("Icons: without before icon", async(() => {

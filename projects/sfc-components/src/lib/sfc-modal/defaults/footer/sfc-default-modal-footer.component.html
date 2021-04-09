@@ -1,0 +1,8 @@
+<div class="default-footer">
+    <sfc-button *ngIf="config.cancelButton" class="button-cancel" text="Cancel" [types]="['rounded']"
+        [custom-size]="{width: 80, height: 30}" (click)="onCancel()">
+    </sfc-button>
+    <sfc-button *ngIf="config.okButton" class="button-ok" text="Ok" [types]="['rounded']"
+        [custom-size]="{width: 80, height: 30}" (click)="onOk()">
+    </sfc-button>
+</div>

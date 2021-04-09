@@ -1,7 +1,14 @@
+import IDefaultHeaderConfig from "../interfaces/sfc-modal/IDefaultHeaderConfig";
+
 export class CommonConstants {
     static BUTTON_DEFAULT_TEXT = 'Button';
     static NOT_FOUND_INDEX = -1;
     static CSS_PIXELS = 'px';
+    static DEFAULT_MODAL_HEADER_CONFIG: IDefaultHeaderConfig = {
+        icon: 'fa fa-window-restore',
+        showCloseIcon: true,
+        text: 'Modal'
+    }
 }
 
 export enum StyleClass {
@@ -13,7 +20,9 @@ export enum StyleClass {
     Empty = 'empty',
     Focus = 'focus',
     Open = 'open',
-    Loading = 'loading'
+    Loading = 'loading',
+    Removed = 'removed',
+    Hided = 'hided'
 };
 
 export enum ButtonType {

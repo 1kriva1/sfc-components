@@ -1,0 +1,9 @@
+:host-context(.sfc-component-dark-theme) ::ng-deep .sfc-button {
+    color: #545e61 !important;
+    border: solid 2px #545e61 !important;
+}
+
+:host-context(.sfc-component-dark-theme) ::ng-deep .sfc-button:hover {
+    border-color: #2bbbad !important;
+    color: #2bbbad !important;
+}

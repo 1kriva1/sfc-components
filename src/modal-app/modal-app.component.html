@@ -8,14 +8,193 @@
     <div class="background"
         [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
         <div class="component-container">
-            <!-- 
+
+            <ng-template #headerTemplateRef>
+                <h1>HEADER REFERENCE</h1>
+            </ng-template>
+
+            <ng-template #footerTemplateRef>
+                <h1>FOOTER REFERENCE</h1>
+            </ng-template>
+
+            <ng-template #defaultBody>
+                <div body [style.width.px]="500">
+                    <h1>test 1</h1>
+                    <h1>test 2</h1>
+                    <h1>test 3</h1>
+                    <h1>test 4</h1>
+                    <h1>test 5</h1>
+                    <h1>test 6</h1>
+                </div>
+            </ng-template>
+
             <hr>
-            <h3>Default(bordered):</h3>
-            <hr> -->
+            <h3>GENERAL:</h3>
+            <hr>
 
             <div class="component-row">
                 <div>
-                    TEST MODAL
+                    <button #generalModalButton>General modal open</button>
+                    <sfc-modal id="generalModalEmpty" *modal-open-on-click="generalModalButton" [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #generalModalButtonSeveral1>Modal open</button>
+                    <span>&nbsp;</span>
+                    <button #generalModalButtonSeveral2>Modal NOT open</button>
+                    <sfc-modal id="generalModalSeveral" *modal-open-on-click="[generalModalButtonSeveral1]"
+                        [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #generalModalButtonNotEcs>Not escape</button>
+                    <sfc-modal id="generalModalNotEsc" *modal-open-on-click="generalModalButtonNotEcs"
+                        [hide-on-esc]="false" [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <button #generalModalButtonNotClick>Not click outside</button>
+                    <sfc-modal id="generalModalNotClick" *modal-open-on-click="generalModalButtonNotClick"
+                        [hide-on-click-outside]="false" [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+
+            </div>
+
+            <hr>
+            <h3>TEMPLATE REFERENCES:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <button #templateModalButtonHeaderRef>With header template reference</button>
+                    <sfc-modal id="templateModalHeaderRef" *modal-open-on-click="templateModalButtonHeaderRef"
+                        [header]="headerTemplateRef">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #templateModalButtonFooterRef>With footer template reference</button>
+                    <sfc-modal id="templateModalFooterRef" *modal-open-on-click="templateModalButtonFooterRef"
+                        [footer]="footerTemplateRef">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #templateModalButtonBodyRef>With body template reference</button>
+                    <sfc-modal id="templateModalBodyRef" *modal-open-on-click="templateModalButtonBodyRef"
+                        [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+            </div>
+
+            <hr>
+            <h3>CONTENT REFERENCES:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <button #contentModalButtonHeaderContent>With header content</button>
+                    <sfc-modal id="contentModalHeaderContent" *modal-open-on-click="contentModalButtonHeaderContent"
+                        [body]="defaultBody">
+                        <div header>
+                            <h1 header>
+                                HEADER CONTENT
+                            </h1>
+                        </div>
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #contentModalButtonFooterContent>With footer content</button>
+                    <sfc-modal id="contentModalFooterContent" *modal-open-on-click="contentModalButtonFooterContent"
+                        [body]="defaultBody">
+                        <div footer>
+                            <h1 header>
+                                FOOTER CONTENT
+                            </h1>
+                        </div>
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #contentModalButtonBodyContent>With body content</button>
+                    <sfc-modal id="contentModalBodyContent" *modal-open-on-click="contentModalButtonBodyContent">
+                        <div body>
+                            BODY CONTENT
+                        </div>
+                    </sfc-modal>
+                </div>
+            </div>
+
+            <hr>
+            <h3>DEFAULTS:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <button #defaultModalButtonWithoutDefaultHeader>Without default header</button>
+                    <sfc-modal id="defaultModalWithoutHeader"
+                        *modal-open-on-click="defaultModalButtonWithoutDefaultHeader" [default-header]="false"
+                        [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #defaultModalButtonHeaderConfig>With default header config</button>
+                    <sfc-modal id="defaultModalHeaderConfig" *modal-open-on-click="defaultModalButtonHeaderConfig"
+                        [default-header-config]="{text: 'Custom text', icon:'fa fa-car', showCloseIcon: true}"
+                        [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #defaultModalButtonHeaderConfigOnlyText>With default header config (only text)</button>
+                    <sfc-modal id="defaultModalHeaderConfigOnlyText"
+                        *modal-open-on-click="defaultModalButtonHeaderConfigOnlyText"
+                        [default-header-config]="{text: 'Custom text', icon:'', showCloseIcon: false}"
+                        [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <button #defaultModalButtonWithoutDefaultFooter>Without default footer</button>
+                    <sfc-modal id="defaultModalWithoutFooter"
+                        *modal-open-on-click="defaultModalButtonWithoutDefaultFooter" [default-footer]="false"
+                        [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #defaultModalButtonFooterConfig>With default footer config</button>
+                    <sfc-modal id="defaultModalFooterConfig" *modal-open-on-click="defaultModalButtonFooterConfig"
+                        [default-footer-config]="{cancelButton: true, okButton: true}" [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+
+                <div>
+                    <button #defaultModalButtonFooterConfigOnlyOk>With default footer config (only OK button)</button>
+                    <sfc-modal id="defaultModalFooterConfigOnlyOk"
+                        *modal-open-on-click="defaultModalButtonFooterConfigOnlyOk"
+                        [default-footer-config]="{cancelButton: false, okButton: true }" [body]="defaultBody">
+                    </sfc-modal>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <button #defaultModalButtonFooterConfigCancelClick>With default footer config (cancel click)</button>
+                    <sfc-modal #defaultModalFooterConfigCancelClick id="defaultModalFooterConfigCancelClick"
+                        *modal-open-on-click="defaultModalButtonFooterConfigCancelClick"
+                        [default-footer-config]="{cancelButton: true, okButton: true, onCancel: onCancelClick }" [body]="defaultBody">
+                    </sfc-modal>
                 </div>
             </div>
         </div>
