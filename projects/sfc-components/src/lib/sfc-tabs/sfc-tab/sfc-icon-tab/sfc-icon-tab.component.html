@@ -1,0 +1,12 @@
+<div>
+    <input type="radio" name="tabs" id="sfc-{{id}}" [checked]="selected" (change)="selectValue()">
+    <div class="tab-label-content" id="{{id}}-content">
+        <label for="sfc-{{id}}" role="button">
+            <i *ngIf="icon" class="icon" [ngClass]="iconClass"></i>
+            <span>{{title}}</span>
+        </label>
+        <div class="tab-content">
+            <ng-content *ngIf="selected"></ng-content>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+:host {
+    position: relative;
+    display: flex;
+}
+
+.slider {
+    background: #2bbbad;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 12px);
+    transition: left 0.3s ease-out;
+}

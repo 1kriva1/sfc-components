@@ -1,0 +1,130 @@
+:host {
+    box-sizing: border-box;
+    flex: 1;
+    padding: 0 10px;
+    text-align: center;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    transition: all 0.3s ease-in-out;
+    color: #929daf;
+    padding: 5px auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.15;
+}
+
+label:hover {
+    outline: 0;
+    color: #bec5cf;
+}
+
+:host[selected=true] label {
+    cursor: default;
+    color: #2bbbad;
+}
+
+label i.icon {
+    color: #929daf;
+    height: 1.2em;
+    vertical-align: bottom;
+    margin-right: 0.2em;
+    transition: all 0.2s ease-in-out;
+}
+
+label:hover i.icon {
+    color: #bec5cf;
+}
+
+:host[selected=true] label i.icon {
+    color: #2bbbad;
+}
+
+.tab-label-content .tab-content {
+    position: absolute;
+    top: 50px;
+    left: 16px;
+    line-height: 130%;
+    display: none;
+    display: none;
+    -webkit-animation-name: content;
+    animation-name: content;
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    line-height: 1.4;
+}
+
+:host[selected=true] .tab-content {
+    display: block;
+}
+
+@keyframes content {
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 600px) {
+    :host[selected=true] label {
+        background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+@media (max-width: 1000px) {
+    label {
+        white-space: initial;
+    }
+    label i.icon {
+        height: 1.5em;
+    }
+    .tab-label-content .tab-content {
+        top: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    label {
+        padding: 10px;
+        border-radius: 5px;
+        text-overflow: initial;
+    }
+    label span {
+        display: none;
+    }
+    i.icon {
+        height: auto !important;
+        margin-right: 0 !important;
+    }
+    .tab-content {
+        margin-top: 20px;
+    }
+    .tab-label-content .tab-content {
+        top: 50px;
+    }
+}

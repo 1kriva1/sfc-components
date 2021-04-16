@@ -14,6 +14,10 @@ export class UIUtils {
         return +value.replace(CommonConstants.CSS_PIXELS, '');
     }
 
+    public static getCssLikePercentage(value: number): string {
+        return value + CommonConstants.CSS_PERCENTAGE;
+    }
+
     public static addClasses(element: HTMLElement, ...classNames: Array<string>): void {
         if (CommonUtils.isDefined(element)) {
             classNames.forEach((className) => element.classList.add(className));

@@ -1,0 +1,24 @@
+<!-- <ng-template #defaultTabsHeader let-tabs="tabs"> -->
+<!-- <ul class="tab-panel-buttons" >
+        <li [ngClass]="{selected: tab.selected}" *ngFor="let tab of tabs" (click)="selectTab(tab)">{{tab.title}}</li>
+    </ul> -->
+<!-- <div *ngIf="tabs">
+    <sfc-line-tab *ngFor="let tab of tabs" (click)="selectTab(tab)" id="{{tab.id}}" title="{{tab.title}}"></sfc-line-tab>
+</div> -->
+
+<!-- </ng-template> -->
+
+<!-- <ng-template #lineTabsHeader>
+    <sfc-line-tab *ngFor="let tab of tabItems"></sfc-line-tab>   
+</ng-template> -->
+
+<!-- <ng-container #test *ngTemplateOutlet="headerTemplate ? headerTemplate : defaultTabsHeader; context:tabsContext">    
+</ng-container> -->
+
+<div class="tab-content">
+    <ng-content></ng-content>        
+</div>
+
+<sfc-line-tab-slider *ngIf="type == 'line'" [length]="tabs.length" [selected-index]="selectedIndex"></sfc-line-tab-slider>
+<sfc-icon-tab-slider *ngIf="type == 'icon'" [length]="tabs.length" [selected-index]="selectedIndex"></sfc-icon-tab-slider>
+

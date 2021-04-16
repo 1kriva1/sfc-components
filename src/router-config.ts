@@ -1,6 +1,7 @@
 import { Route } from "@angular/router";
 import { ButtonAppComponent } from "./button-app/button-app.component";
 import { ModalAppComponent } from "./modal-app/modal-app.component";
+import { TabAppComponent } from "./tab-app/tab-app.component";
 
 const indexRoute: Route = {
     path: "",
@@ -20,6 +21,10 @@ export const routeConfig = [
     {
         path: 'modal-app',
         component: ModalAppComponent
+    },
+    {
+        path: 'tab-app',
+        component: TabAppComponent
     },
     fallbackRoute,
     indexRoute

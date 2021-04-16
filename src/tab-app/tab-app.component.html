@@ -1,0 +1,116 @@
+<div class="demo-container">
+  <h1>TABS</h1>
+  <div class="theme-switcher">
+    <button (click)="changeTheme('common')">Common</button>
+    <button (click)="changeTheme('dark')">Dark</button>
+  </div>
+
+  <div class="background"
+    [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+    <div class="component-container">
+
+      <hr>
+      <h3>LINE TAB:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+
+          <sfc-tab-panel>
+
+            <sfc-line-tab id="tab1" title="Test 1" (on-select)="onSelectTab($event)">
+              TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+              finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+              bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex ultricies,
+              faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+              ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+              laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+              nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend sit
+              amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+              porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab2" title="Test 2" [selected]="true" (on-select)="onSelectTab($event)">
+              tab 2 content {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab3" title="Test 3" icon="fa fa-user" (on-select)="onSelectTab($event)">
+              tab 3 content {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab4" title="Test 4" (on-select)="onSelectTab($event)">
+              tab 4 content {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab5" title="Test 5" (on-select)="onSelectTab($event)">
+              tab 5 content {{selectedId}}
+            </sfc-line-tab>
+
+          </sfc-tab-panel>
+        </div>
+
+        <!-- <div>
+          <sfc-tab-panel>
+
+            <sfc-line-tab id="tab1" title="Test 1" (on-select)="onSelectTab($event)">
+              TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+              finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+              bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex ultricies,
+              faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+              ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+              laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+              nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend sit
+              amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+              porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab2" title="Test 2" [selected]="true" (on-select)="onSelectTab($event)">
+              tab 2 content {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab3" title="Test 3" icon="fa fa-user" (on-select)="onSelectTab($event)">
+              tab 3 content {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab4" title="Test 4" (on-select)="onSelectTab($event)">
+              tab 4 content {{selectedId}}
+            </sfc-line-tab>
+            <sfc-line-tab id="tab5" title="Test 5" (on-select)="onSelectTab($event)">
+              tab 5 content {{selectedId}}
+            </sfc-line-tab>
+
+          </sfc-tab-panel>
+        </div> -->
+      </div>
+
+      <!-- <hr>
+      <h3>ICON TAB:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+          <sfc-tab-panel>
+            <sfc-icon-tab id="tab1" title="Features" (on-select)="onSelectTab($event)">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+              quibusdam cum?
+            </sfc-icon-tab>
+            <sfc-icon-tab id="tab2" title="Delivery Contents" [selected]="true" (on-select)="onSelectTab($event)">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+              quibusdam cum?
+            </sfc-icon-tab>
+            <sfc-icon-tab id="tab3" title="Shipping" icon="fa fa-user" (on-select)="onSelectTab($event)">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+              quibusdam cum?
+            </sfc-icon-tab>
+            <sfc-icon-tab id="tab4" title="Returns" (on-select)="onSelectTab($event)">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+              quibusdam cum?
+            </sfc-icon-tab>
+            <sfc-icon-tab id="tab5" title="Returns 5" (on-select)="onSelectTab($event)">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+              quibusdam cum?
+            </sfc-icon-tab>
+          </sfc-tab-panel>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
