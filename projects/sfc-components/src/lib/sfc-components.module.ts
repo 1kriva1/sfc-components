@@ -11,6 +11,9 @@ import { SfcLineTabComponent } from './sfc-tabs/sfc-tab/sfc-line-tab/sfc-line-ta
 import { SfcIconTabComponent } from './sfc-tabs/sfc-tab/sfc-icon-tab/sfc-icon-tab.component';
 import { SfcLineTabSliderComponent } from './sfc-tabs/sfc-tab/sfc-line-tab/slider/sfc-line-tab-slider.component';
 import { SfcIconTabSliderComponent } from './sfc-tabs/sfc-tab/sfc-icon-tab/slider/sfc-icon-tab-slider.component';
+import { SfcTabBodyComponent } from './sfc-tabs/tabs-base/sfc-tab-body.component';
+import { SfcTabLabelComponent } from './sfc-tabs/tabs-base/sfc-tab-label.component';
+import { SfcTabItemComponent } from './sfc-tabs/tabs-base/sfc-tab-item.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { SfcIconTabSliderComponent } from './sfc-tabs/sfc-tab/sfc-icon-tab/slide
     SfcLineTabSliderComponent,
     SfcIconTabComponent,
     SfcIconTabSliderComponent,
+    SfcTabItemComponent,
+    SfcTabLabelComponent,
+    SfcTabBodyComponent,
     SfcTabPanelComponent,
     SfcModalComponent,
     SfcModalOpenOnClickDirective,
@@ -27,7 +33,9 @@ import { SfcIconTabSliderComponent } from './sfc-tabs/sfc-tab/sfc-icon-tab/slide
   imports: [
     CommonModule
   ],
-  exports: [ButtonComponent, SfcLineTabComponent, SfcIconTabComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective]
+  exports: [ButtonComponent, SfcLineTabComponent, SfcIconTabComponent, SfcTabItemComponent,
+    SfcTabLabelComponent,
+    SfcTabBodyComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective]
 })
 export class SfcComponentsModule {
 

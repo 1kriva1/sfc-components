@@ -14,103 +14,586 @@
       <hr>
 
       <div class="component-row">
-        <div>
+        <div class="full">
 
           <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLine1" title="Tab line 1"></sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item [disabled]="true">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLine2" title="Tab line 2 DISABLED"></sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item label="third tab">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLine3" title="Tab line 3">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                I am third content
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item [selected]="true">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLine4" title="Tab line selected 4">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                I am fouth content
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item label="fifth tab">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLine5" title="Tab line 5"></sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                I am fifth content
+              </sfc-tab-body>
+            </sfc-tab-item>
 
-            <sfc-line-tab id="tab1" title="Test 1" (on-select)="onSelectTab($event)">
-              TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
-              finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
-              bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex ultricies,
-              faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
-              ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
-              laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
-              nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend sit
-              amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
-              porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab2" title="Test 2" [selected]="true" (on-select)="onSelectTab($event)">
-              tab 2 content {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab3" title="Test 3" icon="fa fa-user" (on-select)="onSelectTab($event)">
-              tab 3 content {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab4" title="Test 4" (on-select)="onSelectTab($event)">
-              tab 4 content {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab5" title="Test 5" (on-select)="onSelectTab($event)">
-              tab 5 content {{selectedId}}
-            </sfc-line-tab>
+          </sfc-tab-panel>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div class="half">
+
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalfIcon1" title="Tab line selected default 1" icon="fa fa-shield">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalfIcon2" title="Tab line icon 2" icon="fa fa-server"></sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item label="third tab">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalfIcon3" title="Tab line icon 3" icon="fa fa-star">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                I am third content
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item label="fouth tab">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalfIcon4" title="Tab line icon 4" icon="fa fa-ticket">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                I am fouth content
+              </sfc-tab-body>
+            </sfc-tab-item>
 
           </sfc-tab-panel>
         </div>
 
-        <!-- <div>
-          <sfc-tab-panel>
+        <div class="half">
 
-            <sfc-line-tab id="tab1" title="Test 1" (on-select)="onSelectTab($event)">
-              TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
-              finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
-              bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex ultricies,
-              faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
-              ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
-              laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
-              nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend sit
-              amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
-              porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab2" title="Test 2" [selected]="true" (on-select)="onSelectTab($event)">
-              tab 2 content {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab3" title="Test 3" icon="fa fa-user" (on-select)="onSelectTab($event)">
-              tab 3 content {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab4" title="Test 4" (on-select)="onSelectTab($event)">
-              tab 4 content {{selectedId}}
-            </sfc-line-tab>
-            <sfc-line-tab id="tab5" title="Test 5" (on-select)="onSelectTab($event)">
-              tab 5 content {{selectedId}}
-            </sfc-line-tab>
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalf1"></sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalf2"></sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item label="third tab">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalf3">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                I am third content
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item [selected]="true">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLineHalf4" title="Tab line selected 4" >
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                I am fouth content
+              </sfc-tab-body>
+            </sfc-tab-item>
 
           </sfc-tab-panel>
-        </div> -->
+        </div>
       </div>
-
-      <!-- <hr>
-      <h3>ICON TAB:</h3>
-      <hr>
 
       <div class="component-row">
         <div>
           <sfc-tab-panel>
-            <sfc-icon-tab id="tab1" title="Features" (on-select)="onSelectTab($event)">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
-              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
-              quibusdam cum?
-            </sfc-icon-tab>
-            <sfc-icon-tab id="tab2" title="Delivery Contents" [selected]="true" (on-select)="onSelectTab($event)">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
-              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
-              quibusdam cum?
-            </sfc-icon-tab>
-            <sfc-icon-tab id="tab3" title="Shipping" icon="fa fa-user" (on-select)="onSelectTab($event)">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
-              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
-              quibusdam cum?
-            </sfc-icon-tab>
-            <sfc-icon-tab id="tab4" title="Returns" (on-select)="onSelectTab($event)">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
-              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
-              quibusdam cum?
-            </sfc-icon-tab>
-            <sfc-icon-tab id="tab5" title="Returns 5" (on-select)="onSelectTab($event)">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
-              atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
-              quibusdam cum?
-            </sfc-icon-tab>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLinePart1" title="Tab line 1">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
           </sfc-tab-panel>
         </div>
-      </div> -->
+
+        <div>
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLinePart12" title="Tab line 1">
+                </sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item [selected]="true">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLinePart22" title="Tab line without body 2" ></sfc-line-tab>
+              </sfc-tab-label>
+            </sfc-tab-item>
+          </sfc-tab-panel>
+        </div>
+
+        <div>
+          <sfc-tab-panel>
+            <sfc-tab-item [selected]="true">
+              <sfc-tab-label>
+                <sfc-line-tab id="tabLinePart31" title="Tab line 1"></sfc-line-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                Simple text
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <h3>H3 label tab</h3>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-body>
+                Without label
+              </sfc-tab-body>
+            </sfc-tab-item>
+
+            <sfc-tab-item>
+              <sfc-tab-label>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Without label text
+              </sfc-tab-body>
+            </sfc-tab-item>
+
+          </sfc-tab-panel>
+        </div>
+      </div>
+
+      <hr>
+      <h3>ICON TAB:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div class="full">
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFull1" title="Features">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item [disabled]="true">
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFull2" title="Delivery Contents DISABLED">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFull3" title="Shipping">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                third tab
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item [selected]="true">
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFull4" title="Returns selected">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                fourth tab
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item label="fifth tab">
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFull5" title="Returns 5">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                fifth tab
+              </sfc-tab-body>
+            </sfc-tab-item>
+          </sfc-tab-panel>
+        </div>
+      </div>
+
+      <div class="component-row">
+
+        <div class="half">
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconCustomHalf1" title="Features selected default" icon="fa fa-pencil">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconCustomHalf2" title="Delivery Contents" icon="fa fa-car">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconCustomHalf3" title="Shipping" icon="fa fa-shield">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                third tab
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconCustomHalf4" title="Returns" icon="fa fa-server">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                fourth tab
+              </sfc-tab-body>
+            </sfc-tab-item>
+          </sfc-tab-panel>
+        </div>
+
+        <div class="half">
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconHalf1">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconHalf2">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconHalf3">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                third tab
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconHalf4">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                fourth tab
+              </sfc-tab-body>
+            </sfc-tab-item>
+          </sfc-tab-panel>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div>
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFullPart11" title="Features">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+          </sfc-tab-panel>
+        </div>
+
+        <div>
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFullPart21" title="Features">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item [selected]="true">
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconCustomHalf22" title="Tab icon without body">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+            </sfc-tab-item>
+          </sfc-tab-panel>
+        </div>
+
+        <div>
+          <sfc-tab-panel>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <sfc-icon-tab id="tabIconFullPart31" title="Features">
+                </sfc-icon-tab>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                TAB 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet eget lectus eu congue. Nam
+                finibus urna eget nisl aliquam, in dictum ligula feugiat. Donec mollis ligula purus, et interdum velit
+                bibendum eget. Aliquam magna diam, tristique eu libero nec, sagittis finibus sapien. Cras a ex
+                ultricies,
+                faucibus elit sagittis, maximus nisi. Donec quis arcu sapien. Aenean risus nibh, varius sed porttitor a,
+                ornare nec leo. Sed vitae lacus in ipsum varius sagittis. Ut in quam cursus, ullamcorper sapien posuere,
+                laoreet elit. Suspendisse interdum, risus ut ultricies scelerisque, nibh est commodo leo, sed tristique
+                nisl odio et turpis. Fusce pellentesque nunc nec arcu feugiat accumsan. Praesent mauris sem, eleifend
+                sit
+                amet tortor in, cursus vehicula arcu. Curabitur convallis sit amet nunc ac feugiat. Sed at risus id diam
+                porta pretium id vel felis. Donec nec dui id nisl hendrerit laoreet eu id odio. {{selectedId}}
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                Simple text
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-label>
+                <h3>H3 label tab</h3>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati
+                atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates
+                quibusdam cum?
+              </sfc-tab-body>
+            </sfc-tab-item>
+            <sfc-tab-item>
+              <sfc-tab-body>
+                Without label
+              </sfc-tab-body>
+            </sfc-tab-item>
+
+            <sfc-tab-item>
+              <sfc-tab-label>
+              </sfc-tab-label>
+              <sfc-tab-body>
+                Without label text
+              </sfc-tab-body>
+            </sfc-tab-item>
+          </sfc-tab-panel>
+        </div>
+      </div>
     </div>
   </div>
 </div>

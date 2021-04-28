@@ -13,4 +13,13 @@ export class CollectionUtils {
     public static any<T>(collection: Array<T>): boolean {
         return CommonUtils.isDefined(collection) && collection.length > 0;
     }
+
+    public static getItem<T>(collection: Array<T>, predicate: (item: T) => boolean): T {
+        if (CollectionUtils.any(collection)) {
+            let value = collection.find(predicate);
+            return value;
+        }
+
+        return null;
+    }
 }

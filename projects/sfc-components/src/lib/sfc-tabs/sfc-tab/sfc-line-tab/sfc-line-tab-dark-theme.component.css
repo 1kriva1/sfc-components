@@ -1,0 +1,15 @@
+:host-context(.sfc-component-dark-theme) .tab-label-content:hover label, :host-context(.sfc-component-dark-theme) .tab-label-content:hover i.icon, :host-context(.sfc-component-dark-theme) .selected i.icon, :host-context(.sfc-component-dark-theme) .selected label {
+    color: #F5F7FA;
+}
+
+/* DISABLED */
+
+:host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content label, :host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content i.icon {
+    color: #656D78;
+}
+
+:host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content i.icon, :host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content label {
+    color: #656D78;
+}
+
+/* END DISABLED */

@@ -20,7 +20,6 @@ input[type=radio] {
   justify-content: center;
   align-items: center;
   transition: color 0.2s ease;
-  cursor: pointer;
 }
 
 label {
@@ -40,24 +39,25 @@ label {
 i.icon {
   color: #AAB2BD;
   margin-right: 3px;
-  cursor: pointer;
 }
 
 .tab-label-content:hover label, .tab-label-content:hover i.icon, :host[selected=true] i.icon, :host[selected=true] label {
   color: #656D78;
 }
 
-.tab-label-content .tab-content {
-  position: absolute;
-  top: 100px;
-  left: 0px;
-  line-height: 130%;
-  display: none;
+/* DISABLED */
+
+input[type=radio]:disabled~.tab-label-content label, input[type=radio]:disabled~.tab-label-content i.icon {
+  color: #E6E9ED;
+  cursor: default;
+  pointer-events: none;
 }
 
-:host[selected=true] .tab-content {
-  display: block;
+input[type=radio]:disabled~.tab-label-content i.icon, input[type=radio]:disabled~.tab-label-content label {
+  color: #E6E9ED;
 }
+
+/* END DISABLED */
 
 @media (max-width: 600px) {
   i.icon {

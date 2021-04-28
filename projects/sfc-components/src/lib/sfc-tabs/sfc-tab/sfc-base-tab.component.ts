@@ -1,7 +1,8 @@
-import { EventEmitter, HostBinding, Input, Output } from "@angular/core";
+import { EventEmitter, HostBinding, Input, OnInit, Output } from "@angular/core";
 import { StyleClass } from "../../common/constants/common-constants";
+import { CommonUtils } from "../../common/utils/common-utils";
 
-export default abstract class BaseTabComponent {
+export default abstract class BaseTabComponent implements OnInit {
     @Input()
     id: string;
 
@@ -11,12 +12,18 @@ export default abstract class BaseTabComponent {
     @Input()
     icon: string;
 
-    @Input()
+    @HostBinding('attr.' + StyleClass.Disabled)
+    disabled: boolean;
+
     @HostBinding('attr.' + StyleClass.Selected)
     selected = false;
 
     @Output('on-select')
     onSelect: EventEmitter<string> = new EventEmitter<string>();
+
+    ngOnInit(): void {
+        this.title = CommonUtils.isNullOrEmptyString(this.title) ? this.id : this.title;
+    }
 
     get iconClass() {
         const classes = {};

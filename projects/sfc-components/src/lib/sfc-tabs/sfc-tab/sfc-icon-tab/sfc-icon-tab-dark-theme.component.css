@@ -1,0 +1,25 @@
+:host-context(.sfc-component-dark-theme) label, :host-context(.sfc-component-dark-theme) i.icon {
+    color: #bec5cf;
+}
+
+:host-context(.sfc-component-dark-theme) label:hover, :host-context(.sfc-component-dark-theme) label:hover i.icon {
+    color: #E6E9ED;
+}
+
+/* DISABLED */
+
+:host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content label, :host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content i.icon {
+    color: #656D78;
+}
+
+:host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content i.icon, :host-context(.sfc-component-dark-theme) input[type=radio]:disabled~.tab-label-content label {
+    color: #656D78;
+}
+
+/* END DISABLED */
+
+@media (max-width: 600px) {
+    :host-context(.sfc-component-dark-theme) .selected label {
+        background: #F5F7FA;
+    }
+}

@@ -1,0 +1,7 @@
+:host-context(.sfc-component-dark-theme) .tabs-body {
+    color: #CCD1D9;
+}
+
+:host-context(.sfc-component-dark-theme)  .tabs-header {
+    border-color: #CCD1D9;
+}

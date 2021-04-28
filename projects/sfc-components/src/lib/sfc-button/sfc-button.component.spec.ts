@@ -29,7 +29,7 @@ describe('Component: Button', () => {
 
     it("Id: without id", async(() => {
         const button = fixture.nativeElement.querySelector('a');
-        expect(button.id).toEqual('sfc-')
+        expect(button.id).toEqual('sfc-');
     }));
 
     it("Id: with defined id", async(() => {

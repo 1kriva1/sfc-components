@@ -36,7 +36,7 @@ label:hover {
 
 :host[selected=true] label {
     cursor: default;
-    color: #2bbbad;
+    color: #2bbbad !important;
 }
 
 label i.icon {
@@ -52,7 +52,7 @@ label:hover i.icon {
 }
 
 :host[selected=true] label i.icon {
-    color: #2bbbad;
+    color: #2bbbad !important;
 }
 
 .tab-label-content .tab-content {
@@ -78,6 +78,20 @@ label:hover i.icon {
 :host[selected=true] .tab-content {
     display: block;
 }
+
+/* DISABLED */
+
+input[type=radio]:disabled~.tab-label-content label, input[type=radio]:disabled~.tab-label-content i.icon {
+    color: #E6E9ED;
+    cursor: default;
+    pointer-events: none;
+}
+
+input[type=radio]:disabled~.tab-label-content i.icon, input[type=radio]:disabled~.tab-label-content label {
+    color: #E6E9ED;
+}
+
+/* END DISABLED */
 
 @keyframes content {
     from {

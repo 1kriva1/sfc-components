@@ -8,10 +8,10 @@ import { Component, Input } from '@angular/core';
 export class SfcIconTabSliderComponent {
 
     @Input()
-    length: number;
+    length: number = 1;
 
     @Input('selected-index')
-    selectedIndex: number;
+    selectedIndex: number = 0;
 
     get width(): string {
         return `calc(100% / ${this.length} )`;
