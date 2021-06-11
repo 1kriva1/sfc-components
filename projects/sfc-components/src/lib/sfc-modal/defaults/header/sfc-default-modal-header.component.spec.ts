@@ -87,7 +87,7 @@ describe('Component: SfcModal - SfcDefaultModalHeaderComponent', () => {
         spyOn<any>(component, 'onClose').and.callThrough();
         spyOn(component.closed, 'emit');
 
-        const closeIcon = fixture.nativeElement.querySelector('i.button-close.fa.fa-times');
+        const closeIcon = fixture.nativeElement.querySelector('.modal-header-label ~ span');
         closeIcon.dispatchEvent(new MouseEvent('click', {}));
         fixture.detectChanges();
 

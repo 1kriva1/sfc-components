@@ -1,0 +1,19 @@
+<div class="side-menu-container">
+    <ul>
+        <ng-container *ngFor="let item of config.items" [ngSwitch]="item.type">
+            <sfc-side-menu-header *ngSwitchCase="SideMenuType.Header" [open]="isOpen" label="Menu"
+                (on-toggle)="isOpen = !isOpen">
+            </sfc-side-menu-header>
+
+            <sfc-side-menu-item *ngSwitchCase="SideMenuType.Item" [item]="item" [open]="isOpen" (click)="onClick(item)">
+            </sfc-side-menu-item>
+
+            <sfc-side-menu-item-sub *ngSwitchCase="SideMenuType.ItemWithSub" [item]="item" [open]="isOpen"
+                (on-click)="onClick($event)">
+            </sfc-side-menu-item-sub>
+
+            <sfc-side-menu-title *ngSwitchCase="SideMenuType.Title" label="{{item.label}}" [open]="isOpen">
+            </sfc-side-menu-title>
+        </ng-container>
+    </ul>
+</div>

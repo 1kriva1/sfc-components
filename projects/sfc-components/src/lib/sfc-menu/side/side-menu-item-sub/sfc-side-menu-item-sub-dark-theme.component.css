@@ -1,0 +1,7 @@
+/* ARROWS */
+
+:host-context(.sfc-component-dark-theme) .arrow-container {
+    color: #fff;
+}
+
+/* END ARROWS */

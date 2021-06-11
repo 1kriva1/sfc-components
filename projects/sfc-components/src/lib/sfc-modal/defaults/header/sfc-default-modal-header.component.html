@@ -1,6 +1,7 @@
 <div class="default-header">
     <i class="modal-header-icon" [ngClass]="iconClass"></i>
     <span class="modal-header-label">{{config.text}}</span>
-    <i [style.visibility]="config.showCloseIcon ? 'visible' : 'hidden' " class="button-close fa fa-times"
-        (click)="onClose()"></i>
+    <span (click)="onClose()">
+        <i [style.visibility]="config.showCloseIcon ? 'visible' : 'hidden' " class="button-close fa fa-times"></i>
+    </span>
 </div>

@@ -14,6 +14,16 @@ import { SfcIconTabSliderComponent } from './sfc-tabs/sfc-tab/sfc-icon-tab/slide
 import { SfcTabBodyComponent } from './sfc-tabs/tabs-base/sfc-tab-body.component';
 import { SfcTabLabelComponent } from './sfc-tabs/tabs-base/sfc-tab-label.component';
 import { SfcTabItemComponent } from './sfc-tabs/tabs-base/sfc-tab-item.component';
+import { SfcSideMenuComponent } from './sfc-menu/side/sfc-side-menu.component';
+import { SfcHamburgerComponent } from './common/components/hamburger/sfc-hamburger.component';
+import { SfcSideMenuItemComponent } from './sfc-menu/side/side-menu-item/sfc-side-menu-item.component';
+import { SfcSideMenuHeaderComponent } from './sfc-menu/side/side-menu-header/sfc-side-menu-header.component';
+import { SfcSideMenuTitleComponent } from './sfc-menu/side/side-menu-title/sfc-side-menu-title.component';
+import ISideMenuConfig from './common/interfaces/sfc-menu/side/ISideMenuConfig'
+import { SfcSideMenuItemSubComponent } from './sfc-menu/side/side-menu-item-sub/sfc-side-menu-item-sub.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -29,13 +39,25 @@ import { SfcTabItemComponent } from './sfc-tabs/tabs-base/sfc-tab-item.component
     SfcModalComponent,
     SfcModalOpenOnClickDirective,
     SfcDefaultModalHeaderComponent,
-    SfcDefaultModalFooterComponent],
+    SfcDefaultModalFooterComponent,
+    SfcSideMenuComponent,
+    SfcHamburgerComponent,
+    SfcSideMenuItemComponent,
+    SfcSideMenuHeaderComponent,
+    SfcSideMenuTitleComponent,
+    SfcSideMenuItemSubComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   exports: [ButtonComponent, SfcLineTabComponent, SfcIconTabComponent, SfcTabItemComponent,
     SfcTabLabelComponent,
-    SfcTabBodyComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective]
+    SfcTabBodyComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective,
+    SfcSideMenuComponent,
+    SfcHamburgerComponent
+  ]
 })
 export class SfcComponentsModule {
 
@@ -45,5 +67,4 @@ export class SfcComponentsModule {
       providers: [SfcModalService]
     }
   }
-
 }

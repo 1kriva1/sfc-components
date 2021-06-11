@@ -1,0 +1,29 @@
+.side-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0 20px;
+    min-height: 16px;
+    cursor: default;
+}
+
+:host(.open) .side-menu-header {
+    justify-content: space-between;
+}
+
+.side-menu-header-title {
+    opacity: 0;
+    display: none;
+    color: #8f9090;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: system-ui;
+    user-select: none;
+}
+
+:host(.open) .side-menu-header-title{
+    opacity: 1;
+    display: block;
+}

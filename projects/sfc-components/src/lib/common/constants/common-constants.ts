@@ -11,6 +11,7 @@ export class CommonConstants {
         text: 'Modal'
     }
     static TAB_DEFAULT_ICON = 'fa fa-star';
+    static DEFAULT_MENU_HEADER_TEXT = 'Menu';
 }
 
 export enum StyleClass {
@@ -46,3 +47,10 @@ export enum ComponentSize {
     Medium = 'medium',
     Large = 'large'
 };
+
+export enum SideMenuType{
+    Title = 'title',
+    Item = 'item',
+    Header = 'header',
+    ItemWithSub = 'item-with-sub'
+}

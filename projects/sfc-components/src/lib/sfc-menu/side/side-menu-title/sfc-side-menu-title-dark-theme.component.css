@@ -1,0 +1,11 @@
+:host-context(.sfc-component-dark-theme) .side-menu-title {
+    color: #8f9090;
+}
+
+/* DELIMETER */
+
+:host-context(.sfc-component-dark-theme) .main-hr {
+    border-color: #8f9090;
+}
+
+/* DELIMETER END */
