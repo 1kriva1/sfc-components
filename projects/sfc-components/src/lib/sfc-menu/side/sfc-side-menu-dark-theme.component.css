@@ -1,0 +1,7 @@
+/* CONTAINER */
+
+:host-context(.sfc-component-dark-theme) .side-menu-container {
+    background: #202323;
+}
+
+/* END CONTAINER */

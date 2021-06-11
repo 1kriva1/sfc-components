@@ -1,0 +1,43 @@
+/* TITLE */
+
+:host-context(.sfc-component-dark-theme) .side-menu-item-title {
+    color: #8f9090;
+}
+
+:host-context(.sfc-component-dark-theme) .side-menu-item.active .side-menu-item-title {
+    color: #fff;
+}
+
+:host-context(.sfc-component-dark-theme) .side-menu-item:hover .side-menu-item-title {
+    color: #fff;
+}
+
+/* END TITLE */
+
+/* LINK */
+
+:host-context(.sfc-component-dark-theme) .side-menu-item-link {
+    background-color: #434A54;
+}
+
+:host-context(.sfc-component-dark-theme) .side-menu-item:hover .side-menu-item-link {
+    background-color: #fdd50b;
+}
+
+:host-context(.sfc-component-dark-theme) .side-menu-item.active .side-menu-item-link, :host-context(.sfc-component-dark-theme) .side-menu-item-link:focus, :host-context(.sfc-component-dark-theme) .side-menu-item-link:hover {
+    background-color: #fdd50b;
+}
+
+/* END LINK */
+
+/* ICON */
+
+:host-context(.sfc-component-dark-theme) .side-menu-item-icon {
+    color: #8f9090;
+}
+
+:host-context(.sfc-component-dark-theme) .side-menu-item:hover .side-menu-item-icon, :host-context(.sfc-component-dark-theme) .side-menu-item.active .side-menu-item-icon {
+    color: #434A54;
+}
+
+/* END ICON */

@@ -7,13 +7,15 @@ import { routeConfig } from 'src/router-config';
 import { ButtonAppComponent } from 'src/button-app/button-app.component';
 import { ModalAppComponent } from 'src/modal-app/modal-app.component';
 import { TabAppComponent } from 'src/tab-app/tab-app.component';
+import { SideMenuAppComponent } from 'src/menu-app/side/side-menu-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonAppComponent,
     ModalAppComponent,
-    TabAppComponent
+    TabAppComponent,
+    SideMenuAppComponent
   ],
   imports: [
     BrowserModule,

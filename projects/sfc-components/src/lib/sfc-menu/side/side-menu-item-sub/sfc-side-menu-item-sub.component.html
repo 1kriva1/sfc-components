@@ -1,0 +1,19 @@
+<div class="side-menu-item-sub">
+    <li class="side-menu-item" [class.active]="isParentActive" (click)="isLocalOpen = !isLocalOpen">
+        <div class="side-menu-base-item">
+            <a class="side-menu-item-link">
+                <i class="side-menu-item-icon" [ngClass]="iconClass"></i>
+            </a>
+            <span class="side-menu-item-title">{{item.label}}</span>
+        </div>
+
+        <div class="arrow-container">
+            <fa-icon [icon]="arrowIcon"></fa-icon>
+        </div>
+    </li>
+
+    <div class="side-menu-item-children" *ngIf="isLocalOpen" [@enterAnimation]>
+        <sfc-side-menu-item *ngFor="let child of item.items" [item]="child" [open]="isOpen" (click)="onChildClick(child)">
+        </sfc-side-menu-item>
+    </div>
+</div>

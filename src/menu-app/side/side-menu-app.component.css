@@ -1,0 +1,30 @@
+.aside-menu {
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex
+}
+
+.menu-content {
+    background: #CCD1D9;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sfc-component-dark-theme .menu-content {
+    background: #656D78;
+}
+
+.aside-menu--fixed {
+    height: 100%;
+}
+
+.component-container {
+    width: 100% !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+}

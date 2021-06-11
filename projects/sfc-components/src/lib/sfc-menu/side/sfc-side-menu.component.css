@@ -1,0 +1,31 @@
+/* CONTAINER */
+
+.side-menu-container {
+    width: 80px;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+    background: #F5F7FA;
+}
+
+:host(.empty) .side-menu-container {
+    width: 0px !important;
+}
+
+.side-menu-container ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+:host(.open) .side-menu-container {
+    width: 180px;
+}
+
+/* END CONTAINER */
+
+sfc-side-menu-item, sfc-side-menu-item-sub {
+    margin-bottom: 20px;
+}
