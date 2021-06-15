@@ -1,10 +1,7 @@
 import { SideMenuType } from "../../../constants/common-constants";
+import IMenuItem from "../IMenuItem";
 
-export default interface ISideMenuItem {
-    id:any;
+export default interface ISideMenuItem extends IMenuItem {
     type: SideMenuType;
-    label?:string;
-    icon?:string;
-    isActive?: boolean;
     items?: ISideMenuItem[]
 }

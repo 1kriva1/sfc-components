@@ -1,0 +1,11 @@
+:host-context(.sfc-component-dark-theme) .nav-item:hover, :host-context(.sfc-component-dark-theme)  .nav-item.active {
+    background: #fdd50b;
+}
+
+:host-context(.sfc-component-dark-theme) .nav-item:hover>svg, :host-context(.sfc-component-dark-theme) .nav-item.active>svg {
+    color: #fff;
+}
+
+:host-context(.sfc-component-dark-theme) .nav-item:hover>.nav-item-text, :host-context(.sfc-component-dark-theme)  .nav-item.active>.nav-item-text {
+    color: #434A54;
+}

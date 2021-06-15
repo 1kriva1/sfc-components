@@ -1,5 +1,6 @@
 import { Route } from "@angular/router";
 import { ButtonAppComponent } from "./button-app/button-app.component";
+import { NavigationMenuAppComponent } from "./menu-app/navigation/navigation-menu-app.component";
 import { SideMenuAppComponent } from "./menu-app/side/side-menu-app.component";
 import { ModalAppComponent } from "./modal-app/modal-app.component";
 import { TabAppComponent } from "./tab-app/tab-app.component";
@@ -30,6 +31,10 @@ export const routeConfig = [
     {
         path: 'side-menu-app',
         component: SideMenuAppComponent
+    },
+    {
+        path: 'navigation-menu-app',
+        component: NavigationMenuAppComponent
     },
     fallbackRoute,
     indexRoute
