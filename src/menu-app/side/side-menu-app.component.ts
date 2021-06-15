@@ -6,7 +6,7 @@ import BaseAppComponent from 'src/base-app.component';
     selector: 'side-menu-app',
     templateUrl: './side-menu-app.component.html',
     styleUrls: [
-        './side-menu-app.component.css',
+        '../menu-app.component.css',
         '../../app/app.component.css'
     ]
 })

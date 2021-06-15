@@ -8,6 +8,7 @@ import { ButtonAppComponent } from 'src/button-app/button-app.component';
 import { ModalAppComponent } from 'src/modal-app/modal-app.component';
 import { TabAppComponent } from 'src/tab-app/tab-app.component';
 import { SideMenuAppComponent } from 'src/menu-app/side/side-menu-app.component';
+import { NavigationMenuAppComponent } from 'src/menu-app/navigation/navigation-menu-app.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SideMenuAppComponent } from 'src/menu-app/side/side-menu-app.component'
     ButtonAppComponent,
     ModalAppComponent,
     TabAppComponent,
-    SideMenuAppComponent
+    SideMenuAppComponent,
+    NavigationMenuAppComponent
   ],
   imports: [
     BrowserModule,

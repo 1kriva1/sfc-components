@@ -1,0 +1,21 @@
+<div class="demo-container">
+    <h1>SIDE MENU</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background" [style.padding.px]="0"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <div class="aside-menu aside-menu--fixed" style="width:13%;">
+                <sfc-navigation-menu [config]="menuConfig" (on-select)="onSelect($event)"></sfc-navigation-menu>
+            </div>
+            <div class="menu-content">
+                <h1>{{selectedItemId}}</h1>
+            </div>
+
+        </div>
+    </div>
+</div>

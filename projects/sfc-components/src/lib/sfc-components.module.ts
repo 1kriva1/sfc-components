@@ -19,10 +19,11 @@ import { SfcHamburgerComponent } from './common/components/hamburger/sfc-hamburg
 import { SfcSideMenuItemComponent } from './sfc-menu/side/side-menu-item/sfc-side-menu-item.component';
 import { SfcSideMenuHeaderComponent } from './sfc-menu/side/side-menu-header/sfc-side-menu-header.component';
 import { SfcSideMenuTitleComponent } from './sfc-menu/side/side-menu-title/sfc-side-menu-title.component';
-import ISideMenuConfig from './common/interfaces/sfc-menu/side/ISideMenuConfig'
 import { SfcSideMenuItemSubComponent } from './sfc-menu/side/side-menu-item-sub/sfc-side-menu-item-sub.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SfcNavigationMenuComponent } from './sfc-menu/navigation/sfc-navigation-menu.component';
+import { SfcNavigationMenuItemComponent } from './sfc-menu/navigation/navigation-menu-item/sfc-navigation-menu-item.component';
 
 
 @NgModule({
@@ -45,7 +46,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SfcSideMenuItemComponent,
     SfcSideMenuHeaderComponent,
     SfcSideMenuTitleComponent,
-    SfcSideMenuItemSubComponent
+    SfcSideMenuItemSubComponent,
+    SfcNavigationMenuComponent,
+    SfcNavigationMenuItemComponent
   ],
   imports: [
     CommonModule,
@@ -56,7 +59,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SfcTabLabelComponent,
     SfcTabBodyComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective,
     SfcSideMenuComponent,
-    SfcHamburgerComponent
+    SfcHamburgerComponent,
+    SfcNavigationMenuComponent
   ]
 })
 export class SfcComponentsModule {

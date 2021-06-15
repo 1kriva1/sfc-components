@@ -1,0 +1,6 @@
+<div class="nav-container">
+    <div class="nav-row">
+        <sfc-navigation-menu-item *ngFor="let item of config.items" [item]="item" (click)="onClick(item)">
+        </sfc-navigation-menu-item>
+    </div>
+</div>
