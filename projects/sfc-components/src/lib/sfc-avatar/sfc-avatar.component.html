@@ -1,0 +1,45 @@
+<div class="avatar-container">
+    <div class="avatar-img-container-outer">
+        <div class="avatar-img-container" (mouseenter)="stroke = stroke * 1.5" (mouseleave)="stroke = stroke / 1.5">
+            <div class="avatar-img">
+                <svg [attr.height]="height" [attr.width]="width">
+                    <defs>
+                        <pattern id="{{imgId}}" patternUnits="userSpaceOnUse" [attr.height]="height"
+                            [attr.width]="width">
+                            <image [attr.height]="height" [attr.width]="width" [attr.xlink:href]="avatarInfo.avatarSrc"
+                                preserveAspectRatio="xMidYMid slice"></image>
+                        </pattern>
+                    </defs>
+                    <circle class="progress" [attr.stroke]="progressBarColor" [attr.stroke-width]="stroke"
+                        fill="transparent" [attr.r]="normalizedRadius" [attr.cx]="radius" [attr.cy]="radius" />
+                    <circle class="progress" [attr.stroke]="progressBarFilledColor"
+                        [attr.stroke-dasharray]="circumference + ' ' + circumference"
+                        [ngStyle]="{'stroke-dashoffset':strokeDashoffset}" [attr.stroke-width]="stroke"
+                        fill="transparent" [attr.r]="normalizedRadius" [attr.cx]="radius" [attr.cy]="radius" />
+
+                    <circle class="avatar-img" [attr.cx]="radius" [attr.cy]="radius" [attr.r]="imgRadius"
+                        attr.fill="url('#{{imgId}}')" />
+                </svg>
+            </div>
+
+            <sfc-avatar-badge [radius]="radius" [config]="ratingBadgeConfig">{{avatarInfo.rating}}</sfc-avatar-badge>
+
+            <sfc-avatar-badge *ngIf="avatarInfo.isInjured" [radius]="radius" icon="fa fa-plus"
+                [config]="injuredBadgeConfig"></sfc-avatar-badge>
+
+            <sfc-avatar-badge *ngIf="avatarInfo.isCaptain" [radius]="radius" icon="fa fa-copyright"
+                [config]="captainBadgeConfig"></sfc-avatar-badge>
+
+        </div>
+    </div>
+
+    <div class="avatar-info">
+        <!-- <div class="avatar-stars">STARS</div> -->
+        <div class="avatar-fullname">
+            <span>{{avatarInfo.firstName}} {{avatarInfo.lastName}}</span>
+        </div>
+        <div class="avatar-position">
+            <span>{{avatarInfo.position}}</span>
+        </div>
+    </div>
+</div>

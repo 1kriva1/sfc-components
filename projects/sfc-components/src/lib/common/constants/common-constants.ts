@@ -12,6 +12,18 @@ export class CommonConstants {
     }
     static TAB_DEFAULT_ICON = 'fa fa-star';
     static DEFAULT_MENU_HEADER_TEXT = 'Menu';
+    static AVATAR_DEFAULTS = {
+        AVATAR_PROGRESS_BAR_COLORS: {
+            DEFAULT: '#CCD1D9',
+            FILLED: '#2bbbad'
+        },
+        STROKE: 2,
+        RADIUS: 80,
+        PROGRESS: 0,
+        AVATAR_IMAGE: '../../assets/defaultImage.png',
+        INJURED_BADGE_BACKGROUND: '#ED5565',
+        CAPTAIN_BADGE_BACKGROUND: '#6fa335'
+    }
 }
 
 export enum StyleClass {
@@ -38,8 +50,8 @@ export enum ButtonType {
 
 export enum TabType {
     Default = 'default',
-    Line = 'line'  ,
-    Icon = 'icon'   
+    Line = 'line',
+    Icon = 'icon'
 };
 
 export enum ComponentSize {
@@ -48,7 +60,7 @@ export enum ComponentSize {
     Large = 'large'
 };
 
-export enum SideMenuType{
+export enum SideMenuType {
     Title = 'title',
     Item = 'item',
     Header = 'header',

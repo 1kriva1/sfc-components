@@ -9,6 +9,7 @@ import { ModalAppComponent } from 'src/modal-app/modal-app.component';
 import { TabAppComponent } from 'src/tab-app/tab-app.component';
 import { SideMenuAppComponent } from 'src/menu-app/side/side-menu-app.component';
 import { NavigationMenuAppComponent } from 'src/menu-app/navigation/navigation-menu-app.component';
+import { AvatarAppComponent } from 'src/avatar-app/avatar-app.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavigationMenuAppComponent } from 'src/menu-app/navigation/navigation-m
     ModalAppComponent,
     TabAppComponent,
     SideMenuAppComponent,
-    NavigationMenuAppComponent
+    NavigationMenuAppComponent,
+    AvatarAppComponent
   ],
   imports: [
     BrowserModule,

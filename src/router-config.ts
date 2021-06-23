@@ -1,4 +1,5 @@
 import { Route } from "@angular/router";
+import { AvatarAppComponent } from "./avatar-app/avatar-app.component";
 import { ButtonAppComponent } from "./button-app/button-app.component";
 import { NavigationMenuAppComponent } from "./menu-app/navigation/navigation-menu-app.component";
 import { SideMenuAppComponent } from "./menu-app/side/side-menu-app.component";
@@ -35,6 +36,10 @@ export const routeConfig = [
     {
         path: 'navigation-menu-app',
         component: NavigationMenuAppComponent
+    },
+    {
+        path: 'avatar-app',
+        component: AvatarAppComponent
     },
     fallbackRoute,
     indexRoute
