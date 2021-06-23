@@ -24,6 +24,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SfcNavigationMenuComponent } from './sfc-menu/navigation/sfc-navigation-menu.component';
 import { SfcNavigationMenuItemComponent } from './sfc-menu/navigation/navigation-menu-item/sfc-navigation-menu-item.component';
+import { SfcAvatarComponent } from './sfc-avatar/sfc-avatar.component';
+import { SfcProgressRingComponent } from './sfc-progress/ring/sfc-progress-ring.component';
+import { SfcAvatarBadgeComponent } from './sfc-avatar/sfc-avatar-badge/sfc-avatar-badge.component';
 
 
 @NgModule({
@@ -48,7 +51,10 @@ import { SfcNavigationMenuItemComponent } from './sfc-menu/navigation/navigation
     SfcSideMenuTitleComponent,
     SfcSideMenuItemSubComponent,
     SfcNavigationMenuComponent,
-    SfcNavigationMenuItemComponent
+    SfcNavigationMenuItemComponent,
+    SfcAvatarComponent,
+    SfcProgressRingComponent,
+    SfcAvatarBadgeComponent
   ],
   imports: [
     CommonModule,
@@ -60,7 +66,8 @@ import { SfcNavigationMenuItemComponent } from './sfc-menu/navigation/navigation
     SfcTabBodyComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective,
     SfcSideMenuComponent,
     SfcHamburgerComponent,
-    SfcNavigationMenuComponent
+    SfcNavigationMenuComponent,
+    SfcAvatarComponent
   ]
 })
 export class SfcComponentsModule {

@@ -1,0 +1,74 @@
+:host {
+    display: inline-block;
+}
+
+/* AVATAR IMAGE */
+
+.avatar-img-container-outer{
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-img-container {
+    display: inline-flex;
+    position: relative;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.avatar-img {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.25rem;
+    align-items: center;
+    flex-shrink: 0;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+/* SVG */
+
+circle {
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+    transition: stroke-width 0.3s;
+}
+
+circle.progress {
+    transform: rotate(-90deg);
+}
+
+circle.avatar-img {
+    stroke-width: 1px;
+    stroke-linejoin: round;
+}
+
+/* END SVG */
+
+/* END AVATAR IMAGE*/
+
+/* AVATAR INFO */
+
+.avatar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.avatar-fullname {
+    color: #656D78;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.avatar-position {
+    color: #AAB2BD;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* AVATAR INFO */

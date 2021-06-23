@@ -1,0 +1,91 @@
+<div class="demo-container">
+    <h1>AVATARS</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <div class="component-row">
+                <div>
+                    <sfc-avatar></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="40"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="160"></sfc-avatar>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-avatar [radius]="40" [stroke]="1"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="100" [stroke]="3"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="160" [stroke]="4"></sfc-avatar>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-avatar [radius]="40" [stroke]="1" [progress]="1"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="100" [stroke]="3" [progress]="64"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="160" [stroke]="4" [progress]="99"></sfc-avatar>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-avatar [progress]="54" progress-color="#FFCE54"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="100" [stroke]="3" [progress]="64" progress-color-filled="#FCBB42">
+                    </sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="160" [stroke]="4" [progress]="15" progress-color="#b5dd88"
+                        progress-color-filled="#8CC152"></sfc-avatar>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-avatar [radius]="40" [stroke]="1" [progress]="1" [info]="avatarInfo"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="100" [stroke]="3" [progress]="64" [info]="avatarCaptain"></sfc-avatar>
+                </div>
+
+                <div>
+                    <sfc-avatar [radius]="160" [stroke]="4" [progress]="15" [info]="avatarInjured"></sfc-avatar>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-avatar [progress]="11" [info]="avatarCaptainInjured"></sfc-avatar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
