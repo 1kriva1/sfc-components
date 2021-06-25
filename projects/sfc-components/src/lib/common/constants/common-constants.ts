@@ -23,7 +23,8 @@ export class CommonConstants {
         AVATAR_IMAGE: '../../assets/defaultImage.png',
         INJURED_BADGE_BACKGROUND: '#ED5565',
         CAPTAIN_BADGE_BACKGROUND: '#6fa335'
-    }
+    };
+    static DEFAULT_STARS_COUNT = 5;
 }
 
 export enum StyleClass {
@@ -65,4 +66,12 @@ export enum SideMenuType {
     Item = 'item',
     Header = 'header',
     ItemWithSub = 'item-with-sub'
+}
+
+export enum StarTypes {
+    None = 'none',
+    S25 = 's25',
+    S50 = 's50',
+    S75 = 's75',
+    Full = 'full'
 }

@@ -27,6 +27,7 @@ import { SfcNavigationMenuItemComponent } from './sfc-menu/navigation/navigation
 import { SfcAvatarComponent } from './sfc-avatar/sfc-avatar.component';
 import { SfcProgressRingComponent } from './sfc-progress/ring/sfc-progress-ring.component';
 import { SfcAvatarBadgeComponent } from './sfc-avatar/sfc-avatar-badge/sfc-avatar-badge.component';
+import { SfcStarsComponent } from './sfc-stars/sfc-stars.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { SfcAvatarBadgeComponent } from './sfc-avatar/sfc-avatar-badge/sfc-avata
     SfcNavigationMenuItemComponent,
     SfcAvatarComponent,
     SfcProgressRingComponent,
-    SfcAvatarBadgeComponent
+    SfcAvatarBadgeComponent,
+    SfcStarsComponent
   ],
   imports: [
     CommonModule,
@@ -67,7 +69,8 @@ import { SfcAvatarBadgeComponent } from './sfc-avatar/sfc-avatar-badge/sfc-avata
     SfcSideMenuComponent,
     SfcHamburgerComponent,
     SfcNavigationMenuComponent,
-    SfcAvatarComponent
+    SfcAvatarComponent,
+    SfcStarsComponent
   ]
 })
 export class SfcComponentsModule {

@@ -1,0 +1,3 @@
+<div class="stars-rating" [ngClass]="size">
+  <button [ngStyle]="starStyles" *ngFor="let star of stars; let i = index;" [ngClass]="getStarClass(i+1)"></button>
+</div>

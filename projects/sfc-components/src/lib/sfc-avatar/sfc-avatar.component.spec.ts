@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { SfcAvatarComponent } from './sfc-avatar.component';
 import { SfcComponentsModule } from '../sfc-components.module';
-import { CommonConstants } from '../common/constants/common-constants';
+import { CommonConstants, ComponentSize } from '../common/constants/common-constants';
 import { By } from '@angular/platform-browser';
 
 describe('Component: SfcAvatarComponent', () => {
@@ -184,5 +184,21 @@ describe('Component: SfcAvatarComponent', () => {
         expect(badgesElsAfter[1].componentInstance.radius).toEqual(component.radius);
         expect(badgesElsAfter[1].componentInstance.icon).toEqual('fa fa-copyright');
         expect(badgesElsAfter[1].componentInstance.config).toEqual(component.captainBadgeConfig);
+    }));
+
+    it("Stars: attributes", async(() => {
+        const starsElBefore = el.query(By.css('sfc-stars'));
+        
+        expect(starsElBefore).toBeNull();
+
+        component.showStars = true;
+        fixture.detectChanges();
+
+        const starsElAfter = el.query(By.css('sfc-stars'));
+
+        expect(starsElAfter).toBeDefined();
+        expect(starsElAfter.attributes['size']).toEqual(ComponentSize.Small);
+        expect(starsElAfter.attributes['ng-reflect-count']).toEqual(CommonConstants.DEFAULT_STARS_COUNT.toString());
+        expect(starsElAfter.attributes['ng-reflect-value']).toEqual(component.starsValue.toString());
     }));
 });
