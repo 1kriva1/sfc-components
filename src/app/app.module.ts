@@ -10,6 +10,7 @@ import { TabAppComponent } from 'src/tab-app/tab-app.component';
 import { SideMenuAppComponent } from 'src/menu-app/side/side-menu-app.component';
 import { NavigationMenuAppComponent } from 'src/menu-app/navigation/navigation-menu-app.component';
 import { AvatarAppComponent } from 'src/avatar-app/avatar-app.component';
+import { StarsAppComponent } from 'src/stars-app/stars-app.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AvatarAppComponent } from 'src/avatar-app/avatar-app.component';
     TabAppComponent,
     SideMenuAppComponent,
     NavigationMenuAppComponent,
-    AvatarAppComponent
+    AvatarAppComponent,
+    StarsAppComponent
   ],
   imports: [
     BrowserModule,

@@ -30,6 +30,9 @@ export class SfcAvatarComponent implements OnInit {
     @Input('info')
     avatarInfo: IAvatarInfo;
 
+    @Input('show-stars')
+    showStars: boolean = false;
+
     normalizedRadius: number;
 
     circumference: number;
@@ -88,5 +91,9 @@ export class SfcAvatarComponent implements OnInit {
             bottom: UIUtils.getCssLikePercentage(50),
             background: CommonConstants.AVATAR_DEFAULTS.CAPTAIN_BADGE_BACKGROUND
         }
+    }
+
+    get starsValue(){
+        return this.avatarInfo.rating * CommonConstants.DEFAULT_STARS_COUNT / 100;
     }
 }

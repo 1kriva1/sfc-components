@@ -1,6 +1,8 @@
 <div class="avatar-container">
     <div class="avatar-img-container-outer">
+
         <div class="avatar-img-container" (mouseenter)="stroke = stroke * 1.5" (mouseleave)="stroke = stroke / 1.5">
+
             <div class="avatar-img">
                 <svg [attr.height]="height" [attr.width]="width">
                     <defs>
@@ -31,10 +33,11 @@
                 [config]="captainBadgeConfig"></sfc-avatar-badge>
 
         </div>
+
+        <sfc-stars *ngIf="showStars" [count]="5" [value]="starsValue" size="small"></sfc-stars>
     </div>
 
     <div class="avatar-info">
-        <!-- <div class="avatar-stars">STARS</div> -->
         <div class="avatar-fullname">
             <span>{{avatarInfo.firstName}} {{avatarInfo.lastName}}</span>
         </div>

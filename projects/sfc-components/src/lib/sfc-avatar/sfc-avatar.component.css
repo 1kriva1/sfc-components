@@ -4,9 +4,11 @@
 
 /* AVATAR IMAGE */
 
-.avatar-img-container-outer{
+.avatar-img-container-outer {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .avatar-img-container {
@@ -14,6 +16,7 @@
     position: relative;
     flex-shrink: 0;
     vertical-align: middle;
+    flex-direction: column;
 }
 
 .avatar-img {
