@@ -1,9 +1,0 @@
-<svg [attr.height]="radius * 2" [attr.width]="radius * 2">
-    <circle [attr.stroke]="'blue'" 
-         [attr.stroke-width]="stroke" fill="transparent"
-        [attr.r]="normalizedRadius" [attr.cx]="radius" [attr.cy]="radius" />
-    <circle [attr.stroke]="'red'" [attr.stroke-dasharray]="circumference + ' ' + circumference"
-        [ngStyle]="{'stroke-dashoffset':strokeDashoffset}" [attr.stroke-width]="stroke" fill="transparent"
-        [attr.r]="normalizedRadius" [attr.cx]="radius" [attr.cy]="radius" />
-    
-</svg>

@@ -11,6 +11,7 @@ import { SideMenuAppComponent } from 'src/menu-app/side/side-menu-app.component'
 import { NavigationMenuAppComponent } from 'src/menu-app/navigation/navigation-menu-app.component';
 import { AvatarAppComponent } from 'src/avatar-app/avatar-app.component';
 import { StarsAppComponent } from 'src/stars-app/stars-app.component';
+import { ProgressAppComponent } from 'src/progress-app/progress-app.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StarsAppComponent } from 'src/stars-app/stars-app.component';
     SideMenuAppComponent,
     NavigationMenuAppComponent,
     AvatarAppComponent,
-    StarsAppComponent
+    StarsAppComponent,
+    ProgressAppComponent
   ],
   imports: [
     BrowserModule,

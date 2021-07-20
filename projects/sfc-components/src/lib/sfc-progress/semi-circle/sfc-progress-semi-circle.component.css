@@ -1,0 +1,105 @@
+:host() {
+    display: inline-block;
+}
+
+.semi-circle-progress-container {
+    position: relative;
+    width: 1em;
+    height: 0.5em;
+}
+
+.bar-overflow {
+    position: relative;
+    overflow: hidden;
+    height: inherit;
+}
+
+.bar {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 0.1em solid #E6E9ED;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.semi-circle-progress-container:hover .bar {
+    border-width: 0.08em;
+}
+
+.semi-circle-progress-container span.progress-value {
+    color: #656D78;
+    font-weight: bold;
+    font-size: 0.2em;
+    user-select: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 5em;
+    line-height: 4em;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.semi-circle-progress-container:hover span.progress-value {
+    color: #51575f;
+    font-size: 0.3em;
+    width: 3.33em;
+    line-height: 2.33em;
+}
+
+.semi-circle-progress-container .progress-limits {
+    font-size: 0.06em;
+    color: #656D78;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    user-select: none;
+}
+
+/* SIZES */
+
+.semi-circle-progress-container.small {
+    font-size: 80px;
+}
+
+.semi-circle-progress-container.medium {
+    font-size: 120px;
+}
+
+.semi-circle-progress-container.large {
+    font-size: 160px;
+}
+
+/* END SIZES */

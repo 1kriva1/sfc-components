@@ -1,0 +1,10 @@
+<div class="semi-circle-progress-container" [ngStyle]="semiCircleStyles" [ngClass]="size">
+    <div class="bar-overflow">
+        <div class="bar" [ngStyle]="barStyles"></div>
+    </div>
+    <span class="progress-value">{{progress}}</span>
+    <div class="progress-limits" *ngIf="limits">
+        <span>{{min}}</span>
+        <span>{{max}}</span>
+    </div>
+</div>

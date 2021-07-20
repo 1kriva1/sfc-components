@@ -1,0 +1,7 @@
+<div class="circle-progress-container" [ngStyle]="circleStyles" [ngClass]="size">
+  <span>{{progress}}</span>
+  <div class="slice" [ngClass]="progress > 50 ? 'reversed': ''">
+    <div class="bar" [ngStyle]="{'transform': transformRotate, 'border-color': getColor(progress)}"></div>
+    <div class="fill" [ngStyle]="{'border-color': getColor(progress)}"></div>
+  </div>
+</div>

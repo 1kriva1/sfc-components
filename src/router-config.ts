@@ -4,6 +4,7 @@ import { ButtonAppComponent } from "./button-app/button-app.component";
 import { NavigationMenuAppComponent } from "./menu-app/navigation/navigation-menu-app.component";
 import { SideMenuAppComponent } from "./menu-app/side/side-menu-app.component";
 import { ModalAppComponent } from "./modal-app/modal-app.component";
+import { ProgressAppComponent } from "./progress-app/progress-app.component";
 import { StarsAppComponent } from "./stars-app/stars-app.component";
 import { TabAppComponent } from "./tab-app/tab-app.component";
 
@@ -45,6 +46,10 @@ export const routeConfig = [
     {
         path: 'stars-app',
         component: StarsAppComponent
+    },
+    {
+        path: 'progress-app',
+        component: ProgressAppComponent
     },
     fallbackRoute,
     indexRoute
