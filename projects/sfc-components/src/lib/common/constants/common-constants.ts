@@ -3,8 +3,11 @@ import IDefaultHeaderConfig from "../interfaces/sfc-modal/IDefaultHeaderConfig";
 export class CommonConstants {
     static BUTTON_DEFAULT_TEXT = 'Button';
     static NOT_FOUND_INDEX = -1;
+    static MIN_VALUE = 0;
+    static FULL_PERCENTAGE = 100;
     static CSS_PIXELS = 'px';
     static CSS_PERCENTAGE = '%';
+    static CSS_DEGREES = 'deg';
     static DEFAULT_MODAL_HEADER_CONFIG: IDefaultHeaderConfig = {
         icon: 'fa fa-window-restore',
         showCloseIcon: true,
@@ -25,6 +28,17 @@ export class CommonConstants {
         CAPTAIN_BADGE_BACKGROUND: '#6fa335'
     };
     static DEFAULT_STARS_COUNT = 5;
+    static PROGRESS_DEFAULT_COLORS = {
+        MIN_LOW: '#f08d97',
+        LOW: '#ED5565',
+        MAX_LOW: '#DA4453',
+        MIN_MEDIUM: '#dfc47f',
+        MEDIUM: '#FFCE54',
+        MAX_MEDIUM: '#FCBB42',
+        MIN_HIGH: '#b5dd88',
+        HIGH: '#A0D468',
+        MAX_HIGH: '#8CC152',
+    }
 }
 
 export enum StyleClass {

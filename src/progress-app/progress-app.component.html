@@ -1,0 +1,231 @@
+<div class="demo-container">
+    <h1>PROGRESS</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <hr>
+            <h3>Line:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-line></sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line [progress]="5"></sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line info-start="Dribbling" [progress]="15"></sfc-progress-line>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-line info-end="value:30" [progress]="30"></sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line info-end="value:40" [clear-end]="true" [progress]="40"></sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line info-start="Dribbling" info-end="value:55" [progress]="55"></sfc-progress-line>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-line info-start="Dribbling" [progress]="65"></sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line info-start="Dribbling" [progress]="80"></sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line info-start="Dribbling" [progress]="90"></sfc-progress-line>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-line info-start="Dribbling" [progress]="100"></sfc-progress-line>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-line info-start="Custom color func" [getColor]="getColor" [progress]="20">
+                    </sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line info-start="Custom color func" [getColor]="getColor" [progress]="50">
+                    </sfc-progress-line>
+                </div>
+
+                <div>
+                    <sfc-progress-line info-start="Custom color func" [getColor]="getColor" [progress]="85">
+                    </sfc-progress-line>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Circle:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-circle></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle [progress]="5"></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle [progress]="15"></sfc-progress-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-circle size="small" [progress]="25"></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle size="medium" [progress]="37"></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle size="large" [progress]="49"></sfc-progress-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-circle [custom-size]="20" [progress]="61"></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle [custom-size]="400" [progress]="73"></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle [custom-size]="100" [progress]="85"></sfc-progress-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-circle [getColor]="getColor" [progress]="25"></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle [getColor]="getColor" [progress]="45"></sfc-progress-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-circle [getColor]="getColor" [progress]="75"></sfc-progress-circle>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Semi-Circle:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-semi-circle></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [progress]="5"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [progress]="15"></sfc-progress-semi-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-semi-circle size="small" [progress]="25"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle size="medium" [progress]="37"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle size="large" [progress]="49"></sfc-progress-semi-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-semi-circle [custom-size]="20" [progress]="61"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [custom-size]="400" [progress]="73"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [custom-size]="100" [progress]="98"></sfc-progress-semi-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-semi-circle [limits]="false" [progress]="17"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [limits]="false" [progress]="87"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [limits]="false" [progress]="100"></sfc-progress-semi-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-semi-circle [max]="50" [progress]="5"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [min]="90" [progress]="99"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [min]="20" [max]="80" [progress]="65"></sfc-progress-semi-circle>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-progress-semi-circle [getColor]="getColor" [progress]="25"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [getColor]="getColor" [progress]="45"></sfc-progress-semi-circle>
+                </div>
+
+                <div>
+                    <sfc-progress-semi-circle [getColor]="getColor" [progress]="75"></sfc-progress-semi-circle>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

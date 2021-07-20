@@ -53,7 +53,7 @@ export class ButtonComponent implements OnInit {
     get buttonClasses() {
         const classes = {}
 
-        if(this.disabled)
+        if (this.disabled)
             classes[StyleClass.Disabled] = true;
 
         if (!this.customSize)
@@ -66,12 +66,12 @@ export class ButtonComponent implements OnInit {
 
     get buttonStyles() {
         return this.customSize ?
-          {
-            width: UIUtils.getCssLikePx(this.customSize.width),
-            height: UIUtils.getCssLikePx(this.customSize.height)
-          }
-          : null;
-      }
+            {
+                width: UIUtils.getCssLikePx(this.customSize.width),
+                height: UIUtils.getCssLikePx(this.customSize.height)
+            }
+            : null;
+    }
 
     getIconClass(iconValue: string) {
         const classes = {};

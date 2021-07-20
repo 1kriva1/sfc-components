@@ -18,6 +18,10 @@ export class UIUtils {
         return value + CommonConstants.CSS_PERCENTAGE;
     }
 
+    public static getCssLikeDegrees(value: number): string {
+        return value + CommonConstants.CSS_DEGREES;
+    }
+
     public static addClasses(element: HTMLElement, ...classNames: Array<string>): void {
         if (CommonUtils.isDefined(element)) {
             classNames.forEach((className) => element.classList.add(className));

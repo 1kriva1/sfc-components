@@ -25,9 +25,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SfcNavigationMenuComponent } from './sfc-menu/navigation/sfc-navigation-menu.component';
 import { SfcNavigationMenuItemComponent } from './sfc-menu/navigation/navigation-menu-item/sfc-navigation-menu-item.component';
 import { SfcAvatarComponent } from './sfc-avatar/sfc-avatar.component';
-import { SfcProgressRingComponent } from './sfc-progress/ring/sfc-progress-ring.component';
+import { SfcProgressCircleComponent } from './sfc-progress/circle/sfc-progress-circle.component';
 import { SfcAvatarBadgeComponent } from './sfc-avatar/sfc-avatar-badge/sfc-avatar-badge.component';
 import { SfcStarsComponent } from './sfc-stars/sfc-stars.component';
+import { SfcProgressLineComponent } from './sfc-progress/line/sfc-progress-line.component';
+import { SfcProgressSemiCircleComponent } from './sfc-progress/semi-circle/sfc-progress-semi-circle.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { SfcStarsComponent } from './sfc-stars/sfc-stars.component';
     SfcNavigationMenuComponent,
     SfcNavigationMenuItemComponent,
     SfcAvatarComponent,
-    SfcProgressRingComponent,
+    SfcProgressCircleComponent,
+    SfcProgressSemiCircleComponent,
+    SfcProgressLineComponent,
     SfcAvatarBadgeComponent,
     SfcStarsComponent
   ],
@@ -70,7 +74,10 @@ import { SfcStarsComponent } from './sfc-stars/sfc-stars.component';
     SfcHamburgerComponent,
     SfcNavigationMenuComponent,
     SfcAvatarComponent,
-    SfcStarsComponent
+    SfcStarsComponent,
+    SfcProgressLineComponent,
+    SfcProgressCircleComponent,
+    SfcProgressSemiCircleComponent
   ]
 })
 export class SfcComponentsModule {

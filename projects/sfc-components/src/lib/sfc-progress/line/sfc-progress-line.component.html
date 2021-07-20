@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="info">
+        <span class="start">{{infoStart}}</span>
+        <span class="end" *ngIf="!clearEnd">{{infoEnd}}</span>
+    </div>
+    <div class="progress">
+        <div class="progress-bar" [ngStyle]="{'width': progressValue, 'background-color': getColor(progress)}"></div>
+    </div>
+</div>
