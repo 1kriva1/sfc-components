@@ -7,6 +7,7 @@ import { ModalAppComponent } from "./modal-app/modal-app.component";
 import { ProgressAppComponent } from "./progress-app/progress-app.component";
 import { StarsAppComponent } from "./stars-app/stars-app.component";
 import { TabAppComponent } from "./tab-app/tab-app.component";
+import { TagsAppComponent } from "./tags-app/tags-app.component";
 
 const indexRoute: Route = {
     path: "",
@@ -50,6 +51,10 @@ export const routeConfig = [
     {
         path: 'progress-app',
         component: ProgressAppComponent
+    },
+    {
+        path: 'tags-app',
+        component: TagsAppComponent
     },
     fallbackRoute,
     indexRoute

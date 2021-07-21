@@ -1,0 +1,8 @@
+<div class="tag-container" [ngClass]="tag.size" [ngStyle]="tagStyles">
+    <a class="tag-link">
+        <div class="tag-content">
+            <i *ngIf="tag.icon" class="icon" [ngClass]="iconClass"></i>
+            {{tag.label}}
+        </div>
+    </a>
+</div>
