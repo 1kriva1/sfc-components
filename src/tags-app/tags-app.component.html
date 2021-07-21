@@ -1,0 +1,62 @@
+<div class="demo-container">
+    <h1>TAGS</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <div class="component-row">
+                <div>
+                    <sfc-tags></sfc-tags>
+                </div>
+
+                <div>
+                    <sfc-tags [tags]="[tags[0]]"></sfc-tags>
+                </div>
+
+                <div>
+                    <sfc-tags [tags]="[tags[1]]"></sfc-tags>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-tags [tags]="[tags[2]]"></sfc-tags>
+                </div>
+
+                <div>
+                    <sfc-tags [tags]="[tags[3]]"></sfc-tags>
+                </div>
+
+                <div>
+                    <sfc-tags [tags]="[tags[4]]"></sfc-tags>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-tags [tags]="[tags[5]]"></sfc-tags>
+                </div>
+
+                <div>
+                    <sfc-tags [tags]="[tags[6]]"></sfc-tags>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-tags [tags]="tags"></sfc-tags>
+                </div>
+
+                <div>
+                    <sfc-tags [tags]="tagsSame"></sfc-tags>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

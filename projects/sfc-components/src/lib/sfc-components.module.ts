@@ -30,6 +30,8 @@ import { SfcAvatarBadgeComponent } from './sfc-avatar/sfc-avatar-badge/sfc-avata
 import { SfcStarsComponent } from './sfc-stars/sfc-stars.component';
 import { SfcProgressLineComponent } from './sfc-progress/line/sfc-progress-line.component';
 import { SfcProgressSemiCircleComponent } from './sfc-progress/semi-circle/sfc-progress-semi-circle.component';
+import { SfcTagsComponent } from './sfc-tags/sfc-tags.component';
+import { SfcTagComponent } from './sfc-tags/tag/sfc-tag.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { SfcProgressSemiCircleComponent } from './sfc-progress/semi-circle/sfc-p
     SfcProgressSemiCircleComponent,
     SfcProgressLineComponent,
     SfcAvatarBadgeComponent,
-    SfcStarsComponent
+    SfcStarsComponent,
+    SfcTagsComponent,
+    SfcTagComponent
   ],
   imports: [
     CommonModule,
@@ -77,7 +81,8 @@ import { SfcProgressSemiCircleComponent } from './sfc-progress/semi-circle/sfc-p
     SfcStarsComponent,
     SfcProgressLineComponent,
     SfcProgressCircleComponent,
-    SfcProgressSemiCircleComponent
+    SfcProgressSemiCircleComponent,
+    SfcTagsComponent
   ]
 })
 export class SfcComponentsModule {

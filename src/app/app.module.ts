@@ -12,6 +12,7 @@ import { NavigationMenuAppComponent } from 'src/menu-app/navigation/navigation-m
 import { AvatarAppComponent } from 'src/avatar-app/avatar-app.component';
 import { StarsAppComponent } from 'src/stars-app/stars-app.component';
 import { ProgressAppComponent } from 'src/progress-app/progress-app.component';
+import { TagsAppComponent } from 'src/tags-app/tags-app.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProgressAppComponent } from 'src/progress-app/progress-app.component';
     NavigationMenuAppComponent,
     AvatarAppComponent,
     StarsAppComponent,
-    ProgressAppComponent
+    ProgressAppComponent,
+    TagsAppComponent
   ],
   imports: [
     BrowserModule,

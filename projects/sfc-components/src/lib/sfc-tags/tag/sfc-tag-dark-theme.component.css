@@ -1,0 +1,8 @@
+:host-context(.sfc-component-dark-theme) .tag-link {
+    background-color: #34383f;
+    color: #858a91;
+}
+
+:host-context(.sfc-component-dark-theme) .tag-container:hover .tag-link {
+    background-color: #2e3135;
+}

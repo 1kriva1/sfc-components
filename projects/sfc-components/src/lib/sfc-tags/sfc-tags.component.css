@@ -1,0 +1,19 @@
+:host() {
+    display: inline-flex;
+}
+
+.tags-container {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tags-inner-container {
+    display: inline-block;
+    width: 100%;
+}
+
+sfc-tag {
+    margin-left: 5px;
+}
