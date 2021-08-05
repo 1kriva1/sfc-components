@@ -1,0 +1,27 @@
+:host-context(.sfc-component-dark-theme) .dot-container {
+    color: #CCD1D9;
+}
+
+:host-context(.sfc-component-dark-theme) .dot-container:hover, :host-context(.sfc-component-dark-theme) ul.active .dot-container {
+    color: #F5F7FA;
+}
+
+/* BORDERED */
+
+:host-context(.sfc-component-dark-theme) .dot-container.bordered {
+    border-color: #CCD1D9;
+}
+
+:host-context(.sfc-component-dark-theme) ul.active .dot-container.bordered, :host-context(.sfc-component-dark-theme) .dot-container.bordered:hover {
+    border-color: #F5F7FA;
+}
+
+/* END BORDERED */
+
+/* DOTTED */
+
+:host-context(.sfc-component-dark-theme) ::ng-deep .dot-container:hover sfc-dotted .circle {
+    background: #F5F7FA;
+}
+
+/* DOTTED */

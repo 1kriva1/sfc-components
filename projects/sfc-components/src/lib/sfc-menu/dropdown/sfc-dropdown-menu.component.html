@@ -1,0 +1,14 @@
+<ul [class.active]="active">
+    <li>
+        <div class="dot-container" (click)="onToggleClick()" [class.bordered]="config.bordered">
+            <span *ngIf="config.label">{{config.label}}</span>
+            <i *ngIf="config.icon" [ngClass]="iconClass" [ngStyle]="{'margin-left': config.label ? '5px' : 0}"></i>
+            <sfc-dotted *ngIf="!config.icon && !config.label" [active]="active"></sfc-dotted>
+        </div>
+
+        <ul *ngIf="config.items.length" class="dropdown" [ngClass]="position">
+            <sfc-dropdown-menu-item *ngFor="let item of config.items" [item]="item" (click)="onClick(item)">
+            </sfc-dropdown-menu-item>
+        </ul>
+    </li>
+</ul>
