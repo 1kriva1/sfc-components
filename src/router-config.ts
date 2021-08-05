@@ -1,6 +1,7 @@
 import { Route } from "@angular/router";
 import { AvatarAppComponent } from "./avatar-app/avatar-app.component";
 import { ButtonAppComponent } from "./button-app/button-app.component";
+import { DropdownMenuAppComponent } from "./menu-app/dropdown/dropdown-menu-app.component";
 import { NavigationMenuAppComponent } from "./menu-app/navigation/navigation-menu-app.component";
 import { SideMenuAppComponent } from "./menu-app/side/side-menu-app.component";
 import { ModalAppComponent } from "./modal-app/modal-app.component";
@@ -39,6 +40,10 @@ export const routeConfig = [
     {
         path: 'navigation-menu-app',
         component: NavigationMenuAppComponent
+    },
+    {
+        path: 'dropdown-menu-app',
+        component: DropdownMenuAppComponent
     },
     {
         path: 'avatar-app',

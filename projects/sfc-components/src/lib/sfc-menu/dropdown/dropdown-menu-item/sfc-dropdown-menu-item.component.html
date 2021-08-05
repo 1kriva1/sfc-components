@@ -1,0 +1,6 @@
+<li>
+    <i *ngIf="item.icon" style="padding-right: 10px; width: 10%;" [ngClass]="iconClass"></i>
+    <a>{{item.label}}</a>
+</li>
+
+<sfc-delimeter *ngIf="item.delimeter"></sfc-delimeter>

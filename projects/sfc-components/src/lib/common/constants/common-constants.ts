@@ -52,7 +52,8 @@ export enum StyleClass {
     Open = 'open',
     Loading = 'loading',
     Removed = 'removed',
-    Hided = 'hided'
+    Hided = 'hided',
+    Animated = 'animated'
 };
 
 export enum ButtonType {
@@ -88,4 +89,17 @@ export enum StarTypes {
     S50 = 's50',
     S75 = 's75',
     Full = 'full'
+}
+
+export enum DropdownMenuPosition {
+    Left = 'left',
+    Right = 'right',
+    Top = 'top',
+    Bottom = 'bottom',
+    Center = 'center'
+}
+
+export enum DottedType {
+    Vertical = 'vertical',
+    Horizontal = 'horizontal'
 }

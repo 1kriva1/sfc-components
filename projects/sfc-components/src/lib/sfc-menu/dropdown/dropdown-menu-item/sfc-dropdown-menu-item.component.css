@@ -1,0 +1,40 @@
+:host() {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    color: #8d8d8d;
+    display: flex;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    background: #fff;
+    padding: 0.4rem;
+    clear: both;
+    border: 1px solid transparent;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+li:hover, li:focus-within {
+    background: #F5F7FA;
+    border: 1px solid #F5F7FA;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    user-select: none;
+    color: #8d8d8d;
+}
+
+li:hover, li:focus-within, li:hover a, li:focus-within a {
+    color: #656D78;
+}
+
+li:focus-within a {
+    outline: none;
+}

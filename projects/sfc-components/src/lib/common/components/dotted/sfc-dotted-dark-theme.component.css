@@ -1,0 +1,7 @@
+:host-context(.sfc-component-dark-theme) .circle {
+    background: #CCD1D9;
+}
+
+:host-context(.sfc-component-dark-theme) .dot-container:hover .circle, :host-context(.sfc-component-dark-theme) .dot-container.active .circle {
+    background: #F5F7FA;
+}

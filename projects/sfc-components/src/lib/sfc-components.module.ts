@@ -30,8 +30,12 @@ import { SfcAvatarBadgeComponent } from './sfc-avatar/sfc-avatar-badge/sfc-avata
 import { SfcStarsComponent } from './sfc-stars/sfc-stars.component';
 import { SfcProgressLineComponent } from './sfc-progress/line/sfc-progress-line.component';
 import { SfcProgressSemiCircleComponent } from './sfc-progress/semi-circle/sfc-progress-semi-circle.component';
-import { SfcTagsComponent } from './sfc-tags/sfc-tags.component';
 import { SfcTagComponent } from './sfc-tags/tag/sfc-tag.component';
+import { SfcTagsComponent } from './sfc-tags/sfc-tags.component';
+import { SfcDropdownMenuComponent } from './sfc-menu/dropdown/sfc-dropdown-menu.component';
+import { SfcDottedComponent } from './common/components/dotted/sfc-dotted.component';
+import { SfcDropdownMenuItemComponent } from './sfc-menu/dropdown/dropdown-menu-item/sfc-dropdown-menu-item.component';
+import { SfcDelimeterComponent } from './common/components/delimeter/sfc-delimeter.component';
 
 
 @NgModule({
@@ -51,6 +55,7 @@ import { SfcTagComponent } from './sfc-tags/tag/sfc-tag.component';
     SfcDefaultModalFooterComponent,
     SfcSideMenuComponent,
     SfcHamburgerComponent,
+    SfcDottedComponent,
     SfcSideMenuItemComponent,
     SfcSideMenuHeaderComponent,
     SfcSideMenuTitleComponent,
@@ -64,7 +69,10 @@ import { SfcTagComponent } from './sfc-tags/tag/sfc-tag.component';
     SfcAvatarBadgeComponent,
     SfcStarsComponent,
     SfcTagsComponent,
-    SfcTagComponent
+    SfcTagComponent,
+    SfcDropdownMenuComponent,
+    SfcDropdownMenuItemComponent,
+    SfcDelimeterComponent
   ],
   imports: [
     CommonModule,
@@ -76,13 +84,16 @@ import { SfcTagComponent } from './sfc-tags/tag/sfc-tag.component';
     SfcTabBodyComponent, SfcTabPanelComponent, SfcModalComponent, SfcModalOpenOnClickDirective,
     SfcSideMenuComponent,
     SfcHamburgerComponent,
+    SfcDottedComponent,
     SfcNavigationMenuComponent,
     SfcAvatarComponent,
     SfcStarsComponent,
     SfcProgressLineComponent,
     SfcProgressCircleComponent,
     SfcProgressSemiCircleComponent,
-    SfcTagsComponent
+    SfcTagsComponent,
+    SfcDropdownMenuComponent,
+    SfcDelimeterComponent
   ]
 })
 export class SfcComponentsModule {

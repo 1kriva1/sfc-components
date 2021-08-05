@@ -1,0 +1,94 @@
+<div class="demo-container">
+    <h1>DROPDOWN MENU</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <div class="component-row">
+                <div>
+                    <sfc-dropdown-menu></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfig"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfig" (on-select)="onSelect($event)"></sfc-dropdown-menu>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigRight"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigTopRight"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigTopLeft"></sfc-dropdown-menu>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigCenter"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigCenterTop"></sfc-dropdown-menu>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigClickOutSide"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigBordered"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigHideOnClick"></sfc-dropdown-menu>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigIcon"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigLabel"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigIconLabel"></sfc-dropdown-menu>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigOne"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigThree"></sfc-dropdown-menu>
+                </div>
+
+                <div>
+                    <sfc-dropdown-menu [config]="menuConfigTwo"></sfc-dropdown-menu>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
