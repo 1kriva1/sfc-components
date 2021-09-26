@@ -1,0 +1,7 @@
+<sfc-carousel-item #itemEl [state]="state" [index]="index" [currentIndex]="currentIndex" [previousIndex]="previousIndex"
+    [count]="count" [type]="type">
+    <div class="content-container" [ngClass]="size">
+        <sfc-avatar [progress]="getDataValue(item, 'progress')" [show-stars]="getDataValue(item, 'showStars')"
+            [info]="getDataValue(item, 'avatarInfo')" [radius]="getDataValue(item, 'radius')"></sfc-avatar>
+    </div>
+</sfc-carousel-item>

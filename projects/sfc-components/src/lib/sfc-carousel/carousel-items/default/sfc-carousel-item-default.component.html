@@ -1,0 +1,18 @@
+<sfc-carousel-item #itemEl [state]="state" [index]="index" [currentIndex]="currentIndex" [previousIndex]="previousIndex"
+    [count]="count" [type]="type">
+    <div class="content-container" [ngClass]="size">
+        <div class="labels top">
+            <h3>{{getDataValue(item, 'titleTop')}}</h3>
+            <span>{{getDataValue(item, 'labelTop')}}</span>
+        </div>
+        <div class="image-container">
+            <a class="circle">
+                <span *ngIf="getDataValue(item, 'imgSrc')" class="image" style.background-image="url('{{getDataValue(item, 'imgSrc')}}')"></span>
+            </a>
+        </div>
+        <div class="labels bottom">
+            <h3>{{getDataValue(item, 'titleBottom')}}</h3>
+            <span>{{getDataValue(item, 'labelBottom')}}</span>
+        </div>
+    </div>
+</sfc-carousel-item>

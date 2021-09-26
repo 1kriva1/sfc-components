@@ -36,6 +36,10 @@ import { SfcDropdownMenuComponent } from './sfc-menu/dropdown/sfc-dropdown-menu.
 import { SfcDottedComponent } from './common/components/dotted/sfc-dotted.component';
 import { SfcDropdownMenuItemComponent } from './sfc-menu/dropdown/dropdown-menu-item/sfc-dropdown-menu-item.component';
 import { SfcDelimeterComponent } from './common/components/delimeter/sfc-delimeter.component';
+import { SfcCarouselItemAvatarComponent } from './sfc-carousel/carousel-items/avatars/sfc-carousel-item-avatar.component';
+import { SfcCarouselItemDefaultComponent } from './sfc-carousel/carousel-items/default/sfc-carousel-item-default.component';
+import SfcCarouselItemComponent from './sfc-carousel/carousel-items/sfc-carousel-item.component';
+import { SfcCarouselComponent } from './sfc-carousel/sfc-carousel.component';
 
 
 @NgModule({
@@ -72,7 +76,11 @@ import { SfcDelimeterComponent } from './common/components/delimeter/sfc-delimet
     SfcTagComponent,
     SfcDropdownMenuComponent,
     SfcDropdownMenuItemComponent,
-    SfcDelimeterComponent
+    SfcDelimeterComponent,
+    SfcCarouselComponent,
+    SfcCarouselItemDefaultComponent,
+    SfcCarouselItemAvatarComponent,
+    SfcCarouselItemComponent
   ],
   imports: [
     CommonModule,
@@ -93,8 +101,13 @@ import { SfcDelimeterComponent } from './common/components/delimeter/sfc-delimet
     SfcProgressSemiCircleComponent,
     SfcTagsComponent,
     SfcDropdownMenuComponent,
-    SfcDelimeterComponent
-  ]
+    SfcDelimeterComponent,
+    SfcCarouselComponent,
+    SfcCarouselItemDefaultComponent,
+    SfcCarouselItemAvatarComponent,
+    SfcCarouselItemComponent
+  ],
+  entryComponents: [SfcCarouselItemDefaultComponent, SfcCarouselItemAvatarComponent]
 })
 export class SfcComponentsModule {
 

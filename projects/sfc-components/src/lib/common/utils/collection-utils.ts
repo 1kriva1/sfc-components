@@ -7,7 +7,7 @@ import { CommonUtils } from './common-utils';
 export class CollectionUtils {
 
     public static distinct<T>(collection: Array<T>): Array<T> {
-        return this.any(collection) ? collection.filter((value, index, self)=>self.indexOf(value) === index) : collection;
+        return this.any(collection) ? collection.filter((value, index, self) => self.indexOf(value) === index) : collection;
     }
 
     public static any<T>(collection: Array<T>): boolean {
@@ -22,4 +22,39 @@ export class CollectionUtils {
 
         return null;
     }
+
+    public static firstItem<T>(collection: Array<T>): T {
+        if (CommonUtils.isDefined(collection) && collection.length > 0) {
+            return collection[0];
+        }
+
+        return null;
+    }
+
+    public static lastItem<T>(collection: Array<T>): T {
+        if (CommonUtils.isDefined(collection) && collection.length > 0) {
+            return collection[collection.length - 1];
+        }
+
+        return null;
+    }
+
+    public static sum<T, P>(collection: Array<T>, select: (item: T) => number): number {
+        if (CollectionUtils.any(collection)) {
+            const arrayToSum = collection.map(select);
+            return arrayToSum.reduce((a, b) => { return a + b }, 0)
+        }
+
+        return null;
+    }
+
+    public static max<T>(collection: Array<T>, select: (item: T) => number): number {
+        if (CollectionUtils.any(collection)) {
+            return Math.max( ...collection.map(select) );
+        }
+
+        return null;
+    }
+
+    
 }

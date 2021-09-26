@@ -1,0 +1,121 @@
+<div class="demo-container">
+    <h1>CAROUSELS</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container" style="width: 100%;">
+
+            <hr>
+            <h3>Horizontal:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-carousel></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsConfig"></sfc-carousel>
+                </div>    
+                
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsTwoConfig"></sfc-carousel>
+                </div>
+            </div>
+            
+            <div class="component-row">
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsThreeConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsFourConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsAutomaticConfig"></sfc-carousel>
+                </div>
+            </div>            
+
+            <div class="component-row">
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsSmallConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsMediumConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsLargeConfig"></sfc-carousel>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsSmallConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsMediumConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsLargeConfig"></sfc-carousel>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsAutomaticConfig"></sfc-carousel>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Vertical:</h3>
+            <hr>
+
+            <div class="component-row">
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsSmallVerticalConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsMediumVerticalConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsLargeVerticalConfig"></sfc-carousel>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsSmallVerticalConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsMediumVerticalConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsLargeVerticalConfig"></sfc-carousel>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-carousel [config]="carouselDefaultItemsAutomaticVerticalConfig"></sfc-carousel>
+                </div>
+
+                <div>
+                    <sfc-carousel [config]="carouselAvatarItemsAutomaticVerticalConfig"></sfc-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

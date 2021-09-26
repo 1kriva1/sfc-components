@@ -1,0 +1,3 @@
+::ng-deep sfc-avatar .avatar-container{
+    min-width: 160px;
+}

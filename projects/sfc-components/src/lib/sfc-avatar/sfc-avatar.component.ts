@@ -13,7 +13,7 @@ import { UIUtils } from '../common/utils/ui-utils';
 export class SfcAvatarComponent implements OnInit {
 
     @Input()
-    radius: number = CommonConstants.AVATAR_DEFAULTS.RADIUS;
+    radius: number
 
     @Input()
     stroke: number = CommonConstants.AVATAR_DEFAULTS.STROKE;
@@ -49,7 +49,8 @@ export class SfcAvatarComponent implements OnInit {
         this.avatarInfo = CommonUtils.isDefined(this.avatarInfo)
             ? this.avatarInfo
             : { rating: 0, firstName: '', lastName: '', position: '', avatarSrc: CommonConstants.AVATAR_DEFAULTS.AVATAR_IMAGE };
-        this.normalizedRadius = this.radius - this.stroke * 2
+        this.radius = this.radius || CommonConstants.AVATAR_DEFAULTS.RADIUS;
+        this.normalizedRadius = this.radius - this.stroke * 2;
         this.circumference = this.normalizedRadius * 2 * Math.PI;
         this.height = this.width = this.radius * 2;
         this.imgRadius = this.normalizedRadius - (this.normalizedRadius * 0.15);
@@ -60,7 +61,7 @@ export class SfcAvatarComponent implements OnInit {
         return this.circumference - (this.progress / 100 * this.circumference);
     }
 
-    get ratingBadgeConfig(): IAvatarBadgeConfig{
+    get ratingBadgeConfig(): IAvatarBadgeConfig {
         const badgeSize = UIUtils.getCssLikePx(this.radius * 0.375);
         return {
             height: badgeSize,
@@ -93,7 +94,19 @@ export class SfcAvatarComponent implements OnInit {
         }
     }
 
-    get starsValue(){
+    get starsValue() {
         return this.avatarInfo.rating * CommonConstants.DEFAULT_STARS_COUNT / 100;
+    }
+
+    get fullNameStyles(){
+        return {
+            fontSize: UIUtils.getCssLikePx(this.radius / 3.3)
+        }
+    }
+
+    get positionStyles(){
+        return {
+            fontSize: UIUtils.getCssLikePx(this.radius / 4.2)
+        }
     }
 }
