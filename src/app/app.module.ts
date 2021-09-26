@@ -14,6 +14,7 @@ import { StarsAppComponent } from 'src/stars-app/stars-app.component';
 import { ProgressAppComponent } from 'src/progress-app/progress-app.component';
 import { TagsAppComponent } from 'src/tags-app/tags-app.component';
 import { DropdownMenuAppComponent } from 'src/menu-app/dropdown/dropdown-menu-app.component';
+import { CarouselAppComponent } from 'src/carousel/carousel-app.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DropdownMenuAppComponent } from 'src/menu-app/dropdown/dropdown-menu-ap
     StarsAppComponent,
     ProgressAppComponent,
     TagsAppComponent,
-    DropdownMenuAppComponent
+    DropdownMenuAppComponent,
+    CarouselAppComponent
   ],
   imports: [
     BrowserModule,

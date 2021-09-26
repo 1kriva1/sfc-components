@@ -38,7 +38,11 @@ export class CommonConstants {
         MIN_HIGH: '#b5dd88',
         HIGH: '#A0D468',
         MAX_HIGH: '#8CC152',
-    }
+    };
+    static CAROUSEL_DELAY_MS = 1000;
+    static CAROUSEL_AUTOMATIC_PERIOD_MS = 1500;
+    static CAROUSEL_DEFAULT_COUNT = 3
+    static CAROUSEL_ITEM_DEFAULT_SIZE = 180;
 }
 
 export enum StyleClass {
@@ -99,7 +103,23 @@ export enum DropdownMenuPosition {
     Center = 'center'
 }
 
-export enum DottedType {
+export enum PositionType {
     Vertical = 'vertical',
     Horizontal = 'horizontal'
+}
+
+export enum CarouselMovementType {
+    Custom = 'custom',
+    Automatic = 'automatic'
+}
+
+export enum CarouselItemState {
+    Center = 'center',
+    Up = 'up',
+    Down = 'down',
+    ShowDown = 'show-down',
+    ShowUp = 'show-up',
+    HideDown = 'hide-down',
+    HideUp = 'hide-up',
+    Hide = 'hide'
 }

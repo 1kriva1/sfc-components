@@ -38,10 +38,10 @@
     </div>
 
     <div class="avatar-info">
-        <div class="avatar-fullname">
+        <div class="avatar-fullname" [ngStyle]="fullNameStyles">
             <span>{{avatarInfo.firstName}} {{avatarInfo.lastName}}</span>
         </div>
-        <div class="avatar-position">
+        <div class="avatar-position" [ngStyle]="positionStyles">
             <span>{{avatarInfo.position}}</span>
         </div>
     </div>

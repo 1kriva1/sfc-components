@@ -1,0 +1,11 @@
+:host-context(.sfc-component-dark-theme) .labels.bottom h3 {
+    color: #E6E9ED;
+}
+
+:host-context(.sfc-component-dark-theme) .labels span {
+    color: #CCD1D9;
+}
+
+:host-context(.sfc-component-dark-theme) .content-container{
+    box-shadow: 0 2px 10px #AAB2BD;
+}

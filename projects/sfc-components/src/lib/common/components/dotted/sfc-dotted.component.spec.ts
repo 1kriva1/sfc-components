@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { SfcComponentsModule } from '../../../sfc-components.module';
 import { SfcDottedComponent } from './sfc-dotted.component';
-import { DottedType } from '../../constants/common-constants';
+import { PositionType } from '../../constants/common-constants';
 
 describe('Component: SfcDottedComponent', () => {
 
@@ -47,14 +47,14 @@ describe('Component: SfcDottedComponent', () => {
     }));
 
     it("Position: horizontal/vertical", async(() => {
-        expect(el.nativeElement.className).toContain(DottedType.Horizontal);
-        expect(el.nativeElement.className).not.toContain(DottedType.Vertical);
+        expect(el.nativeElement.className).toContain(PositionType.Horizontal);
+        expect(el.nativeElement.className).not.toContain(PositionType.Vertical);
 
-        component.position = DottedType.Vertical;
+        component.position = PositionType.Vertical;
         fixture.detectChanges();
 
-        expect(el.nativeElement.className).toContain(DottedType.Vertical);
-        expect(el.nativeElement.className).not.toContain(DottedType.Horizontal);
+        expect(el.nativeElement.className).toContain(PositionType.Vertical);
+        expect(el.nativeElement.className).not.toContain(PositionType.Horizontal);
     }));
 
     it("Animated: on/off", async(() => {

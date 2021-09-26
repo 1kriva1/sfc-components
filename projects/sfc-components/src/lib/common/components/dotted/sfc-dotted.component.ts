@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input } from '@angular/core';
-import { DottedType, StyleClass } from '../../constants/common-constants';
+import { PositionType, StyleClass } from '../../constants/common-constants';
 
 @Component({
     selector: 'sfc-dotted',
@@ -14,7 +14,7 @@ export class SfcDottedComponent {
 
     @Input()
     @HostBinding('class')
-    position: DottedType = DottedType.Horizontal;
+    position: PositionType = PositionType.Horizontal;
 
     @Input()
     @HostBinding('class.' + StyleClass.Animated)

@@ -1,0 +1,15 @@
+<div class="carousel-container">
+    <div class="action-buttons" *ngIf="showActionButtons">
+        <sfc-button [disabled]="actionDisabled"
+            icon-before="fa fa-chevron-{{config.positionType == 'horizontal' ? 'left' : 'up'}}" text="" (on-click)="move(false)"
+            [types]="['circled']" size="small" [custom-size]="buttonsSize"></sfc-button>
+
+        <sfc-button [disabled]="actionDisabled"
+            icon-before="fa fa-chevron-{{config.positionType == 'horizontal' ? 'right' : 'down'}}" text=""
+            (on-click)="move(true)" [types]="['circled']" size="small" [custom-size]="buttonsSize"></sfc-button>
+    </div>
+
+    <div class="carousel" [ngStyle]="{width: componentSize.width, height: componentSize.height}">
+        <ng-container #itemsContainer></ng-container>
+    </div>
+</div>

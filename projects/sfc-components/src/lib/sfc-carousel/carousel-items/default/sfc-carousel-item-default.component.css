@@ -1,0 +1,97 @@
+.content-container {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #F5F7FA;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+    min-width: 120px;
+}
+
+/* CIRCLE IMAGE */
+
+.circle {
+    position: relative;
+    border-radius: 50%;
+    display: inline-flex;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+    border: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.circle .image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* END CIRCLE IMAGE */
+
+/* LABELS */
+
+.labels {
+    margin: 10px 0 15px 0;
+    font-weight: bold;
+}
+
+.labels h3 {
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+.labels.top h3 {
+    color: #8CC152;
+}
+
+.labels.bottom h3 {
+    color: #656D78;
+}
+
+.labels span {
+    color: #AAB2BD;
+}
+
+/* END LABELS */
+
+/* SIZES */
+
+.content-container.small{
+    min-width: 80px;
+    font-size: 8px;
+}
+
+.content-container.small .image .circle{
+    width: 30px;
+    height: 30px;
+}
+
+.content-container.medium{
+    min-width: 120px;
+    font-size: 12px;
+}
+
+.content-container.medium .image .circle{
+    width: 60px;
+    height: 60px;
+}
+
+.content-container.large{
+    min-width: 160px;
+    font-size: 16px;
+}
+
+.content-container.large .image .circle{
+    width: 90px;
+    height: 90px;
+}
+
+/* END SIZES */

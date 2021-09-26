@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ButtonType, CommonConstants, ComponentSize, StyleClass } from '../common/constants/common-constants';
 import ISize from '../common/interfaces/ISize';
 import { CollectionUtils } from '../common/utils/collection-utils';
@@ -35,6 +35,9 @@ export class ButtonComponent implements OnInit {
 
     @Input('custom-size')
     customSize: ISize;
+
+    @Output('on-click') 
+    onClick = new EventEmitter();
 
     ngOnInit(): void {
         if (!CommonUtils.isDefined(this.text)) {
