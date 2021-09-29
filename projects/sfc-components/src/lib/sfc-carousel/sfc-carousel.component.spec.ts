@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture, async, fakeAsync, tick, flush, discardPeriod
 import { DebugElement } from '@angular/core';
 import { SfcCarouselComponent } from './sfc-carousel.component';
 import { SfcComponentsModule } from '../sfc-components.module';
-import { ButtonType, CarouselMovementType, CommonConstants, ComponentSize, PositionType } from '../common/constants/common-constants';
+import { ButtonType, ComponentMovementType, CommonConstants, ComponentSize, PositionType } from '../common/constants/common-constants';
 import { SfcCarouselItemDefaultComponent } from './carousel-items/default/sfc-carousel-item-default.component';
 import { By } from '@angular/platform-browser';
 import { SfcCarouselItemAvatarComponent } from './carousel-items/avatars/sfc-carousel-item-avatar.component';
@@ -40,7 +40,7 @@ describe('Component: SfcCarouselComponent', () => {
 
     it("Action buttons: not exist if automatic mode", async(() => {
         spyOn(window, 'setInterval').and.callFake(() => null);
-        component.config = { movementType: CarouselMovementType.Automatic, items: [], itemType: SfcCarouselItemDefaultComponent };
+        component.config = { movementType: ComponentMovementType.Automatic, items: [], itemType: SfcCarouselItemDefaultComponent };
         component.ngAfterViewInit();
         fixture.detectChanges();
 
@@ -181,7 +181,7 @@ describe('Component: SfcCarouselComponent', () => {
     it("Carousel: automatic mode", fakeAsync(() => {
         spyOn<any>(component, 'move').and.callThrough();
         spyOn(window, 'setInterval').and.callThrough();
-        component.config = { movementType: CarouselMovementType.Automatic, items: [], itemType: SfcCarouselItemDefaultComponent };
+        component.config = { movementType: ComponentMovementType.Automatic, items: [], itemType: SfcCarouselItemDefaultComponent };
         component.ngAfterViewInit();
         fixture.detectChanges();
 
@@ -201,7 +201,7 @@ describe('Component: SfcCarouselComponent', () => {
     it("Carousel: automatic mode (several rounds)", fakeAsync(() => {
         spyOn<any>(component, 'move').and.callThrough();
         spyOn(window, 'setInterval').and.callThrough();
-        component.config = { movementType: CarouselMovementType.Automatic, items: [], itemType: SfcCarouselItemDefaultComponent };
+        component.config = { movementType: ComponentMovementType.Automatic, items: [], itemType: SfcCarouselItemDefaultComponent };
         component.ngAfterViewInit();
         fixture.detectChanges();
 

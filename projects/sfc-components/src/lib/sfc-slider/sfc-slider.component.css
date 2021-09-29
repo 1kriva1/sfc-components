@@ -1,0 +1,139 @@
+.slider-wrapper {
+    width: 600px;
+    margin: 50px auto;
+    height: 400px;
+    position: relative;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 2px 2px 0px;
+}
+
+.slider-container {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    overflow: hidden;
+    background: #434A54;
+    display: flex;
+}
+
+.slider-container>ul {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ACTION BUTTONS */
+
+.btn {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    top: 50%;
+    margin-top: -25px;
+    line-height: 57px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    user-select: none;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.btn.next {
+    right: -50px;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.btn.prev {
+    left: -50px;
+    border-radius: 0px 7px 7px 0px;
+}
+
+.counter {
+    top: 30px;
+    right: 35px;
+    width: auto;
+    position: absolute;
+}
+
+.slider-container.active .btn.next {
+    right: 0px;
+}
+
+.slider-container.active .btn.prev {
+    left: 0px;
+}
+
+/* END ACTION BUTTONS */
+
+/* PAGINATION */
+
+.pagination-container {
+    min-width: 20px;
+    margin: auto auto 40px auto;
+    height: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.pagination-container ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-container ul li {
+    margin: 0 4px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+}
+
+.pagination-container ul li.active {
+    width: 15px;
+    height: 15px;
+    top: 3px;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
+}
+
+.pagination-container .pause-action {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+/* END PAGINATION */
+
+/* ANIMATION */
+
+.slider-container ul, .pagination-container ul li {
+    -webkit-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -moz-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -ms-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+}
+
+/* END ANIMATION */

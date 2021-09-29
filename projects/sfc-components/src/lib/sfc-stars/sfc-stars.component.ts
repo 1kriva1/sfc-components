@@ -35,12 +35,12 @@ export class SfcStarsComponent implements OnInit {
 
     get starStyles() {
         return this.customSize ?
-          {
-            width: UIUtils.getCssLikePx(this.customSize.width),
-            height: UIUtils.getCssLikePx(this.customSize.height)
-          }
-          : null;
-      }
+            {
+                width: UIUtils.getCssLikePx(this.customSize.width),
+                height: UIUtils.getCssLikePx(this.customSize.height)
+            }
+            : null;
+    }
 
     getStarClass(index: number) {
 

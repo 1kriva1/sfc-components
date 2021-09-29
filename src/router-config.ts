@@ -7,6 +7,7 @@ import { NavigationMenuAppComponent } from "./menu-app/navigation/navigation-men
 import { SideMenuAppComponent } from "./menu-app/side/side-menu-app.component";
 import { ModalAppComponent } from "./modal-app/modal-app.component";
 import { ProgressAppComponent } from "./progress-app/progress-app.component";
+import { SliderAppComponent } from "./slider-app/slider-app.component";
 import { StarsAppComponent } from "./stars-app/stars-app.component";
 import { TabAppComponent } from "./tab-app/tab-app.component";
 import { TagsAppComponent } from "./tags-app/tags-app.component";
@@ -65,6 +66,10 @@ export const routeConfig = [
     {
         path: 'carousel-app',
         component: CarouselAppComponent
+    },
+    {
+        path: 'slider-app',
+        component: SliderAppComponent
     },
     fallbackRoute,
     indexRoute

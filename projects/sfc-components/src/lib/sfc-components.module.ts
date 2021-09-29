@@ -40,6 +40,8 @@ import { SfcCarouselItemAvatarComponent } from './sfc-carousel/carousel-items/av
 import { SfcCarouselItemDefaultComponent } from './sfc-carousel/carousel-items/default/sfc-carousel-item-default.component';
 import SfcCarouselItemComponent from './sfc-carousel/carousel-items/sfc-carousel-item.component';
 import { SfcCarouselComponent } from './sfc-carousel/sfc-carousel.component';
+import { SfcSliderComponent } from './sfc-slider/sfc-slider.component';
+import { SfcSliderItemComponent } from './sfc-slider/slider-item/sfc-slider-item.component';
 
 
 @NgModule({
@@ -80,7 +82,9 @@ import { SfcCarouselComponent } from './sfc-carousel/sfc-carousel.component';
     SfcCarouselComponent,
     SfcCarouselItemDefaultComponent,
     SfcCarouselItemAvatarComponent,
-    SfcCarouselItemComponent
+    SfcCarouselItemComponent,
+    SfcSliderComponent,
+    SfcSliderItemComponent
   ],
   imports: [
     CommonModule,
@@ -105,7 +109,8 @@ import { SfcCarouselComponent } from './sfc-carousel/sfc-carousel.component';
     SfcCarouselComponent,
     SfcCarouselItemDefaultComponent,
     SfcCarouselItemAvatarComponent,
-    SfcCarouselItemComponent
+    SfcCarouselItemComponent,
+    SfcSliderComponent
   ],
   entryComponents: [SfcCarouselItemDefaultComponent, SfcCarouselItemAvatarComponent]
 })

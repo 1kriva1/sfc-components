@@ -1,0 +1,49 @@
+<div class="demo-container">
+    <h1>SLIDER</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <div class="component-row">
+                <div>
+                    <sfc-slider></sfc-slider>
+                </div>
+
+                <div>
+                    <sfc-slider [config]="config"></sfc-slider>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-slider [config]="configAutomatic"></sfc-slider>
+                </div>
+
+                <div>
+                    <sfc-slider [config]="configShowCount"></sfc-slider>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-slider [config]="configShowPagination"></sfc-slider>
+                </div>
+
+                <div>
+                    <sfc-slider [config]="configFull"></sfc-slider>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-slider [config]="configSize"></sfc-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

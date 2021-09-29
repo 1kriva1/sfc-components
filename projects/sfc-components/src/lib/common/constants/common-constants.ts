@@ -43,6 +43,7 @@ export class CommonConstants {
     static CAROUSEL_AUTOMATIC_PERIOD_MS = 1500;
     static CAROUSEL_DEFAULT_COUNT = 3
     static CAROUSEL_ITEM_DEFAULT_SIZE = 180;
+    static COMPONENT_AUTOMATIC_PERIOD_MS = 3000;
 }
 
 export enum StyleClass {
@@ -108,7 +109,7 @@ export enum PositionType {
     Horizontal = 'horizontal'
 }
 
-export enum CarouselMovementType {
+export enum ComponentMovementType {
     Custom = 'custom',
     Automatic = 'automatic'
 }

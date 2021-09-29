@@ -1,5 +1,5 @@
 import { AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, ComponentFactoryResolver, ComponentRef, HostBinding, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { CarouselMovementType, PositionType, CommonConstants, ComponentSize } from '../common/constants/common-constants';
+import { ComponentMovementType, PositionType, CommonConstants, ComponentSize } from '../common/constants/common-constants';
 import ISize from '../common/interfaces/ISize';
 import ICarouselConfig from '../common/interfaces/sfc-carousel/ICarouselConfig';
 import { CollectionUtils } from '../common/utils/collection-utils';
@@ -67,7 +67,7 @@ export class SfcCarouselComponent implements OnInit, AfterViewInit, AfterViewChe
             items: [],
             itemType: SfcCarouselItemDefaultComponent,
             positionType: PositionType.Horizontal,
-            movementType: CarouselMovementType.Custom,
+            movementType: ComponentMovementType.Custom,
             size: ComponentSize.Medium
         };
 
@@ -75,7 +75,7 @@ export class SfcCarouselComponent implements OnInit, AfterViewInit, AfterViewChe
         this.config.positionType = this.config.positionType || PositionType.Horizontal;
 
         // by default component is not moved automatically
-        this.config.movementType = this.config.movementType || CarouselMovementType.Custom;
+        this.config.movementType = this.config.movementType || ComponentMovementType.Custom;
 
         this.config.size = this.config.size || ComponentSize.Medium;
     }
@@ -87,7 +87,7 @@ export class SfcCarouselComponent implements OnInit, AfterViewInit, AfterViewChe
         // set component size depend on carousel items
         this.setUpComponentSize();
 
-        if (this.config.movementType == CarouselMovementType.Automatic) {
+        if (this.config.movementType == ComponentMovementType.Automatic) {
             this.setUpAutomaticMode();
         }
     }
