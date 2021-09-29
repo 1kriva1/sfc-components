@@ -1,0 +1,24 @@
+<div class="slider-wrapper" [ngStyle]="size">
+    <div #sliderContainer class="slider-container" [ngClass]="{'active': active}" (mouseover)="onMouseOver()"
+        (mouseout)="onMouseOut()">
+        <ul [ngStyle]="{width: sliderWidth, left: leftPosition}">
+            <sfc-slider-item *ngFor="let item of config.items" [item]="item" [size]="config.customSize"></sfc-slider-item>
+        </ul>
+        <!--controls-->
+        <div class="btn next" (click)="slideRight()"><i class="fa fa-arrow-right"></i></div>
+        <div class="btn prev" (click)="slideLeft()"><i class="fa fa-arrow-left"></i></div>
+        <div class="counter" *ngIf="config.showCount">{{count > 0 ? position+1: 0}} / {{count}}</div>
+
+        <div class="pagination-container" *ngIf="config.showPagination">
+            <ul>
+                <li *ngFor="let item of config.items; let i = index;" [ngClass]="{'active': i == position}"
+                    (click)="chooseItem(i)"></li>
+            </ul>
+            <div *ngIf="isAutomaticMode" class="pause-action" (click)="toggleAutomaticMode()">
+                <div *ngIf="!pause"><i class="fas fa-pause-circle"></i></div>
+                <div *ngIf="pause"><i class="fas fa-play-circle"></i></div>
+            </div>
+        </div>
+        <!--controls-->
+    </div>
+</div>
