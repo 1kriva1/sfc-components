@@ -44,6 +44,7 @@ export class CommonConstants {
     static CAROUSEL_DEFAULT_COUNT = 3
     static CAROUSEL_ITEM_DEFAULT_SIZE = 180;
     static COMPONENT_AUTOMATIC_PERIOD_MS = 3000;
+    static NOTIFICATION_DESTROY_INTERVAL_MS = 5000;
 }
 
 export enum StyleClass {
@@ -123,4 +124,10 @@ export enum CarouselItemState {
     HideDown = 'hide-down',
     HideUp = 'hide-up',
     Hide = 'hide'
+}
+
+export enum NotificationComponentType {
+    Info = 'info',
+    Success = 'success',
+    Failed = 'failed'
 }

@@ -1,0 +1,17 @@
+<div class="content-container" [ngClass]="type" [ngStyle]="size">
+    <div class="illustration">
+        <div *ngIf="icon" class="icon">
+            <i [ngClass]="iconClass"></i>
+        </div>
+        <div *ngIf="imgSrc && !icon" class="image">
+            <img [src]="imgSrc">
+        </div>
+    </div>
+    <div class="message">
+        <h1 class="alert">{{title}}</h1>
+        <p>{{subTitle}}</p>
+    </div>
+    <div *ngIf="showButton" class="action-container">
+        <sfc-button text="{{buttonText || type}}" [types]="['rounded', 'filled']" (on-click)="onClick()"></sfc-button>
+    </div>
+</div>

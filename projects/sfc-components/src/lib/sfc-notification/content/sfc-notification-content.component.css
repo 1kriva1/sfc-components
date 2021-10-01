@@ -1,0 +1,94 @@
+:host() {
+    display: inline-block;
+    font-size: 62px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ILLUSTRATION */
+
+.illustration {
+    color: #fcfcfc;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7em;
+}
+
+.illustration .image img {
+    border-radius: 10px;
+}
+
+/* END ILLUSTRATION */
+
+/* MESSAGE */
+
+.message {
+    width: 100%;
+    text-align: center;
+}
+
+.message h1 {
+    font-size: 0.4em;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding-top: 5px;
+    color: #fcfcfc;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.message p {
+    margin-top: -5px;
+    font-size: 0.2em;
+    font-weight: 100;
+    color: #5e5e5e;
+    letter-spacing: 1px;
+}
+
+/* END MESSAGE */
+
+/* CLOSE BUTTON */
+
+.action-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::ng-deep sfc-button .sfc-button.filled {
+    background: #fcfcfc !important;
+    border: solid 2px #fcfcfc !important;
+}
+
+::ng-deep sfc-button .sfc-button.filled:hover {
+    background: #efefef !important;
+    border-color: #efefef !important;
+    transform: scale(1.05);
+}
+
+/* END CLOSE BUTTON */
+
+/* TYPES */
+
+.content-container.info ::ng-deep sfc-button .sfc-button.filled {
+    color: #4FC1E9 !important;
+}
+
+.content-container.success ::ng-deep sfc-button .sfc-button.filled {
+    color: #4ec07d !important;
+}
+
+.content-container.failed ::ng-deep sfc-button .sfc-button.filled {
+    color: #e96075 !important;
+}
+
+/* END TYPES */

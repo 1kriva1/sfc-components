@@ -1,0 +1,43 @@
+:host() {
+    display: inline-block;
+}
+
+.notification-box {
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #CCD1D9;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* CLOSE NOTIFICATION */
+
+.close-container {
+    color: #F5F7FA;
+    align-self: end;
+    cursor: pointer;
+}
+
+.close-container:hover {
+    color: #fff;
+}
+
+/* END CLOSE NOTIFICATION */
+
+/* TYPES */
+
+.notification-container.info .notification-box {
+    background: linear-gradient(to bottom right, #4FC1E9 40%, #4A89DC 100%);
+}
+
+.notification-container.success .notification-box {
+    background: linear-gradient(to bottom right, #b0db7d 40%, #99dbb4 100%);
+}
+
+.notification-container.failed .notification-box {
+    background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%);
+}
+
+/* END TYPES */

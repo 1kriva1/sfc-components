@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ButtonType, CommonConstants, ComponentSize, StyleClass } from '../common/constants/common-constants';
 import ISize from '../common/interfaces/ISize';
 import { CollectionUtils } from '../common/utils/collection-utils';
@@ -38,6 +38,8 @@ export class ButtonComponent implements OnInit {
 
     @Output('on-click') 
     onClick = new EventEmitter();
+
+    constructor(private changeDetector: ChangeDetectorRef) { }
 
     ngOnInit(): void {
         if (!CommonUtils.isDefined(this.text)) {
