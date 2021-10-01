@@ -1,0 +1,120 @@
+<div class="demo-container">
+    <h1>NOTIFICATION</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <div class="component-row">
+                <div>
+                    <sfc-notification></sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Only title"></sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Title" sub-title="with sub-title"></sfc-notification>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-notification title="Title" sub-title="sub-title" button-text="With button text">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Title + Icon" sub-title="sub-title" button-text="Button text"
+                        icon="fa fa-info">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Title + Image" sub-title="sub-title" button-text="Button text"
+                        [image-src]="'../assets/defaultImage.png'">
+                    </sfc-notification>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-notification title="Without button" sub-title="sub-title" icon="fa fa-info"
+                        [show-button]="false">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Without close" sub-title="sub-title" icon="fa fa-info" [show-close]="false"
+                        button-text="Button text">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="On close event" sub-title="sub-title" icon="fa fa-info"
+                        button-text="Button text" (on-close)="onCloseNotification()">
+                    </sfc-notification>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-notification title="Close automaticly after 5 sec" sub-title="sub-title" icon="fa fa-info"
+                        button-text="Button text" [auto-close]="true">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="On button click event" sub-title="sub-title" icon="fa fa-info"
+                        button-text="Button text" (on-button-click)="onButtonClick()">
+                    </sfc-notification>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-notification title="Small size" sub-title="sub-title" icon="fa fa-info"
+                        button-text="Button text" [custom-size]="{width: 250, height: 200}">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Medium size" sub-title="sub-title" icon="fa fa-info"
+                        button-text="Button text" [custom-size]="{width: 400, height: 250}">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Large size" sub-title="sub-title" icon="fa fa-info"
+                        button-text="Button text" [custom-size]="{width: 1200, height: 300}">
+                    </sfc-notification>
+                </div>
+            </div>
+
+            <div class="component-row">
+                <div>
+                    <sfc-notification title="Success" sub-title="sub-title" icon="fa fa-check-circle"
+                        button-text="CONTINUE" type="success" [custom-size]="{width: 400, height: 250}">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification title="Failed" sub-title="sub-title" icon="fa fa-bug" button-text="RETRY"
+                        type="failed" [custom-size]="{width: 400, height: 250}">
+                    </sfc-notification>
+                </div>
+
+                <div>
+                    <sfc-notification [custom-size]="{width: 400, height: 140}">
+                        <h1>CUSTOM NOTIFICATION CONTENT</h1>
+                    </sfc-notification>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

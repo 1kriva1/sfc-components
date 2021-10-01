@@ -1,0 +1,14 @@
+<div class="notification-container" [ngClass]="type" *ngIf="show" [@closeAnimation]>
+    <div class="notification-box">
+        <div *ngIf="showClose" class="close-container" (click)="close($event)">
+            <i class="fas fa-times"></i>
+        </div>
+        <sfc-notification-content *ngIf="customContent.children.length == 0" [type]="type" [title]="title"
+            [sub-title]="subTitle" [button-text]="buttonText" [icon]="icon" [image-src]="imgSrc"
+            [custom-size]="customSize" [show-button]="showButton" (on-button-click)="onClick()">
+        </sfc-notification-content>
+        <div #customContent>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

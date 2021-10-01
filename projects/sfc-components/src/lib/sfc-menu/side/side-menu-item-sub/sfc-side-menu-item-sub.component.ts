@@ -24,7 +24,7 @@ import BaseSideMenuItem from '../side-menu-item-base/side-menu-item-base.compone
             ])
         ]
         )
-    ],
+    ]
 })
 export class SfcSideMenuItemSubComponent extends BaseSideMenuItem {
 

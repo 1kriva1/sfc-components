@@ -16,6 +16,7 @@ import { TagsAppComponent } from 'src/tags-app/tags-app.component';
 import { DropdownMenuAppComponent } from 'src/menu-app/dropdown/dropdown-menu-app.component';
 import { CarouselAppComponent } from 'src/carousel/carousel-app.component';
 import { SliderAppComponent } from 'src/slider-app/slider-app.component';
+import { NotificationAppComponent } from 'src/notification-app/notification-app.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SliderAppComponent } from 'src/slider-app/slider-app.component';
     TagsAppComponent,
     DropdownMenuAppComponent,
     CarouselAppComponent,
-    SliderAppComponent
+    SliderAppComponent,
+    NotificationAppComponent
   ],
   imports: [
     BrowserModule,
