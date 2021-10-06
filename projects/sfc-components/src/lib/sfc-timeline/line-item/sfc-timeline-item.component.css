@@ -1,0 +1,224 @@
+/* BASE */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* END BASE */
+
+/* TIMELINE ITEM */
+
+.timeline-item {
+    padding-left: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+/* END TIMELINE ITEM */
+
+/* TIMELINE INFO */
+
+.timeline-info {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 0.5em 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* END TIMELINE INFO */
+
+/* TIMELINE MARKER */
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+}
+
+.timeline-marker:before {
+    background: #2bbbad;
+    border: 3px solid transparent;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.timeline-marker:after {
+    content: "";
+    width: 3px;
+    background: #CCD5DB;
+    display: block;
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 6px;
+}
+
+.timeline-item:not(.period):hover .timeline-marker:before {
+    background: transparent;
+    border: 3px solid #2bbbad;
+}
+
+.last-item-delimeter {
+    background: transparent;
+    display: none;
+    width: 15px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    border-bottom: 3px solid #CCD5DB;
+}
+
+/* END TIMELINE MARKER */
+
+/* TIMELINE CONTENT */
+
+.timeline-content {
+    padding-bottom: 40px;
+    cursor: pointer;
+}
+
+.timeline-content p {
+    margin: 0 0 10px;
+}
+
+.timeline-title, .timeline-content svg {
+    color: #656D78;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.timeline-content svg, .timeline-content img {
+    margin-right: 5px;
+}
+
+.timeline-content img {
+    width: 16px;
+}
+
+/* END TIMELINE CONTENT */
+
+/* TIMELINE PERIOD */
+
+.period {
+    padding: 0;
+}
+
+.period .timeline-info {
+    display: none;
+}
+
+.period .timeline-marker:before {
+    background: transparent;
+    content: "";
+    width: 15px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    top: 0;
+    bottom: 30px;
+    position: absolute;
+    border-top: 3px solid #CCD5DB;
+    border-bottom: 3px solid #CCD5DB;
+}
+
+.period .timeline-marker:after {
+    content: "";
+    height: 32px;
+    top: auto;
+}
+
+.period .timeline-content {
+    padding: 40px 0 70px;
+}
+
+.period .timeline-title {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* END TIMELINE PERIOD */
+
+/* MEDIA */
+
+@media (min-width: 992px) {
+    .timeline-item, .timeline-info, .timeline-marker, .timeline-content {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .timeline-item {
+        padding-bottom: 5px;
+        overflow: hidden;
+    }
+    .timeline-marker {
+        position: absolute;
+        left: 50%;
+        margin-left: -7.5px;
+    }
+    .timeline-info, .timeline-content {
+        width: 50%;
+    }
+    :host(.left) .timeline-item .timeline-info {
+        float: left;
+        text-align: right;
+        padding-right: 30px;
+    }
+    :host(.left) .timeline-item .timeline-content {
+        float: right;
+        text-align: left;
+        padding-left: 30px;
+    }
+    :host(.right) .timeline-item .timeline-info {
+        float: right;
+        text-align: left;
+        padding-left: 30px;
+    }
+    :host(.right) .timeline-item .timeline-content {
+        float: left;
+        text-align: right;
+        padding-right: 30px;
+    }
+    .timeline-item.period .timeline-content {
+        float: none;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .timeline-item.period {
+        padding: 50px 0 90px;
+    }
+    .period .timeline-marker:after {
+        height: 30px;
+        bottom: 0;
+        top: auto;
+    }
+    .period .timeline-title {
+        left: auto;
+    }
+}
+
+/* END MEDIA */
+
+/* END TIMELINE */

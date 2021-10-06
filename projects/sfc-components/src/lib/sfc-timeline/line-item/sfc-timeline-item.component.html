@@ -1,0 +1,14 @@
+<li class="timeline-item" [ngClass]="{'period': item.isPeriod}">
+    <div class="timeline-info">
+        <span>{{item.dateTimeLabel}}</span>
+    </div>
+    <div class="timeline-marker">
+        <div class="last-item-delimeter"></div>
+    </div>    
+    <div class="timeline-content">
+        <i *ngIf="item.icon" [ngClass]="iconClass"></i>
+        <img *ngIf="item.imgSrc && !item.icon" [src]="item.imgSrc">
+        <span class="timeline-title">{{item.title}}</span>
+        <p>{{item.description}}</p>
+    </div>
+</li>

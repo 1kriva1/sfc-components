@@ -45,6 +45,8 @@ import { SfcSliderItemComponent } from './sfc-slider/slider-item/sfc-slider-item
 import { SfcNotificationComponent } from './sfc-notification/sfc-notification.component';
 import { SfcNotificationContentComponent } from './sfc-notification/content/sfc-notification-content.component';
 import { SfcAlertComponent } from './common/components/alert/sfc-alert.component';
+import { SfcTimeLineComponent } from './sfc-timeline/sfc-timeline.component';
+import { SfcTimeLineItemComponent } from './sfc-timeline/line-item/sfc-timeline-item.component';
 
 
 @NgModule({
@@ -90,7 +92,9 @@ import { SfcAlertComponent } from './common/components/alert/sfc-alert.component
     SfcSliderItemComponent,
     SfcNotificationComponent,
     SfcNotificationContentComponent,
-    SfcAlertComponent
+    SfcAlertComponent,
+    SfcTimeLineComponent,
+    SfcTimeLineItemComponent
   ],
   imports: [
     CommonModule,
@@ -119,7 +123,9 @@ import { SfcAlertComponent } from './common/components/alert/sfc-alert.component
     SfcSliderComponent,
     SfcNotificationComponent,
     SfcNotificationContentComponent,
-    SfcAlertComponent
+    SfcAlertComponent,
+    SfcTimeLineComponent,
+    SfcTimeLineItemComponent
   ],
   entryComponents: [SfcCarouselItemDefaultComponent, SfcCarouselItemAvatarComponent]
 })
