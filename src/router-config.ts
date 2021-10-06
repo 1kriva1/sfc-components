@@ -12,6 +12,7 @@ import { SliderAppComponent } from "./slider-app/slider-app.component";
 import { StarsAppComponent } from "./stars-app/stars-app.component";
 import { TabAppComponent } from "./tab-app/tab-app.component";
 import { TagsAppComponent } from "./tags-app/tags-app.component";
+import { TimeLineAppComponent } from "./timeline-app/timeline-app.component";
 
 const indexRoute: Route = {
     path: "",
@@ -75,6 +76,10 @@ export const routeConfig = [
     {
         path: 'notification-app',
         component: NotificationAppComponent
+    },
+    {
+        path: 'timeline-app',
+        component: TimeLineAppComponent
     },
     fallbackRoute,
     indexRoute

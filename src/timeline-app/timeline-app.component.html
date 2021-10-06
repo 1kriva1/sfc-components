@@ -1,0 +1,41 @@
+<div class="demo-container">
+    <h1>TIMELINE</h1>
+    <div class="theme-switcher">
+        <button (click)="changeTheme('common')">Common</button>
+        <button (click)="changeTheme('dark')">Dark</button>
+    </div>
+
+    <div class="background"
+        [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+        <div class="component-container">
+
+            <div class="component-row">
+                <div>
+                    <sfc-timeline></sfc-timeline>
+                </div>
+                <div>
+                    <sfc-timeline [config]="configFirstHalfOnly"></sfc-timeline>
+                </div>
+                <div>
+                    <sfc-timeline [config]="configSecondHalfOnly"></sfc-timeline>
+                </div>
+            </div>
+            <div class="component-row">
+                <div>
+                    <sfc-timeline [config]="configNothingHappened"></sfc-timeline>
+                </div>
+                <div>
+                    <sfc-timeline [config]="configEmpty"></sfc-timeline>
+                </div>
+                <div>
+                    <sfc-timeline [config]="config"></sfc-timeline>
+                </div>
+            </div>
+            <div class="component-row">
+                <div>
+                    <sfc-timeline [config]="configFull"></sfc-timeline>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

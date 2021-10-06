@@ -1,0 +1,7 @@
+:host-context(.sfc-component-dark-theme) .timeline-title, :host-context(.sfc-component-dark-theme) .timeline-content svg {
+    color: #F5F7FA;
+}
+
+:host-context(.sfc-component-dark-theme) .timeline-item:not(.period):hover .timeline-marker:before {
+    background: #F5F7FA;
+}

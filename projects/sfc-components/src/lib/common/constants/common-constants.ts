@@ -131,3 +131,8 @@ export enum NotificationComponentType {
     Success = 'success',
     Failed = 'failed'
 }
+
+export enum TimeLinePosition {
+    Left = 'left',
+    Right = 'right'
+}

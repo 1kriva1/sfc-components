@@ -17,6 +17,7 @@ import { DropdownMenuAppComponent } from 'src/menu-app/dropdown/dropdown-menu-ap
 import { CarouselAppComponent } from 'src/carousel/carousel-app.component';
 import { SliderAppComponent } from 'src/slider-app/slider-app.component';
 import { NotificationAppComponent } from 'src/notification-app/notification-app.component';
+import { TimeLineAppComponent } from 'src/timeline-app/timeline-app.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NotificationAppComponent } from 'src/notification-app/notification-app.
     DropdownMenuAppComponent,
     CarouselAppComponent,
     SliderAppComponent,
-    NotificationAppComponent
+    NotificationAppComponent,
+    TimeLineAppComponent
   ],
   imports: [
     BrowserModule,
