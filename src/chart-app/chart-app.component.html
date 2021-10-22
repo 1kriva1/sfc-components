@@ -1,0 +1,248 @@
+<div class="demo-container">
+  <h1>CHART</h1>
+  <div class="theme-switcher">
+    <button (click)="changeTheme('common')">Common</button>
+    <button (click)="changeTheme('dark')">Dark</button>
+  </div>
+
+  <div class="background"
+    [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+    <div class="component-container">
+
+      <hr>
+      <h3>Line:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart></sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'line'" [data-sets]="lineChartData" [legend]="false" [labels]="lineChartLabels"
+            [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'line'" [data-sets]="lineChartData1" [legend]="true" [grid-lines]="false"
+            [labels]="lineChartLabels" [colors]="lineChartColors" [size]="{width: 400, height:300}" [theme]="theme">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'line'" [data-sets]="lineChartSeveralData" [ticks]="false" [labels]="lineChartLabels"
+            [size]="{width: 400, height:300}" [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'line'" [data-sets]="lineChartSeveralData" [tooltip]="false" [labels]="lineChartLabels"
+            [size]="{width: 400, height:300}" [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'line'" [data-sets]="lineChartColorsData" [labels]="lineChartLabels" [theme]="theme"
+            [custom-colors]="true" [options]="lineChartOptions" [size]="{width: 1000, height:700}">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <hr>
+      <h3>Bar:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'bar'" [data-sets]="barChartData" [legend]="false" [labels]="barChartLabels"
+            [theme]="theme" [colors]="barChartColors">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'bar'" [data-sets]="barChartSeveralData" [legend]="true" [grid-lines]="false"
+            [labels]="barChartLabels" [size]="{width: 400, height:300}" [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'bar'" [data-sets]="barChartSeveralData" [ticks]="false" [labels]="barChartLabels"
+            [theme]="theme">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'bar'" [data-sets]="barChartSeveralData" [tooltip]="false" [labels]="barChartLabels"
+            [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'bar'" [data-sets]="barChartColorsData" [labels]="barChartLabels" [theme]="theme"
+            [custom-colors]="true" [options]="barChartOptions" [size]="{width: 1000, height:700}">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <hr>
+      <h3>Doughnut:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'doughnut'" [data-sets]="doughnutChartData" [legend]="false" [labels]="doughnutChartLabels"
+            [theme]="theme" [colors]="doughnutChartColors">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'doughnut'" [data-sets]="doughnutChartSeveralData" [legend]="true" [grid-lines]="false"
+            [labels]="doughnutChartLabels" [size]="{width: 400, height:300}" [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'doughnut'" [data-sets]="doughnutChartSeveralData" [ticks]="false"
+            [labels]="doughnutChartLabels" [theme]="theme">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'doughnut'" [data-sets]="doughnutChartSeveralData" [tooltip]="false"
+            [labels]="doughnutChartLabels" [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'doughnut'" [data-sets]="doughnutChartColorsData" [legend]="true"
+            [labels]="doughnutChartColorsLabels" [options]="doughnutChartOptions" [theme]="theme" [custom-colors]="true"
+            [size]="{width: 1000, height:700}">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <hr>
+      <h3>Pie:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'pie'" [data]="pieChartData" [legend]="false" [labels]="pieChartLabels" [theme]="theme"
+            [colors]="pieChartColors">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'pie'" [data]="pieChartSeveralData" [legend]="true" [grid-lines]="false"
+            [labels]="pieChartLabels" [theme]="theme" [size]="{width: 400, height:300}">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'pie'" [data]="pieChartSeveralData" [ticks]="false" [labels]="pieChartLabels"
+            [theme]="theme">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'pie'" [data]="pieChartSeveralData" [tooltip]="false" [labels]="pieChartLabels"
+            [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'pie'" [data]="pieChartColorsData" [labels]="pieChartColorsLabels"
+            [options]="pieChartOptions" [theme]="theme" [custom-colors]="true" [size]="{width: 1000, height:700}">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <hr>
+      <h3>Radar:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'radar'" [data-sets]="radarChartData" [legend]="false" [colors]="radarChartColors"
+            [labels]="radarChartLabels" [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'radar'" [data-sets]="radarChartSeveralData" [legend]="true" [grid-lines]="false"
+            [labels]="radarChartLabels" [theme]="theme" [size]="{width: 400, height:300}">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'radar'" [data-sets]="radarChartSeveralData" [ticks]="false" [labels]="radarChartLabels"
+            [theme]="theme">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'radar'" [data-sets]="radarChartSeveralData" [tooltip]="false" [labels]="radarChartLabels"
+            [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'radar'" [data-sets]="radarChartColorsData" [legend]="true"
+            [labels]="radarChartColorsLabels" [options]="radarChartOptions" [theme]="theme" [custom-colors]="true"
+            [size]="{width: 1000, height:700}">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <hr>
+      <h3>Polar:</h3>
+      <hr>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'polarArea'" [data]="polarAreaChartData" [legend]="false" [labels]="polarAreaChartLabels"
+            [theme]="theme" [colors]="polarAreaChartColors">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'polarArea'" [data]="polarAreaChartSeveralData" [legend]="true" [grid-lines]="false"
+            [labels]="polarAreaChartLabels" [theme]="theme" [size]="{width: 400, height:300}">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'polarArea'" [data]="polarAreaChartSeveralData" [ticks]="false"
+            [labels]="polarAreaChartLabels" [theme]="theme">
+          </sfc-chart>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div>
+          <sfc-chart [type]="'polarArea'" [data]="polarAreaChartSeveralData" [tooltip]="false"
+            [labels]="polarAreaChartLabels" [theme]="theme">
+          </sfc-chart>
+        </div>
+
+        <div>
+          <sfc-chart [type]="'polarArea'" [data]="polarAreaChartColorsData" [labels]="polarAreaChartColorsLabels"
+            [options]="polarAreaChartOptions" [theme]="theme" [custom-colors]="true" [size]="{width: 1000, height:700}">
+          </sfc-chart>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

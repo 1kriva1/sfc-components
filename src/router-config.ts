@@ -2,6 +2,7 @@ import { Route } from "@angular/router";
 import { AvatarAppComponent } from "./avatar-app/avatar-app.component";
 import { ButtonAppComponent } from "./button-app/button-app.component";
 import { CarouselAppComponent } from "./carousel/carousel-app.component";
+import { ChartAppComponent } from "./chart-app/chart-app.component";
 import { DropdownMenuAppComponent } from "./menu-app/dropdown/dropdown-menu-app.component";
 import { NavigationMenuAppComponent } from "./menu-app/navigation/navigation-menu-app.component";
 import { SideMenuAppComponent } from "./menu-app/side/side-menu-app.component";
@@ -81,6 +82,10 @@ export const routeConfig = [
         path: 'timeline-app',
         component: TimeLineAppComponent
     },
+    {
+      path: 'chart-app',
+      component: ChartAppComponent
+  },
     fallbackRoute,
     indexRoute
 ];

@@ -1,4 +1,5 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import { ChartsModule, ThemeService } from 'ng2-charts';
 import { CommonModule } from '@angular/common';
 import { SfcTabPanelComponent } from './sfc-tabs/sfc-tab-panel.component';
 import { SfcModalComponent } from './sfc-modal/sfc-modal.component';
@@ -47,6 +48,7 @@ import { SfcNotificationContentComponent } from './sfc-notification/content/sfc-
 import { SfcAlertComponent } from './common/components/alert/sfc-alert.component';
 import { SfcTimeLineComponent } from './sfc-timeline/sfc-timeline.component';
 import { SfcTimeLineItemComponent } from './sfc-timeline/line-item/sfc-timeline-item.component';
+import { SfcChartComponent } from './sfc-chart/sfc-chart.component';
 
 
 @NgModule({
@@ -94,12 +96,14 @@ import { SfcTimeLineItemComponent } from './sfc-timeline/line-item/sfc-timeline-
     SfcNotificationContentComponent,
     SfcAlertComponent,
     SfcTimeLineComponent,
-    SfcTimeLineItemComponent
+    SfcTimeLineItemComponent,
+    SfcChartComponent
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ChartsModule
   ],
   exports: [ButtonComponent, SfcLineTabComponent, SfcIconTabComponent, SfcTabItemComponent,
     SfcTabLabelComponent,
@@ -125,7 +129,8 @@ import { SfcTimeLineItemComponent } from './sfc-timeline/line-item/sfc-timeline-
     SfcNotificationContentComponent,
     SfcAlertComponent,
     SfcTimeLineComponent,
-    SfcTimeLineItemComponent
+    SfcTimeLineItemComponent,
+    SfcChartComponent
   ],
   entryComponents: [SfcCarouselItemDefaultComponent, SfcCarouselItemAvatarComponent]
 })
@@ -134,7 +139,7 @@ export class SfcComponentsModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SfcComponentsModule,
-      providers: [SfcModalService]
+      providers: [SfcModalService, ThemeService]
     }
   }
 }
