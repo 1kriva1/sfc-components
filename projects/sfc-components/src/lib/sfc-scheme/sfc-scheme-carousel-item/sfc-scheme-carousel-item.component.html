@@ -1,0 +1,10 @@
+<div class="scheme-item-container" [ngClass]="{'selected': config.selected}" (click)="onClick()">
+    <div class="formation-title">
+        <span>{{config.formation | sfcSchemeCarouselFormationPipe}}</span>
+    </div>
+    <div *ngFor="let line of config.formation" class="line-container">    
+        <div *ngFor="let value of [].constructor(line)" class="line">
+            <sfc-scheme-carousel-dot></sfc-scheme-carousel-dot>
+        </div>
+    </div>
+</div>

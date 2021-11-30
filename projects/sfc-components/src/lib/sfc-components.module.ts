@@ -40,7 +40,6 @@ import { SfcDelimeterComponent } from './common/components/delimeter/sfc-delimet
 import { SfcCarouselItemAvatarComponent } from './sfc-carousel/carousel-items/avatars/sfc-carousel-item-avatar.component';
 import { SfcCarouselItemDefaultComponent } from './sfc-carousel/carousel-items/default/sfc-carousel-item-default.component';
 import SfcCarouselItemComponent from './sfc-carousel/carousel-items/sfc-carousel-item.component';
-import { SfcCarouselComponent } from './sfc-carousel/sfc-carousel.component';
 import { SfcSliderComponent } from './sfc-slider/sfc-slider.component';
 import { SfcSliderItemComponent } from './sfc-slider/slider-item/sfc-slider-item.component';
 import { SfcNotificationComponent } from './sfc-notification/sfc-notification.component';
@@ -49,6 +48,25 @@ import { SfcAlertComponent } from './common/components/alert/sfc-alert.component
 import { SfcTimeLineComponent } from './sfc-timeline/sfc-timeline.component';
 import { SfcTimeLineItemComponent } from './sfc-timeline/line-item/sfc-timeline-item.component';
 import { SfcChartComponent } from './sfc-chart/sfc-chart.component';
+import { SfcSchemeComponent } from './sfc-scheme/sfc-scheme.component';
+import { StageComponent } from './sfc-carousel/sfc-owl-carousel/stage/sfc-owl-carousel-stage.component';
+import { SfcOwlCarouselComponent } from './sfc-carousel/sfc-owl-carousel/sfc-owl-carousel.component';
+import { ResizeService } from './common/services/resize.service';
+import { WINDOW_PROVIDERS } from './common/services/window-ref.service';
+import { DOCUMENT_PROVIDERS } from './common/services/document-ref.service';
+import { SfcCarouselComponent } from './sfc-carousel/sfc-common-carousel/sfc-carousel.component';
+import { SfcSchemeCarouselItemComponent } from './sfc-scheme/sfc-scheme-carousel-item/sfc-scheme-carousel-item.component';
+import { SfcCarouselSlideDirective } from './sfc-carousel/sfc-owl-carousel/slide/sfc-carousel-slide.directive';
+import { SfcSchemeCarouselDotComponent } from './sfc-scheme/sfc-scheme-carousel-item/sfc-scheme-dot/sfc-scheme-carousel-dot.component';
+import { SfcSchemeCarouselFormationPipePipe } from './sfc-scheme/sfc-scheme-carousel-item/sfc-scheme-carousel-formation-pipe/sfc-scheme-carousel-formation-pipe.pipe';
+import { SfcSchemePlayerPointComponent } from './sfc-scheme/sfc-scheme-player/sfc-scheme-player-point/sfc-scheme-player-point.component';
+import { SfcSchemeModalBodyComponent } from './sfc-scheme/sfc-scheme-modal/sfc-scheme-modal-body/sfc-scheme-modal-body.component';
+import { SfcSchemePlayerBadgeComponent } from './sfc-scheme/sfc-scheme-player/sfc-scheme-player-badge/sfc-scheme-player-badge.component';
+
+import { SfcSchemePlayerComponent } from './sfc-scheme/sfc-scheme-player/sfc-scheme-player/sfc-scheme-player.component';
+import { AdHostDirective } from './common/directives/ad-host/ad-host.directive';
+import { ThrowElementOnHoverDirective } from './common/directives/throw-element/throw-element-on-hover.directive';
+import { ShowHideElementDirective } from './common/directives/show-hide-element/show-hide-element.directive';
 
 
 @NgModule({
@@ -97,7 +115,14 @@ import { SfcChartComponent } from './sfc-chart/sfc-chart.component';
     SfcAlertComponent,
     SfcTimeLineComponent,
     SfcTimeLineItemComponent,
-    SfcChartComponent
+    SfcChartComponent,
+    SfcSchemeComponent,
+    SfcOwlCarouselComponent, 
+    SfcCarouselSlideDirective, 
+    StageComponent, 
+    SfcSchemeCarouselItemComponent, 
+    SfcSchemeCarouselDotComponent, SfcSchemeCarouselFormationPipePipe, SfcSchemePlayerPointComponent, SfcSchemeModalBodyComponent, SfcSchemePlayerBadgeComponent, 
+    AdHostDirective, SfcSchemePlayerComponent, ThrowElementOnHoverDirective, ShowHideElementDirective
   ],
   imports: [
     CommonModule,
@@ -130,7 +155,11 @@ import { SfcChartComponent } from './sfc-chart/sfc-chart.component';
     SfcAlertComponent,
     SfcTimeLineComponent,
     SfcTimeLineItemComponent,
-    SfcChartComponent
+    SfcChartComponent,
+    SfcSchemeComponent,
+    SfcOwlCarouselComponent, 
+    SfcCarouselSlideDirective,
+    SfcSchemeCarouselItemComponent
   ],
   entryComponents: [SfcCarouselItemDefaultComponent, SfcCarouselItemAvatarComponent]
 })
@@ -139,7 +168,7 @@ export class SfcComponentsModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SfcComponentsModule,
-      providers: [SfcModalService, ThemeService]
+      providers: [SfcModalService, ThemeService, ResizeService, WINDOW_PROVIDERS, DOCUMENT_PROVIDERS]
     }
   }
 }

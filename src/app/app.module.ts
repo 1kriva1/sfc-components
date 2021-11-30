@@ -19,6 +19,7 @@ import { SliderAppComponent } from 'src/slider-app/slider-app.component';
 import { NotificationAppComponent } from 'src/notification-app/notification-app.component';
 import { TimeLineAppComponent } from 'src/timeline-app/timeline-app.component';
 import { ChartAppComponent } from 'src/chart-app/chart-app.component';
+import { SchemeAppComponent } from 'src/scheme-app/scheme-app.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ChartAppComponent } from 'src/chart-app/chart-app.component';
     SliderAppComponent,
     NotificationAppComponent,
     TimeLineAppComponent,
-    ChartAppComponent
+    ChartAppComponent,
+    SchemeAppComponent
   ],
   imports: [
     BrowserModule,

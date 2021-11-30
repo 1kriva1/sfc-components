@@ -1,0 +1,10 @@
+<div class="badge yellow" [throwElementOnHover]="-4">
+    <span class="position">- {{data.position}} -</span>
+    <span *ngIf="data.isCaptain" class="captain"><i class="fa fa-copyright"></i></span>
+    <div class="circle" style.background-image="url('{{data.photo}}')">
+    </div>
+    <div class="ribbon">
+        <span class="raiting">{{data.raiting}}</span>
+        <span class="name">{{data.firstName[0]}}. {{data.lastName}}</span>
+    </div>
+</div>

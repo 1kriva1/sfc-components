@@ -1,0 +1,144 @@
+:host {
+  display: inline-block;
+}
+
+.container {
+  /* width: 800px; */
+
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  width: 800px;
+}
+
+.arbitrarily-container{
+  width:500px;
+  visibility: hidden;
+  background: radial-gradient(closest-side, #464242, #1d1c1c);
+}
+
+.scheme-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #1d1c1c; */
+  border-radius: 1px;
+  background: radial-gradient(closest-side, #464242, #1d1c1c);
+  position: relative;
+  width: 100%;
+}
+
+.field {
+  background: url(../../assets/football_field_12.jpg) 100% 100% no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 510px;
+  width: inherit;
+  position: relative;
+}
+
+.formation-carousel {
+  background: #2a2727;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  width: inherit;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  background: #fff;
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.header-content {
+  width: inherit;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.header-content span {
+  margin: 0 20px;
+}
+
+.team-name {
+  font-size: 17px;
+  font-weight: bold;
+  color: #F5F7FA;
+}
+
+.carousel {
+  width: 90%;
+}
+
+.carousel-move-container {
+  color: #435a29;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.carousel-move-container:hover {
+  color: #6b8d45;
+}
+
+.formation-title {
+  background: #242222;
+  color: #CCD1D9;
+}
+
+.formation-title span {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 7px 0 7px 20px;
+}
+
+/* sfc-scheme-player-point{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+} */
+
+.line-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.line {
+  display: inline-block;
+}
+
+.field-players {
+  position: absolute;
+  width: inherit;
+  height: calc(100% - 245px);
+  margin-top: 145px;
+}
+
+sfc-dropdown-menu {
+  display: block;
+}
+
+::ng-deep .header-actions sfc-dotted .circle {
+  background: #F5F7FA !important;
+}
+
+::ng-deep .header-actions .dot-container:hover sfc-dotted .circle {
+  background: #CCD1D9 !important;
+}

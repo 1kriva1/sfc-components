@@ -1,0 +1,6 @@
+<ng-container [ngSwitch]="type">
+    <div (click)="onClick()">
+        <sfc-scheme-player-point *ngSwitchCase="'point'"></sfc-scheme-player-point>
+        <sfc-scheme-player-badge *ngSwitchCase="'badge'" [data]="data"></sfc-scheme-player-badge>
+    </div>
+</ng-container>
