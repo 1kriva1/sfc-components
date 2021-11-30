@@ -1,11 +1,12 @@
 import { AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, ComponentFactoryResolver, ComponentRef, HostBinding, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { ComponentMovementType, PositionType, CommonConstants, ComponentSize } from '../common/constants/common-constants';
-import ISize from '../common/interfaces/ISize';
-import ICarouselConfig from '../common/interfaces/sfc-carousel/ICarouselConfig';
-import { CollectionUtils } from '../common/utils/collection-utils';
-import { CommonUtils } from '../common/utils/common-utils';
-import { UIUtils } from '../common/utils/ui-utils';
-import { SfcCarouselItemDefaultComponent } from './carousel-items/default/sfc-carousel-item-default.component';
+import { CommonConstants, ComponentMovementType, ComponentSize, PositionType } from '../../common/constants/common-constants';
+import ISize from '../../common/interfaces/ISize';
+import ICarouselConfig from '../../common/interfaces/sfc-carousel/ICarouselConfig';
+import { CollectionUtils } from '../../common/utils/collection-utils';
+import { CommonUtils } from '../../common/utils/common-utils';
+import { UIUtils } from '../../common/utils/ui-utils';
+import { SfcCarouselItemDefaultComponent } from '../carousel-items/default/sfc-carousel-item-default.component';
+
 
 
 @Component({

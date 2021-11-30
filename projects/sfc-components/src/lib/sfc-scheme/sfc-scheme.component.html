@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="inner-container">
+    <div class="main-container">
+      <div class="scheme-container">
+        <div class="header">
+  
+        </div>
+        <div class="header-content">
+          <span class="team-name">
+            Team name
+          </span>
+          <span class="header-actions">
+            <sfc-dropdown-menu [config]="schemeActionsMenuConfig" (on-select)="onSelectSchemeType($event)">
+            </sfc-dropdown-menu>
+          </span>
+        </div>
+  
+        <div class="field">
+  
+          <div class="field-players">
+            <div *ngFor="let line of playerFormations; let i = index" class="line-container" [ngStyle]="lineStyle(i)">
+              <div *ngFor="let value of line; let x = index" class="line">
+                <sfc-scheme-player (on-add)="onAddPlayer(i, x, value)" [data]="value.data"></sfc-scheme-player>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="field-formation">
+        <div class="formation-title">
+          <span>Formation</span>
+        </div>
+        <div class="formation-carousel">
+  
+          <div class="carousel-move-container" (click)="owlCar.prev()">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+  
+          <div class="carousel">
+            <sfc-owl-carousel [options]="customOptions" #owlCar>
+  
+              <ng-container *ngFor="let item of carouselFormations">
+                <ng-template carouselSlide>
+                  <sfc-scheme-carousel-item [config]="item" (on-select)="selectFormation(item)">
+                  </sfc-scheme-carousel-item>
+                </ng-template>
+              </ng-container>
+  
+            </sfc-owl-carousel>
+          </div>
+  
+          <div class="carousel-move-container" (click)="owlCar.next()">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    <div  [showHideElement]="type == 'arbitrarily'" class="arbitrarily-container">
+      type
+    </div>
+  </div>
+ 
+
+  <sfc-modal #modal id="defaultModalHeaderConfigOnlyText" *modal-open-on-click="playerPoints"
+    [default-header-config]="{text: modalTitleText, icon:'', showCloseIcon: true}"
+    [default-footer-config]="{onOk: onModalOk.bind(this), okButton:true, cancelButton: true}">
+    <ng-container body>
+      <sfc-scheme-modal-body></sfc-scheme-modal-body>
+    </ng-container>
+  </sfc-modal>
+</div>

@@ -1,0 +1,15 @@
+<p>sfc-scheme-modal-body works! {{schemeModalService.modalData.line}}: {{schemeModalService.modalData.index}}</p>
+
+<div *ngIf="schemeModalService.selectedData">
+    {{schemeModalService.selectedData.firstName}} - {{schemeModalService.selectedData.lastName}}
+</div>
+
+<div *ngIf="!schemeModalService.selectedData">
+    <div *ngFor="let value of [].constructor(4); let x = index" class="line" (click)="onChoosePlayer(x)">
+        {{x}}
+    </div>
+</div>
+
+<div (click)="onClear()">
+    CLEAR
+</div>

@@ -23,6 +23,15 @@ export class CollectionUtils {
         return null;
     }
 
+    public static getItems<T>(collection: Array<T>, predicate: (item: T) => boolean): Array<T> {
+        if (CollectionUtils.any(collection)) {
+            let value = collection.filter(predicate);
+            return value;
+        }
+
+        return null;
+    }
+
     public static firstItem<T>(collection: Array<T>): T {
         if (CommonUtils.isDefined(collection) && collection.length > 0) {
             return collection[0];

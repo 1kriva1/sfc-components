@@ -141,3 +141,13 @@ export enum TimeLinePosition {
   Left = 'left',
   Right = 'right'
 }
+
+export enum SchemePlayerPointType {
+  Point = 'point',
+  Badge = 'badge'
+}
+
+export enum SchemeType {
+  Formation = 'formation',
+  Arbitrarily = 'arbitrarily'
+}

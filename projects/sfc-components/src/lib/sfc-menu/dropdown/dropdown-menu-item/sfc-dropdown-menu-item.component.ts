@@ -27,4 +27,9 @@ export class SfcDropdownMenuItemComponent implements OnInit {
 
         return classes;
     }
+
+    onClick(){
+        if(this.item.onClick)
+        this.item.onClick();
+    }
 }

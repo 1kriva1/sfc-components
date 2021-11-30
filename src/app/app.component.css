@@ -111,3 +111,10 @@ margin: 0 10px 0 10px;
 }
 
 /* ROUTER END */
+
+.slider{
+  height: 60px;
+  border-right: 1px solid #fff;
+  background-color: red;
+  text-align: center;
+}

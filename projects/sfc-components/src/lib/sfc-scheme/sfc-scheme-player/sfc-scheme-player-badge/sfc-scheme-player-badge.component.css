@@ -1,0 +1,122 @@
+:host {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.badge {
+    position: relative;
+    /* margin: 1.5em 3em; */
+    width: 2.4em;
+    /*SIZE*/
+    height: 3.72em;
+    /*SIZE*/
+    border-radius: 6px;
+    /*SIZE*/
+    display: inline-block;
+    top: 0;
+    transition: all 0.2s ease;
+
+}
+
+.badge:before, .badge:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.badge:before {
+    transform: rotate(60deg);
+}
+
+.badge:after {
+    transform: rotate(-60deg);
+}
+
+.badge span.position {
+    width: 100%;
+}
+
+.badge>span {
+    z-index: 11;
+    color: #434A54;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.badge span.captain {
+    top: 40%;
+    right: -68%;
+    color: #434A54;
+}
+
+.badge .ribbon span.raiting {
+    color: #ffb300;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 9px;
+    border: 1px solid #F5F7FA;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 3px;
+}
+
+.badge .circle {
+    width: 40px;
+    /*SIZE*/
+    height: 40px;
+    /*SIZE*/
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.badge .ribbon {
+    position: absolute;
+    border-radius: 4px;
+    padding: 2px 5px 2px;
+    width: 70px;
+    /*SIZE*/
+    z-index: 11;
+    color: #fff;
+    bottom: 2px;
+    /*SIZE*/
+    left: 50%;
+    margin-left: -40px;
+    /*SIZE*/
+    /* height: 7px; */
+    /*SIZE*/
+    font-size: 7px;
+    /*SIZE*/
+    box-shadow: 0 1px 2px rgb(0 0 0 / 27%);
+    text-shadow: 0 2px 2px rgb(0 0 0 / 10%);
+    text-transform: uppercase;
+    background: linear-gradient(to bottom right, #555 0%, #333 100%);
+    text-align: center;
+}
+
+.yellow {
+    background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+    color: #ffb300;
+}
