@@ -1,11 +1,11 @@
 import { TestBed, ComponentFixture, async, fakeAsync, tick, flush, discardPeriodicTasks } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { SfcCarouselComponent } from './sfc-carousel.component';
-import { SfcComponentsModule } from '../sfc-components.module';
-import { ButtonType, ComponentMovementType, CommonConstants, ComponentSize, PositionType } from '../common/constants/common-constants';
-import { SfcCarouselItemDefaultComponent } from './carousel-items/default/sfc-carousel-item-default.component';
 import { By } from '@angular/platform-browser';
-import { SfcCarouselItemAvatarComponent } from './carousel-items/avatars/sfc-carousel-item-avatar.component';
+import { SfcComponentsModule } from '../../sfc-components.module';
+import { ButtonType, CommonConstants, ComponentMovementType, ComponentSize, PositionType } from '../../common/constants/common-constants';
+import { SfcCarouselItemDefaultComponent } from '../carousel-items/default/sfc-carousel-item-default.component';
+import { SfcCarouselItemAvatarComponent } from '../carousel-items/avatars/sfc-carousel-item-avatar.component';
 
 describe('Component: SfcCarouselComponent', () => {
 

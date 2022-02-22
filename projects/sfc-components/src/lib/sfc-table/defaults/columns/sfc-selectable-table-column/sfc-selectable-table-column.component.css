@@ -1,0 +1,24 @@
+:host {
+    display: inline-block;
+}
+
+.column {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.6);
+    transition: color 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.column.active .label, .column:hover {
+    color: #434A54;
+}
+
+.label {
+    padding-left: 5px;
+}

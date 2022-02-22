@@ -1,0 +1,13 @@
+<div [class.checked]="value">
+    <label class="switch">
+        <span class="switch-container">
+            <div class="icon checked">
+                <i *ngIf="config.checkedItem.icon" class="{{config.checkedItem.icon}}"></i>
+            </div>
+            <div class="icon unchecked">
+                <i *ngIf="config.uncheckedItem.icon" class="{{config.uncheckedItem.icon}}"></i>
+            </div>
+            <strong>{{label}}</strong>
+        </span>
+    </label>
+</div>

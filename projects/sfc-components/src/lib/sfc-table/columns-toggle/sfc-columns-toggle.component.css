@@ -1,0 +1,47 @@
+:host {
+    display: flex;
+    align-items: center;
+}
+
+/* CONTAINER */
+
+.columns-toggle-container {
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #969696;
+    width: 100%;
+    text-align: end;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.columns-toggle-container:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media all and (max-width: 767px) {
+    .columns-toggle-container {
+        display: block;
+    }
+}
+
+/* END CONTAINER */
+
+/* ICONS */
+
+.columns-toggle-container span.icon{
+    position: absolute;
+}
+
+/* END ICONS */
+
+/* LABEL */
+
+.columns-toggle-container span.label {
+    padding-left: 15px;
+}
+
+/* LABEL */

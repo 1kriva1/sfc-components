@@ -13,6 +13,7 @@ import { SchemeAppComponent } from "./scheme-app/scheme-app.component";
 import { SliderAppComponent } from "./slider-app/slider-app.component";
 import { StarsAppComponent } from "./stars-app/stars-app.component";
 import { TabAppComponent } from "./tab-app/tab-app.component";
+import { TableAppComponent } from "./table-app/table-app.component";
 import { TagsAppComponent } from "./tags-app/tags-app.component";
 import { TimeLineAppComponent } from "./timeline-app/timeline-app.component";
 
@@ -84,12 +85,16 @@ export const routeConfig = [
         component: TimeLineAppComponent
     },
     {
-      path: 'chart-app',
-      component: ChartAppComponent
+        path: 'chart-app',
+        component: ChartAppComponent
     },
     {
-      path: 'scheme-app',
-      component: SchemeAppComponent
+        path: 'scheme-app',
+        component: SchemeAppComponent
+    },
+    {
+        path: 'table-app',
+        component: TableAppComponent
     },
     fallbackRoute,
     indexRoute

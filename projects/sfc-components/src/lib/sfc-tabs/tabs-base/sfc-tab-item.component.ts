@@ -2,6 +2,7 @@ import {
   Component,
   Input,
   ContentChild,
+  forwardRef,
 } from "@angular/core";
 import { SfcTabBodyComponent } from "./sfc-tab-body.component";
 import { SfcTabLabelComponent } from "./sfc-tab-label.component";
@@ -20,9 +21,9 @@ export class SfcTabItemComponent {
   @Input()
   disabled: boolean;
 
-  @ContentChild(SfcTabBodyComponent, { static: false })
+  @ContentChild(forwardRef(() => SfcTabBodyComponent), { static: false })
   bodyComponent: SfcTabBodyComponent;
 
-  @ContentChild(SfcTabLabelComponent, { static: false })
+  @ContentChild(forwardRef(() => SfcTabLabelComponent), { static: false })
   labelComponent: SfcTabLabelComponent;
 }

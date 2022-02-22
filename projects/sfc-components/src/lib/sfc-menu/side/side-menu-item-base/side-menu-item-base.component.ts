@@ -1,9 +1,9 @@
-import { HostBinding, Input, OnInit } from "@angular/core";
+import { Component, Directive, HostBinding, Input, OnInit } from "@angular/core";
 import { SideMenuType, StyleClass } from "../../../common/constants/common-constants";
 import ISideMenuItem from "../../../common/interfaces/sfc-menu/side/ISideMenuItem";
 import { CommonUtils } from "../../../common/utils/common-utils";
 
-export default abstract class BaseSideMenuItem implements OnInit {
+export class BaseSideMenuItem implements OnInit {
     @Input()
     item: ISideMenuItem;
 

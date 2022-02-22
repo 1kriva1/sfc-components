@@ -1,0 +1,44 @@
+:host {
+    cursor: default;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+:host(.enabled) {
+    cursor: pointer;
+}
+
+/* CONTAINER */
+
+.sorting-container {
+    display: flex;
+    min-width: 0;    
+    color: rgba(99, 99, 99, 0.6);
+}
+
+.sorting-container:hover, :host(.active) .sorting-container {
+    color: #434A54;
+}
+
+/* END CONTAINER */
+
+/* CONTENT */
+
+.sorting-content {
+    display: flex;
+    user-select: none;
+}
+
+/* END CONTENT */
+
+/* ICONS */
+
+.sorting-icons {
+    margin: 0 5px;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+/* END ICONS */

@@ -1,0 +1,134 @@
+:host{
+    width: 100%;
+    display: inline-block;
+}
+
+/* CONTAINER */
+
+.pagination-container {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 17%, white 83%, rgba(255, 255, 255, 0) 100%);
+    position: relative;
+    text-align: center;
+}
+
+.pagination-container:before, .pagination-container:after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 17%, rgba(0, 0, 0, 0.1) 83%, rgba(0, 0, 0, 0) 100%);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.pagination-container:before {
+    top: -1px;
+}
+
+.pagination-container:after {
+    bottom: -1px;
+}
+
+/* END CONTAINER */
+
+/* PAGINATION */
+
+ul.pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+ul.pagination li {
+    display: block;
+    float: left;
+    padding: 5px;
+}
+
+ul.pagination li:first-child {
+    border: none;
+}
+
+ul.pagination button,
+ul.pagination span {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    min-width: 40px;
+    padding: 0;
+}
+
+/* END PAGINATION */
+
+/* PAGE BUTTONS */
+
+ul.pagination button {
+    outline: none;
+    position: relative;
+    transition: all 170ms linear;
+}
+
+ul.pagination button:before {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    content: "";
+    cursor: pointer;
+    height: 0;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all 170ms linear;
+    top: 50%;
+    width: 0;
+}
+
+ul.pagination button:hover:not(.active) {
+    color: black;
+}
+
+ul.pagination button:hover:not(.active):before {
+    -webkit-animation: hoverAnimation 510ms linear forwards;
+    animation: hoverAnimation 510ms linear forwards;
+    height: 40px;
+    width: 40px;
+}
+
+ul.pagination button.active {
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+ul.pagination .prevNext {
+    font-size: 14px;
+}
+
+@-webkit-keyframes hoverAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hoverAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* END PAGE BUTTONS */

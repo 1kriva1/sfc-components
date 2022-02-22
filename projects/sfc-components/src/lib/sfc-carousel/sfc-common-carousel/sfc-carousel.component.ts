@@ -32,10 +32,10 @@ export class SfcCarouselComponent implements OnInit, AfterViewInit, AfterViewChe
     componentSize: any = {};
 
     //disable actions flag
-    private actionDisabled = false;
+    actionDisabled = false;
 
     // show actions buttons when not automatic mode
-    private showActionButtons = true;
+    showActionButtons = true;
 
     private itemsComponents: ComponentRef<any>[] = [];
 

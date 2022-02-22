@@ -1,0 +1,22 @@
+:host-context(.sfc-component-dark-theme) .pagination-container {
+    background: none;
+    border-top: 1px solid #F5F7FA;
+    border-bottom: 1px solid #F5F7FA;
+}
+
+:host-context(.sfc-component-dark-theme) ul.pagination button {
+    color: #F5F7FA;
+}
+
+:host-context(.sfc-component-dark-theme) ul.pagination button:hover:not(.active) {
+    color: #fff;
+}
+
+:host-context(.sfc-component-dark-theme) ul.pagination button.active {
+    background: #F5F7FA;
+    color: black;
+}
+
+:host-context(.sfc-component-dark-theme) ul.pagination button:before{
+    background: #F5F7FA;
+}

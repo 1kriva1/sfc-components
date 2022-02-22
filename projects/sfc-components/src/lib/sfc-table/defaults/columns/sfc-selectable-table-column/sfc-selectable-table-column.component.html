@@ -1,0 +1,4 @@
+<div class="column" [class.active]="selected" (click)="selectAllRows()">
+    <sfc-checkmark [checked]="selected"></sfc-checkmark>
+    <span class="label">{{DEFAULT_COLUMN_TEXT_SELECT_ALL}}</span>
+</div>

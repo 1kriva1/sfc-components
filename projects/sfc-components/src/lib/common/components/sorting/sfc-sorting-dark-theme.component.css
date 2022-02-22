@@ -1,0 +1,7 @@
+:host-context(.sfc-component-dark-theme) .sorting-container {
+    color: #AAB2BD;
+}
+
+:host-context(.sfc-component-dark-theme) .sorting-container:hover, :host-context(.sfc-component-dark-theme).active .sorting-container {
+    color: #fff;
+}

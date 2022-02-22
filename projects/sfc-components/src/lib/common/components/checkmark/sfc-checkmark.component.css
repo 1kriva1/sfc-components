@@ -1,0 +1,54 @@
+:host {
+    display: inline-block;
+}
+
+.check {
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    background: white;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.check:hover {
+    border: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    opacity: 0.4;
+    font-size: 0.7em;
+    transition: opacity 0.3s 0.1s ease;
+}
+
+/* CHECKED */
+
+.checked .check {
+    border-color: #2bbbad;
+    background: #2bbbad;
+}
+
+.checked .icon {
+    opacity: 1;
+    transform: scale(0);
+    color: white;
+    animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
+}
+
+/* END CHECKED */
+
+@keyframes icon {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

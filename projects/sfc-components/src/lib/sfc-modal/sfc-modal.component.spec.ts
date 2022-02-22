@@ -1,10 +1,9 @@
-import { TestBed, ComponentFixture, async, fakeAsync, tick } from '@angular/core/testing';
+import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 import { Component, DebugElement, TemplateRef, ViewChild } from '@angular/core';
-import { By } from '@angular/platform-browser';
 import { SfcModalComponent } from './sfc-modal.component';
 import { SfcComponentsModule } from '../sfc-components.module';
 import { SfcModalService } from './modal-service/sfc-modal.service';
-import { CommonConstants, StyleClass } from '../common/constants/common-constants';
+import { StyleClass } from '../common/constants/common-constants';
 
 @Component({
     template: `<ng-template #headerRef>
@@ -92,11 +91,11 @@ describe('Component: SfcModalComponent', () => {
 
         // TODO
         setTimeout(() => {
-            expect(overlayEl.parentElement.classList.contains(StyleClass.Hided)).toBeTruthy();
+            expect(overlayEl.parentElement.classList.contains(StyleClass.Hidden)).toBeTruthy();
             expect(modalService.close).toHaveBeenCalledTimes(1);
         }, 2000);
 
-        expect(overlayEl.parentElement.classList.contains(StyleClass.Hided)).toBeTruthy();
+        expect(overlayEl.parentElement.classList.contains(StyleClass.Hidden)).toBeTruthy();
         expect(component.modal['close']).toHaveBeenCalled();
     }));
 
@@ -114,11 +113,11 @@ describe('Component: SfcModalComponent', () => {
 
         // TODO
         setTimeout(() => {
-            expect(overlayEl.parentElement.classList.contains(StyleClass.Hided)).toBeFalsy();
+            expect(overlayEl.parentElement.classList.contains(StyleClass.Hidden)).toBeFalsy();
             expect(modalService.close).not.toHaveBeenCalled();
         }, 1000);
 
-        expect(overlayEl.parentElement.classList.contains(StyleClass.Hided)).toBeFalsy();
+        expect(overlayEl.parentElement.classList.contains(StyleClass.Hidden)).toBeFalsy();
         expect(component.modal['close']).not.toHaveBeenCalled();
     }));
 

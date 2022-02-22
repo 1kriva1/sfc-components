@@ -62,7 +62,7 @@ export class SfcModalComponent implements OnInit, AfterContentChecked {
     @Input()
     context: any;
 
-    @HostBinding('class.' + StyleClass.Hided)
+    @HostBinding('class.' + StyleClass.Hidden)
     underHide: boolean = false;
 
     constructor(private modalService: SfcModalService,

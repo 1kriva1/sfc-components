@@ -1,0 +1,3 @@
+:host-context(.sfc-component-dark-theme) .column.active, :host-context(.sfc-component-dark-theme) .column:hover {
+    color: #fff;
+}

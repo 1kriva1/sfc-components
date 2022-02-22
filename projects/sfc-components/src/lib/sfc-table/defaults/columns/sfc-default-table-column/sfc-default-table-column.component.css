@@ -1,0 +1,22 @@
+:host {
+    display: inline-block;
+}
+
+.column {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.column.active, .column:hover {
+    color: #434A54;
+}
+
+.icon {
+    margin-right: 5px;
+}

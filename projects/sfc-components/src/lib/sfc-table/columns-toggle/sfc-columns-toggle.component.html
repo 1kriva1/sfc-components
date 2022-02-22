@@ -1,0 +1,11 @@
+<div class="columns-toggle-container">
+    <div *ngIf="getToggle(columnsToggleService.showColumns$ | async) as toggleData">
+        <span class="icon" [showHideElement]="!toggleData.showColumns">
+            <i class="{{COLUMN_TOGGLE_ICONS.SHOW}}"></i>
+        </span>
+        <span class="icon" [showHideElement]="toggleData.showColumns">
+            <i class="{{COLUMN_TOGGLE_ICONS.HIDE}}"></i>
+        </span>
+        <span class="label">{{toggleData.label}}</span>
+    </div>
+</div>

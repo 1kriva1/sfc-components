@@ -13,7 +13,6 @@ import { SfcIconTabComponent } from './sfc-tabs/sfc-tab/sfc-icon-tab/sfc-icon-ta
 import { SfcLineTabSliderComponent } from './sfc-tabs/sfc-tab/sfc-line-tab/slider/sfc-line-tab-slider.component';
 import { SfcIconTabSliderComponent } from './sfc-tabs/sfc-tab/sfc-icon-tab/slider/sfc-icon-tab-slider.component';
 import { SfcTabBodyComponent } from './sfc-tabs/tabs-base/sfc-tab-body.component';
-import { SfcTabLabelComponent } from './sfc-tabs/tabs-base/sfc-tab-label.component';
 import { SfcTabItemComponent } from './sfc-tabs/tabs-base/sfc-tab-item.component';
 import { SfcSideMenuComponent } from './sfc-menu/side/sfc-side-menu.component';
 import { SfcHamburgerComponent } from './common/components/hamburger/sfc-hamburger.component';
@@ -39,7 +38,7 @@ import { SfcDropdownMenuItemComponent } from './sfc-menu/dropdown/dropdown-menu-
 import { SfcDelimeterComponent } from './common/components/delimeter/sfc-delimeter.component';
 import { SfcCarouselItemAvatarComponent } from './sfc-carousel/carousel-items/avatars/sfc-carousel-item-avatar.component';
 import { SfcCarouselItemDefaultComponent } from './sfc-carousel/carousel-items/default/sfc-carousel-item-default.component';
-import SfcCarouselItemComponent from './sfc-carousel/carousel-items/sfc-carousel-item.component';
+import {SfcCarouselItemComponent} from './sfc-carousel/carousel-items/sfc-carousel-item.component';
 import { SfcSliderComponent } from './sfc-slider/sfc-slider.component';
 import { SfcSliderItemComponent } from './sfc-slider/slider-item/sfc-slider-item.component';
 import { SfcNotificationComponent } from './sfc-notification/sfc-notification.component';
@@ -62,11 +61,22 @@ import { SfcSchemeCarouselFormationPipePipe } from './sfc-scheme/sfc-scheme-caro
 import { SfcSchemePlayerPointComponent } from './sfc-scheme/sfc-scheme-player/sfc-scheme-player-point/sfc-scheme-player-point.component';
 import { SfcSchemeModalBodyComponent } from './sfc-scheme/sfc-scheme-modal/sfc-scheme-modal-body/sfc-scheme-modal-body.component';
 import { SfcSchemePlayerBadgeComponent } from './sfc-scheme/sfc-scheme-player/sfc-scheme-player-badge/sfc-scheme-player-badge.component';
-
 import { SfcSchemePlayerComponent } from './sfc-scheme/sfc-scheme-player/sfc-scheme-player/sfc-scheme-player.component';
 import { AdHostDirective } from './common/directives/ad-host/ad-host.directive';
 import { ThrowElementOnHoverDirective } from './common/directives/throw-element/throw-element-on-hover.directive';
 import { ShowHideElementDirective } from './common/directives/show-hide-element/show-hide-element.directive';
+import { SfcTableComponent } from './sfc-table/sfc-table.component';
+import { SfcTabLabelComponent } from './sfc-tabs/tabs-base/sfc-tab-label.component';
+import { TemplateReferenceDirective } from './common/directives/template-reference/template-reference.directive';
+import { SfcPaginationComponent } from './common/components/pagination/sfc-pagination.component';
+import { SfcSortingComponent } from './common/components/sorting/sfc-sorting.component';
+import { SfcDefaultTableColumnComponent } from './sfc-table/defaults/columns/sfc-default-table-column/sfc-default-table-column.component';
+import { SfcDefaultTableRowComponent } from './sfc-table/defaults/rows/sfc-default-table-row/sfc-default-table-row.component';
+import { SfcCheckmarkComponent } from './common/components/checkmark/sfc-checkmark.component';
+import { SfcSelectableTableColumnComponent } from './sfc-table/defaults/columns/sfc-selectable-table-column/sfc-selectable-table-column.component';
+import { SfcColumnsToggleComponent } from './sfc-table/columns-toggle/sfc-columns-toggle.component';
+import { SfcToggleComponent } from './common/components/toggle/sfc-toggle.component';
+import { SfcDefaultTableCardComponent } from './sfc-table/defaults/cards/sfc-default-table-card/sfc-default-table-card.component';
 
 
 @NgModule({
@@ -121,8 +131,11 @@ import { ShowHideElementDirective } from './common/directives/show-hide-element/
     SfcCarouselSlideDirective, 
     StageComponent, 
     SfcSchemeCarouselItemComponent, 
+    SfcCarouselItemComponent,
     SfcSchemeCarouselDotComponent, SfcSchemeCarouselFormationPipePipe, SfcSchemePlayerPointComponent, SfcSchemeModalBodyComponent, SfcSchemePlayerBadgeComponent, 
-    AdHostDirective, SfcSchemePlayerComponent, ThrowElementOnHoverDirective, ShowHideElementDirective
+    AdHostDirective, SfcSchemePlayerComponent, ThrowElementOnHoverDirective, ShowHideElementDirective, SfcTableComponent, TemplateReferenceDirective, 
+    SfcPaginationComponent, SfcSortingComponent, SfcDefaultTableColumnComponent, SfcDefaultTableRowComponent, SfcCheckmarkComponent, SfcSelectableTableColumnComponent, SfcColumnsToggleComponent, SfcToggleComponent, SfcDefaultTableCardComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -159,7 +172,11 @@ import { ShowHideElementDirective } from './common/directives/show-hide-element/
     SfcSchemeComponent,
     SfcOwlCarouselComponent, 
     SfcCarouselSlideDirective,
-    SfcSchemeCarouselItemComponent
+    SfcSchemeCarouselItemComponent,
+    SfcTableComponent,
+    TemplateReferenceDirective,
+    SfcSortingComponent,
+    SfcCheckmarkComponent
   ],
   entryComponents: [SfcCarouselItemDefaultComponent, SfcCarouselItemAvatarComponent]
 })

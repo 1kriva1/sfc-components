@@ -1,0 +1,19 @@
+<div class="row-container" [class.even]="isEven" [class.pointer]="selectOnClick" (click)="selectOnClick && selectRow()">
+    <div [ngStyle]="columnStyle" [style.text-align]="columnPosition" class="row-columns-container" *ngFor="let column of columns">
+        <div class="row-content" [style.align-items]="columnPosition">
+            <ng-container [ngSwitch]="column.type">
+                <div class="column-checkmark" #columnCheckmark *ngSwitchCase="TableColumnType.Selectable">
+                    <sfc-checkmark [checked]="data.model.selected || false"></sfc-checkmark>
+                </div>
+                <div class="column-sequence" *ngSwitchCase="TableColumnType.Sequence">
+                    <span class="column-name">{{column.columnName}}</span>
+                    <span>{{data.sequenceNumber}}</span>
+                </div>
+                <div class="column-data" *ngSwitchDefault>
+                    <span class="column-name">{{column.columnName}}</span>
+                    <span>{{data.model.data[column.fieldName]}}</span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
