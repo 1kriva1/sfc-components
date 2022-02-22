@@ -20,6 +20,12 @@ import { NotificationAppComponent } from 'src/notification-app/notification-app.
 import { TimeLineAppComponent } from 'src/timeline-app/timeline-app.component';
 import { ChartAppComponent } from 'src/chart-app/chart-app.component';
 import { SchemeAppComponent } from 'src/scheme-app/scheme-app.component';
+import { TableAppComponent } from 'src/table-app/table-app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BadgeComponent } from '../table-app/badge/badge.component';
+import { RowItemComponent } from '../table-app/row-item/row-item.component';
+import { CardItemComponent } from '../table-app/card-item/card-item.component';
+import { ColumnItemComponent } from '../table-app/column-item/column-item.component';
 
 @NgModule({
   declarations: [
@@ -39,10 +45,17 @@ import { SchemeAppComponent } from 'src/scheme-app/scheme-app.component';
     NotificationAppComponent,
     TimeLineAppComponent,
     ChartAppComponent,
-    SchemeAppComponent
+    SchemeAppComponent,
+    TableAppComponent,
+    BadgeComponent,
+    RowItemComponent,
+    CardItemComponent,
+    ColumnItemComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     SfcComponentsModule.forRoot(),
     RouterModule.forRoot(routeConfig)
   ],

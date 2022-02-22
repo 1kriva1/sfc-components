@@ -1,0 +1,8 @@
+<div class="column" [class.active]="column.sorting && column.sorting.active">
+    <div *ngIf="column.icon" class="icon">
+        <i [ngClass]="column.icon"></i>
+    </div>
+    <div class="label">
+        <span class="column-label">{{column.columnName}}</span>
+    </div>
+</div>

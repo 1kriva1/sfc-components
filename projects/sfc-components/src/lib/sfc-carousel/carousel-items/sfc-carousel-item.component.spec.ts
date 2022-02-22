@@ -2,7 +2,7 @@ import { TestBed, ComponentFixture, async } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { SfcComponentsModule } from '../../sfc-components.module';
 import { CarouselItemState, PositionType } from '../../common/constants/common-constants';
-import SfcCarouselItemComponent from './sfc-carousel-item.component';
+import { SfcCarouselItemComponent } from './sfc-carousel-item.component';
 
 describe('Component: SfcCarouselItemComponent', () => {
 

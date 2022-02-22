@@ -1,0 +1,13 @@
+<div class="sorting-container">
+    <div class="sorting-content">
+        <ng-content></ng-content>
+    </div>
+    <div *ngIf="enabled" class="sorting-icons">
+        <div *ngIf="config.direction === SortingDirection.Ascending">
+            <i class="{{getIcon(SortingDirection.Ascending)}}"></i>
+        </div>
+        <div *ngIf="config.direction === SortingDirection.Descending">
+            <i class="{{getIcon(SortingDirection.Descending)}}"></i>
+        </div>
+    </div>
+</div>

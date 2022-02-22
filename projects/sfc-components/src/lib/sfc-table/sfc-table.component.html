@@ -1,0 +1,76 @@
+<div class="table-container" *ngIf="vm$ | async as vm">
+    <div class="columns-container">
+        <div class="action-container">
+            <sfc-columns-toggle *ngIf="showColumns"></sfc-columns-toggle>
+            <sfc-toggle *ngIf="showDataToggle" [value]="dataType == TableDataType.Cards" [config]="TYPE_TOGGLE_CONFIG"
+                (on-toggle)="onTypeToggle($event)"></sfc-toggle>
+        </div>
+
+        <div *ngIf="showColumns && vm.showColumns" class="columns">
+            <div class="column" [style.justify-content]="columnPosition"
+                [ngStyle]="{width:'calc(100% / ' + vm.columnWidth +')'}" *ngFor="let column of vm.columns">
+                <ng-container [ngSwitch]="column.type">
+                    <sfc-selectable-table-column *ngSwitchCase="TableColumnType.Selectable"
+                        [selected]="allRowsSelected">
+                    </sfc-selectable-table-column>
+
+                    <sfc-sorting *ngSwitchDefault [config]="column.sorting" [id]="column.fieldName">
+                        <ng-container *ngIf="columnTemplateRef">
+                            <ng-container *ngTemplateOutlet="columnTemplateRef;context:{$implicit: column}">
+                            </ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="columnTemplate && !columnTemplateRef">
+                            <ng-container *ngTemplateOutlet="columnTemplate.template; context:{$implicit: column}">
+                            </ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="isShowDefaultColumn">
+                            <sfc-default-table-column [column]="column"></sfc-default-table-column>
+                        </ng-container>
+                    </sfc-sorting>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <sfc-delimeter *ngIf="columnDelimeter"></sfc-delimeter>
+
+    <div class="rows-container">
+        <div class="row" *ngFor="let item of vm.data">
+            <ng-container *ngIf="rowTemplateRef && dataType == TableDataType.Rows">
+                <ng-container
+                    *ngTemplateOutlet="rowTemplateRef;context:{$implicit: {model: item, columns: vm.columns, columnWidth: vm.columnWidth, columnPosition: columnPosition}}">
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="cardTemplateRef && dataType == TableDataType.Cards">
+                <ng-container
+                    *ngTemplateOutlet="cardTemplateRef;context:{$implicit: {model: item, columns: vm.columns}}">
+                </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="rowTemplate && !rowTemplateRef && dataType == TableDataType.Rows">
+                <ng-container
+                    *ngTemplateOutlet="rowTemplate.template; context:{$implicit: {model: item, columns: vm.columns, columnWidth: vm.columnWidth, columnPosition: columnPosition}}">
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="cardTemplate && !cardTemplateRef && dataType == TableDataType.Cards">
+                <ng-container
+                    *ngTemplateOutlet="cardTemplate.template; context:{$implicit: {model: item, columns: vm.columns}}">
+                </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="isShowDefaultRow && dataType == TableDataType.Rows">
+                <sfc-default-table-row [columns]="vm.columns" [data]="item" [column-position]="columnPosition"
+                    [column-width]="vm.columnWidth" [select-on-click]="selectOnClick" (on-select)="selectRow($event)">
+                </sfc-default-table-row>
+            </ng-container>
+            <ng-container *ngIf="isShowDefaultCard && dataType == TableDataType.Cards">
+                <sfc-default-table-card [columns]="vm.columns" [data]="item" [select-on-click]="selectOnClick" (on-select)="selectRow($event)">
+                </sfc-default-table-card>
+            </ng-container>
+        </div>
+    </div>
+    
+    <div class="pagination-container">
+        <sfc-pagination *ngIf="pagination.enabled" [show-first-last]="false" [full-count]="false"></sfc-pagination>
+    </div>
+</div>

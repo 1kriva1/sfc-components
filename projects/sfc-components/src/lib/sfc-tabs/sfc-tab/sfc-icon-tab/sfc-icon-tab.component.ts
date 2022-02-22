@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonConstants } from '../../../common/constants/common-constants';
 import { CommonUtils } from '../../../common/utils/common-utils';
-import BaseTabComponent from '../sfc-base-tab.component';
+import {BaseTabComponent} from '../sfc-base-tab.component';
 
 @Component({
     selector: 'sfc-icon-tab',

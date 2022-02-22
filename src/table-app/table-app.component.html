@@ -1,0 +1,133 @@
+<div class="demo-container">
+  <h1>TABLE</h1>
+  <div class="theme-switcher">
+    <button (click)="changeTheme('common')">Common</button>
+    <button (click)="changeTheme('dark')">Dark</button>
+  </div>
+
+  <div class="background"
+    [ngClass]="(theme=='common')?'default-background':['sfc-component-dark-theme', 'dark-background']">
+    <div class="component-container">
+
+      <!-- REFERENCES -->
+
+      <ng-template #badgeTemplateRef let-badge>
+        <table-badge [label]="badge.model.model.data.label" [icon]="badge.model.model.data.icon" [color]="badge.model.model.data.color">
+        </table-badge>
+      </ng-template>
+
+      <!-- END REFERENCES -->
+
+      <div class="component-row">
+        <div style="flex-basis: 100%;">
+          <h4>Default table with columns and data</h4>
+          <sfc-table [columns]="columnsDefault" [data]="dataDefault"></sfc-table>
+        </div>
+
+        <div style="flex-basis: 100%;">
+          <h4>Table with sorting (+ row sequence, + column delimeter)</h4>
+          <sfc-table [columns]="columnsSorting" [data]="dataDefault" [sequence]="true" [column-delimeter]="true">
+          </sfc-table>
+        </div>
+
+        <div style="flex-basis: 100%;">
+          <h4>Pagination: page=2, pageSize=2 (+ hide columns)</h4>
+          <sfc-table [columns]="columnsDefault" [data]="dataDefault" [show-columns]="false"
+            [pagination]="paginationConfig">
+          </sfc-table>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div style="flex-basis: 100%;">
+          <h4>Selectable (+ column position start, + column icons)</h4>
+          <sfc-table [columns]="columnsSelectable" [data]="dataDefault" [column-position]="'start'" [selectable]="true"
+            [select-on-click]="false">
+          </sfc-table>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div style="flex-basis: 46%;">
+          <h4>Sync data (add new item, remove item and filtering data, + selected items on init)</h4>
+          <button (click)="addItemSync()" style="margin-right: 10px;">Add item</button>
+          <button (click)="removeItemSync()">Remove item</button>
+          <h6>Filter sync data:</h6>
+          <div [formGroup]="filterSyncFormGroup">
+            <input formControlName="searchSyncData" type="text" placeholder="search">
+          </div>
+          <sfc-table [columns]="columnsSorting" [data]="dataSync" [selectable]="true">
+          </sfc-table>
+        </div>
+
+        <div style="flex-basis: 47%;">
+          <h4>Async data (add new item, remove item and filtering data + select-on-click)</h4>
+          <button (click)="addItemAsync()" style="margin-right: 10px;">Add item</button>
+          <button (click)="removeItemAsync()">Remove item</button>
+          <h6>Filter async data:</h6>
+          <div [formGroup]="filterAsyncFormGroup">
+            <input formControlName="searchAsyncData" type="text" placeholder="search">
+          </div>
+          <sfc-table [columns]="columnsSorting" [data-async]="filteredData$" [selectable]="true"
+            [select-on-click]="true">
+          </sfc-table>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div style="flex-basis: 46%;">
+          <h4>Columns (add and remove column)</h4>
+          <button (click)="addColumn()" style="margin-right: 10px;">Add new column</button>
+          <button (click)="removeColumn()">Remove item</button>
+          <sfc-table [columns]="columnsModification" [data]="dataColumnModifications" [selectable]="true">
+          </sfc-table>
+        </div>
+
+        <div style="flex-basis: 47%;">
+          <h4>Cards (without data type toggler)</h4>
+          <sfc-table [columns]="columnsDefault" [data]="dataDefault" [selectable]="true" [data-type]="'cards'"
+            [data-toggle]="false">
+          </sfc-table>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div style="flex-basis: 100%;">
+          <h4>Full table (sorting, pagination and selection)</h4>
+          <sfc-table [columns]="columnsSorting" [data]="dataDefault" [column-position]="'end'" [selectable]="true"
+            [column-delimeter]="true" [data-type]="'cards'" [sequence]="true">
+          </sfc-table>
+        </div>
+      </div>
+
+      <div class="component-row" style="justify-content: center;">
+        <div style="flex-basis: initial;width: 50%;">
+          <h4>Badges</h4>
+          <sfc-table [columns]="columnsBadges" [data]="dataBadges" [show-columns]="false" [data-type]="'cards'"
+            [card-template-ref]="badgeTemplateRef" [data-toggle]="false" [pagination]="paginationBadgesConfig">
+          </sfc-table>
+        </div>
+      </div>
+
+      <div class="component-row">
+        <div style="flex-basis: 100%;">
+          <h4>List of items</h4>
+          <sfc-table [columns]="columnsListItems" [data]="dataListItems" [column-position]="'center'"
+            [selectable]="true" [select-on-click]="false" #listItemsTable>
+            <ng-template template="column" let-column>
+              <table-column-item [label]="column.columnName" [active]="column.sorting.active"></table-column-item>
+            </ng-template>
+            <ng-template template="row" let-list>
+              <table-row-item [data]="list.model" [columns]="list.columns" [column-position]="list.columnPosition"
+                [column-width]="list.columnWidth" (on-select)="listItemsTable.selectRow($event)">
+              </table-row-item>
+            </ng-template>
+            <ng-template template="card" let-list>
+              <table-card-item [data]="list.model" [columns]="list.columns"></table-card-item>
+            </ng-template>
+          </sfc-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

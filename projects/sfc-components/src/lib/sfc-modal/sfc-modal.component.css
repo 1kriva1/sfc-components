@@ -18,7 +18,7 @@
   animation: expandModal 0.4s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-:host(.hided) .modal-content {
+:host(.hidden) .modal-content {
   opacity: 0;
   visibility: hidden;
   transform: scale(1.2);
@@ -46,7 +46,7 @@
   animation: expandOverlay 0.4s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-:host(.hided) .modal-overlay {
+:host(.hidden) .modal-overlay {
   opacity: 0;
   visibility: hidden;
 }

@@ -1,0 +1,23 @@
+:host-context(.sfc-component-dark-theme) .column {
+    color: #AAB2BD;
+    border-color: #AAB2BD;
+}
+
+:host-context(.sfc-component-dark-theme) .column:hover {
+    color: #fff;
+}
+
+:host-context(.sfc-component-dark-theme) .column.active .label {
+    color: #fff;
+}
+
+:host-context(.sfc-component-dark-theme) ::ng-deep sfc-checkmark .check {
+    border-color: inherit;
+    color: inherit;
+    background: transparent;
+    transition:none;
+}
+
+:host-context(.sfc-component-dark-theme) ::ng-deep sfc-checkmark .icon {
+    opacity: 1;
+}

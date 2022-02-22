@@ -1,14 +1,14 @@
 import { Component, HostBinding, OnInit } from "@angular/core";
 import { CarouselItemState, PositionType } from "../../common/constants/common-constants";
 import { CommonUtils } from "../../common/utils/common-utils";
-import SfcCarouselItem from "./base/sfc-carousel-item";
+import { SfcCarouselItem } from "./base/sfc-carousel-item";
 
 @Component({
     selector: 'sfc-carousel-item',
     templateUrl: './sfc-carousel-item.component.html',
     styleUrls: ['./sfc-carousel-item.component.css']
 })
-export default class SfcCarouselItemComponent extends SfcCarouselItem implements OnInit {
+export class SfcCarouselItemComponent extends SfcCarouselItem implements OnInit {
 
     ngOnInit(): void {
         this.type = this.type || PositionType.Horizontal;

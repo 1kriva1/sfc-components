@@ -2,7 +2,7 @@ import { EventEmitter, HostBinding, Input, OnInit, Output } from "@angular/core"
 import { StyleClass } from "../../common/constants/common-constants";
 import { CommonUtils } from "../../common/utils/common-utils";
 
-export default abstract class BaseTabComponent implements OnInit {
+export class BaseTabComponent implements OnInit {
     @Input()
     id: string;
 

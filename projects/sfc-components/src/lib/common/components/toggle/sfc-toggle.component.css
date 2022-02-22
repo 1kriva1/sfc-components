@@ -1,0 +1,110 @@
+.switch {
+    cursor: pointer;
+}
+
+/* CONTAINER */
+
+.switch span.switch-container {
+    padding-left: 50px;
+    min-height: 24px;
+    line-height: 24px;
+    display: block;
+    
+    position: relative;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.switch span.switch-container:before, .switch span.switch-container:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 12px;
+}
+
+.switch span.switch-container:before {
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 24px;
+    background: #f6f6f6;
+    transition: all 0.3s ease;
+}
+
+.switch span.switch-container:after {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    top: 3px;
+    left: 3px;
+    box-shadow: 0 1px 3px rgba(18, 22, 33, 0.1);
+    transition: all 0.45s ease;
+}
+
+/* END CONTAINER */
+
+/* LABEL */
+
+.switch span.switch-container strong {
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    top: 1px;
+    user-select: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* END LABEL */
+
+/* ICON */
+
+.switch div.icon.checked {
+    opacity: 0;
+}
+
+.switch div.icon.unchecked {
+    opacity: 1;
+}
+
+.switch span div.icon.checked svg {
+    transform: translate(18px, 0);
+}
+
+.switch span div.icon svg {
+    width: 12px;
+    height: 10px;
+    position: absolute;
+    left: 6px;
+    bottom: 7px;
+    display: block;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* END ICON */
+
+/* CHECKED */
+
+.checked .switch span div.icon svg, .checked .switch span.switch-container strong {
+    color: #2bbbad;
+}
+
+.checked .switch span.switch-container:before {
+    background: #22b6a7;
+}
+
+.checked .switch span.switch-container:after {
+    background: #fff;
+    transform: translate(18px, 0);
+}
+
+.checked div.icon.checked {
+    opacity: 1;
+}
+
+.checked div.icon.unchecked {
+    opacity: 0;
+}
+
+/* END CHECKED */

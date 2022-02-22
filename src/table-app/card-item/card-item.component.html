@@ -1,0 +1,34 @@
+<div class="card-container" [ngClass]="data.model.data.status">
+    <div class="card-columns-container">
+        <div class="card-content">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+                </div>
+                <div class="card-body">
+                    <span class="tag">{{data.model.data.status}}</span>
+                    <h4>
+                        {{data.model.data.activity}}
+                    </h4>
+                    <p>
+                        {{data.model.data.onDate}}
+                        <small>2h ago</small>
+                    </p>
+                    <div class="user">
+                        <div class="photo" [style.backgroundImage]="'url('+ data.model.data.photo + ')'"></div>
+                        <div class="user-info">
+                            <div>
+                                <span>
+                                    {{data.model.data.client}}
+                                    <i class="fa fa-star" *ngIf="data.model.data.isVIP"></i>
+                                </span>
+                                <div class="client-number">{{data.model.data.clientNumber}}</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

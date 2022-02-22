@@ -1,0 +1,29 @@
+<div class="pagination-container" *ngIf="vm$ | async as vm">
+  <ul *ngIf="vm.isAnyPages" class="pagination">
+    <li [showHideElement]="vm.showPrevPage" (click)="onPageClick(vm.prevPage)">
+      <button class="prevNext" title="previous page">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+    </li>
+    <li *ngIf="vm.showFirstPage" class="first-page" (click)="onPageClick(1)">
+      <button>1</button>
+    </li>
+    <li *ngIf="vm.showFirstPage" class="first-page">
+      <span>...</span>
+    </li>
+    <li *ngFor="let p of vm.range" class="page" (click)="onPageClick(p)">
+      <button [class.active]="vm.page == p">{{p}}</button>
+    </li>
+    <li *ngIf="vm.showLastPage" class="last-page">
+      <span>...</span>
+    </li>
+    <li *ngIf="vm.showLastPage" class="last-page" (click)="onPageClick(vm.totalPages)">
+      <button>{{vm.totalPages}}</button>
+    </li>
+    <li [showHideElement]="vm.showNextPage" (click)="onPageClick(vm.nextPage)">
+      <button class="prevNext" title="next page">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </li>
+  </ul>
+</div>

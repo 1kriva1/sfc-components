@@ -1,0 +1,7 @@
+:host-context(.sfc-component-dark-theme) .switch span.switch-container strong {
+    color: #F5F7FA;
+}
+
+:host-context(.sfc-component-dark-theme) .checked .switch span.switch-container strong {
+    color: #2bbbad;
+}

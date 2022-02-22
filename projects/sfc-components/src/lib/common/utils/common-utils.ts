@@ -14,10 +14,9 @@ export class CommonUtils {
   }
 
   /**
-* Simple object check.
-* @param item
-* @returns {boolean}
-*/
+  * Simple object check.
+  * @param item
+  */
   public static isObject(item): boolean {
     return (item && typeof item === 'object' && !Array.isArray(item));
   }

@@ -2,7 +2,7 @@ import { ElementRef, Input, ViewChild } from "@angular/core";
 import { ComponentSize } from "../../../common/constants/common-constants";
 import ISize from "../../../common/interfaces/ISize";
 import { CommonUtils } from "../../../common/utils/common-utils";
-import SfcCarouselItem from "./sfc-carousel-item";
+import { SfcCarouselItem } from "./sfc-carousel-item";
 
 export default abstract class SfcCarouselItemBaseComponent extends SfcCarouselItem {
 

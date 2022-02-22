@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 import ISideMenuItem from '../../../common/interfaces/sfc-menu/side/ISideMenuItem';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { CollectionUtils } from '../../../common/utils/collection-utils';
 import { CommonUtils } from '../../../common/utils/common-utils';
-import BaseSideMenuItem from '../side-menu-item-base/side-menu-item-base.component';
+import { BaseSideMenuItem } from '../side-menu-item-base/side-menu-item-base.component';
+import { StyleClass } from '../../../common/constants/common-constants';
 
 @Component({
     selector: 'sfc-side-menu-item-sub',
@@ -27,7 +28,7 @@ import BaseSideMenuItem from '../side-menu-item-base/side-menu-item-base.compone
     ]
 })
 export class SfcSideMenuItemSubComponent extends BaseSideMenuItem {
-
+    
     @Output('on-click')
     onClick: EventEmitter<ISideMenuItem> = new EventEmitter<ISideMenuItem>();
 

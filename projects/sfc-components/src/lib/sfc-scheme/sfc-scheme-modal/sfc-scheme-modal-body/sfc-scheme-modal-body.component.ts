@@ -9,7 +9,7 @@ import { SfcSchemeModalService } from '../services/sfc-scheme-modal.service';
 })
 export class SfcSchemeModalBodyComponent implements OnInit {
 
-  constructor(protected schemeModalService: SfcSchemeModalService) { }
+  constructor(public schemeModalService: SfcSchemeModalService) { }
 
   ngOnInit() {
   }

@@ -2,7 +2,7 @@ import { Input } from "@angular/core";
 import { PositionType } from "../../../common/constants/common-constants";
 import ICarouselItemState from "../../../common/interfaces/sfc-carousel/ICarouselItemState";
 
-export default abstract class SfcCarouselItem {
+export class SfcCarouselItem {
     // item index
     @Input()
     index: number;

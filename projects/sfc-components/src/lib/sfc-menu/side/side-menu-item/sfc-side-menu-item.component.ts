@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import BaseSideMenuItem from '../side-menu-item-base/side-menu-item-base.component';
+import { Component, HostBinding, Input } from '@angular/core';
+import { StyleClass } from '../../../common/constants/common-constants';
+import ISideMenuItem from '../../../common/interfaces/sfc-menu/side/ISideMenuItem';
+import { BaseSideMenuItem } from '../side-menu-item-base/side-menu-item-base.component';
 
 @Component({
     selector: 'sfc-side-menu-item',
@@ -8,4 +10,5 @@ import BaseSideMenuItem from '../side-menu-item-base/side-menu-item-base.compone
         './sfc-side-menu-item.component.css']
 })
 export class SfcSideMenuItemComponent extends BaseSideMenuItem {
+    
 }

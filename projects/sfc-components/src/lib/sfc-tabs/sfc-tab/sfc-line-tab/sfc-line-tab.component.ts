@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import BaseTabComponent from '../sfc-base-tab.component';
+import {BaseTabComponent} from '../sfc-base-tab.component';
 
 @Component({
     selector: 'sfc-line-tab',

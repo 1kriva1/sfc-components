@@ -1,5 +1,3 @@
-import IDefaultHeaderConfig from "../interfaces/sfc-modal/IDefaultHeaderConfig";
-
 export class CommonConstants {
   static BUTTON_DEFAULT_TEXT = 'Button';
   static NOT_FOUND_INDEX = -1;
@@ -8,7 +6,11 @@ export class CommonConstants {
   static CSS_PIXELS = 'px';
   static CSS_PERCENTAGE = '%';
   static CSS_DEGREES = 'deg';
-  static DEFAULT_MODAL_HEADER_CONFIG: IDefaultHeaderConfig = {
+  static MEDIA_LIMITS = {
+    TABLET_MAX_SIZE: 767,
+    MOBILE_MAX_SIZE: 430
+  }
+  static DEFAULT_MODAL_HEADER_CONFIG = {
     icon: 'fa fa-window-restore',
     showCloseIcon: true,
     text: 'Modal'
@@ -45,6 +47,43 @@ export class CommonConstants {
   static CAROUSEL_ITEM_DEFAULT_SIZE = 180;
   static COMPONENT_AUTOMATIC_PERIOD_MS = 3000;
   static NOTIFICATION_DESTROY_INTERVAL_MS = 5000;
+  static PAGINATION_DEFAULTS = {
+    SIZE: 5,
+    PAGE: 1,
+    COUNT: 3
+  };
+  static TABLE_DEFAULTS = {
+    PAGE_SIZE: 5,
+    INITIAL_PAGE: 1,
+    TEMPLATE: {
+      COLUMN: 'column',
+      ROW: 'row',
+      CARD: 'card'
+    },
+    COLUMNS_TOGGLE: {
+      SHOW: {
+        LABEL: 'Show',
+        ICON: 'fa fa-eye'
+      },
+      HIDE: {
+        LABEL: 'Hide',
+        ICON: 'fa fa-eye-slash'
+      }
+    },
+    DEFAULT_COLUMN_TEXT_SELECT_ALL: 'ALL'
+  };
+  static SHOW_HIDE_TRANSITION_DELAY = 0.5;
+  static SORTING_DEFAULT_ICONS = {
+    ASC_ICON: 'fa fa-chevron-up',
+    DESC_ICON: 'fa fa-chevron-down',
+  }
+  static CHECKMARK_DEFAULTS = {
+    ICON: 'fa fa-check'
+  }
+  static TOGGLE_DEFAULTS = {
+    CHECKED_ITEM: { label: 'Checked' },
+    UNCHECKED_ITEM: { label: 'Unchecked' }
+  }
 }
 
 export enum ComponentTheme {
@@ -57,13 +96,15 @@ export enum StyleClass {
   Valid = 'valid',
   Invalid = 'invalid',
   Disabled = 'disabled',
+  Enabled = 'enabled',
   Selected = 'selected',
   Empty = 'empty',
   Focus = 'focus',
   Open = 'open',
   Loading = 'loading',
   Removed = 'removed',
-  Hided = 'hided',
+  Hidden = 'hidden',
+  Visible = 'visible',
   Animated = 'animated'
 };
 
@@ -115,6 +156,17 @@ export enum PositionType {
   Horizontal = 'horizontal'
 }
 
+export enum PositionSideType {
+  Start = 'start',
+  End = 'end',
+  Center = 'center'
+}
+
+export enum TextStyle {
+  UpperCase = 'uppercase',
+  LowerCase = 'lowercase'
+}
+
 export enum ComponentMovementType {
   Custom = 'custom',
   Automatic = 'automatic'
@@ -150,4 +202,20 @@ export enum SchemePlayerPointType {
 export enum SchemeType {
   Formation = 'formation',
   Arbitrarily = 'arbitrarily'
+}
+
+export enum SortingDirection {
+  Ascending = 'ascending',
+  Descending = 'descending'
+}
+
+export enum TableColumnType {
+  Data = 'data',
+  Sequence = 'sequence',
+  Selectable = 'selectable'
+}
+
+export enum TableDataType {
+  Rows = 'rows',
+  Cards = 'cards'
 }
