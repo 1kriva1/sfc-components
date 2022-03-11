@@ -1,10 +1,10 @@
 import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SfcSelectableTableColumnComponent } from './sfc-selectable-table-column.component';
-import { SfcComponentsModule } from '../../../../sfc-components.module';
-import { TableSelectedService } from '../../../services/table-selected/table-selected.service';
+import { SfcComponentsModule } from '../../../sfc-components.module';
+import { TableSelectedService } from '../../services/table-selected/table-selected.service';
 import { By } from '@angular/platform-browser';
-import { CommonConstants } from '../../../../common/constants/common-constants'
+import { CommonConstants } from '../../../common/constants/common-constants'
 
 describe('Component: SfcSelectableTableColumnComponent', () => {
   let component: SfcSelectableTableColumnComponent;

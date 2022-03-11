@@ -32,11 +32,11 @@ describe('Component: SfcTableComponent', () => {
   }));
 
   describe('General', () => {
-    fit('Should create component', () => {
+    it('Should create component', () => {
       expect(component).toBeTruthy();
     });
 
-    fit('Main elements', () => {
+    it('Main elements', () => {
       expect(fixture.nativeElement.querySelector('div.table-container')).toBeDefined();
       expect(fixture.nativeElement.querySelector('div.columns-container')).toBeDefined();
       expect(fixture.nativeElement.querySelector('div.action-container')).toBeDefined();
@@ -44,18 +44,18 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelector('div.pagination-container')).toBeDefined();
     });
 
-    fit('Column delimeter by default', () => {
+    it('Column delimeter by default', () => {
       expect(fixture.nativeElement.querySelector('sfc-delimeter')).toBeNull();
     });
 
-    fit('Column delimeter when column delimeter is true', () => {
+    it('Column delimeter when column delimeter is true', () => {
       component.columnDelimeter = true;
       fixture.detectChanges();
 
       expect(fixture.nativeElement.querySelector('sfc-delimeter')).toBeDefined();
     });
 
-    fit('Column delimeter when column delimeter is false', () => {
+    it('Column delimeter when column delimeter is false', () => {
       component.columnDelimeter = false;
       fixture.detectChanges();
 
@@ -66,11 +66,11 @@ describe('Component: SfcTableComponent', () => {
   describe('Actions', () => {
 
     describe('Columns toggle', () => {
-      fit('By default', () => {
+      it('By default', () => {
         expect(fixture.nativeElement.querySelector('sfc-columns-toggle')).toBeDefined();
       });
 
-      fit('When show columns is false', () => {
+      it('When show columns is false', () => {
         component.showColumns = false;
         fixture.detectChanges();
 
@@ -80,25 +80,25 @@ describe('Component: SfcTableComponent', () => {
     });
 
     describe('Data toggle', () => {
-      fit('By default', () => {
+      it('By default', () => {
         expect(fixture.nativeElement.querySelector('sfc-toggle')).toBeDefined();
       });
 
-      fit('When show data toggle is false', () => {
+      it('When show data toggle is false', () => {
         component.showDataToggle = false;
         fixture.detectChanges();
 
         expect(fixture.nativeElement.querySelector('sfc-toggle')).toBeNull();
       });
 
-      fit('Value by default', () => {
+      it('Value by default', () => {
         const toggleEl = el.query(By.css('sfc-toggle'));
 
         expect(toggleEl.attributes['ng-reflect-value']).toEqual('false');
         expect(toggleEl.componentInstance.value).toBeFalsy();
       });
 
-      fit('Value when data type is cards', () => {
+      it('Value when data type is cards', () => {
         component.dataType = TableDataType.Cards;
         fixture.detectChanges();
 
@@ -108,13 +108,13 @@ describe('Component: SfcTableComponent', () => {
         expect(toggleEl.componentInstance.value).toBeTruthy();
       });
 
-      fit('Static config', () => {
+      it('Static config', () => {
         const toggleEl = el.query(By.css('sfc-toggle'));
 
         expect(toggleEl.componentInstance.config).toEqual(component.TYPE_TOGGLE_CONFIG);
       });
 
-      fit('On-toggle event should change data type', () => {
+      it('On-toggle event should change data type', () => {
         expect(component.dataType).toEqual(TableDataType.Rows);
 
         fixture.nativeElement.querySelector('sfc-toggle').dispatchEvent(new MouseEvent('click', {}));
@@ -126,18 +126,18 @@ describe('Component: SfcTableComponent', () => {
   });
 
   describe('Pagination', () => {
-    fit('By default', () => {
+    it('By default', () => {
       expect(fixture.nativeElement.querySelector('sfc-pagination')).toBeDefined();
     });
 
-    fit('When pagination is disabled', () => {
+    it('When pagination is disabled', () => {
       component.pagination.enabled = false;
       fixture.detectChanges();
 
       expect(fixture.nativeElement.querySelector('sfc-pagination')).toBeNull();
     });
 
-    fit('Static attributes', () => {
+    it('Static attributes', () => {
       const paginationEl = el.query(By.css('sfc-pagination'));
 
       expect(paginationEl.attributes['ng-reflect-show-first-last']).toEqual('false');
@@ -148,18 +148,18 @@ describe('Component: SfcTableComponent', () => {
   });
 
   describe('Columns', () => {
-    fit('Should show columns by default', () => {
+    it('Should show columns by default', () => {
       expect(fixture.nativeElement.querySelector('.columns > div.columns')).toBeDefined();
     });
 
-    fit('Should hide columns when show column input is false', () => {
+    it('Should hide columns when show column input is false', () => {
       component.showColumns = false;
       fixture.detectChanges();
 
       expect(fixture.nativeElement.querySelector('.columns > div.columns')).toBeNull();
     });
 
-    fit('Should show columns when windows size is more than constant value', () => {
+    it('Should show columns when windows size is more than constant value', () => {
       windowMock.innerWidth = CommonConstants.MEDIA_LIMITS.TABLET_MAX_SIZE + 1;
       fixture.detectChanges();
 
@@ -169,7 +169,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelector('.columns > div.columns')).toBeDefined();
     });
 
-    fit('Should show columns when windows size is equal to constant value', () => {
+    it('Should show columns when windows size is equal to constant value', () => {
       windowMock.innerWidth = CommonConstants.MEDIA_LIMITS.TABLET_MAX_SIZE;
       fixture.detectChanges();
 
@@ -179,7 +179,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelector('.columns > div.columns')).toBeDefined();
     });
 
-    fit('Should hide columns when windows size is less than constant value', () => {
+    it('Should hide columns when windows size is less than constant value', () => {
       windowMock.innerWidth = CommonConstants.MEDIA_LIMITS.TABLET_MAX_SIZE - 1;
       fixture.detectChanges();
 
@@ -189,14 +189,14 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelector('.columns > div.columns')).toBeNull();
     });
 
-    fit('Column position by default', () => {
+    it('Column position by default', () => {
       component.columns = [{ columnName: '', fieldName: '' }];
       fixture.detectChanges();
 
       expect(fixture.nativeElement.querySelector('.columns > div.column').style.justifyContent).toEqual(PositionSideType.Center);
     });
 
-    fit('Column position when defined value', () => {
+    it('Column position when defined value', () => {
       component.columns = [{ columnName: '', fieldName: '' }];
       component.columnPosition = PositionSideType.Start;
       fixture.detectChanges();
@@ -204,7 +204,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelector('.columns > div.column').style.justifyContent).toEqual(PositionSideType.Start);
     });
 
-    fit('Column width value for desktop', () => {
+    it('Column width value for desktop', () => {
       component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
       fixture.detectChanges();
 
@@ -217,14 +217,14 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelector('.columns > div.column').style.width).toEqual('calc(50%)');
     });
 
-    fit('Column width value for tablet', () => {
+    it('Column width value for tablet', () => {
       component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
       fixture.detectChanges();
 
       expect(fixture.nativeElement.querySelector('.columns > div.column').style.width).toEqual('calc(100%)');
     });
 
-    fit('Column width value for mobile', () => {
+    it('Column width value for mobile', () => {
       component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
       fixture.detectChanges();
 
@@ -241,14 +241,14 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelector('.columns > div.column').style.width).toEqual('calc(100%)');
     });
 
-    fit('Columns count', () => {
+    it('Columns count', () => {
       component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
       fixture.detectChanges();
 
       expect(fixture.nativeElement.querySelectorAll('.columns > div.column').length).toEqual(component.columns.length);
     });
 
-    fit('Columns count changing', () => {
+    it('Columns count changing', () => {
       component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
       fixture.detectChanges();
 
@@ -266,14 +266,14 @@ describe('Component: SfcTableComponent', () => {
     });
 
     describe('Selectable column', () => {
-      fit('Should not exist if table not selectable (by default)', () => {
+      it('Should not exist if table not selectable (by default)', () => {
         component.columns = [{ columnName: '', fieldName: '', }];
         fixture.detectChanges();
 
         expect(fixture.nativeElement.querySelector('sfc-selectable-table-column')).toBeNull();
       });
 
-      fit('Should not exist if table not selectable', () => {
+      it('Should not exist if table not selectable', () => {
         component.columns = [{ columnName: '', fieldName: '', }];
         component.selectable = false;
         fixture.detectChanges();
@@ -281,7 +281,7 @@ describe('Component: SfcTableComponent', () => {
         expect(fixture.nativeElement.querySelector('sfc-selectable-table-column')).toBeNull();
       });
 
-      fit('Should exist if table is selectable', () => {
+      it('Should exist if table is selectable', () => {
         component.columns = [{ columnName: '', fieldName: '', }];
         component.selectable = true;
         fixture.detectChanges();
@@ -289,7 +289,7 @@ describe('Component: SfcTableComponent', () => {
         expect(fixture.nativeElement.querySelector('sfc-selectable-table-column')).toBeDefined();
       });
 
-      fit('Should not be selected if all rows not checked', () => {
+      it('Should not be selected if all rows not checked', () => {
         component.columns = [{ columnName: '', fieldName: '', }];
         component.selectable = true;
         component.data = [{ data: {}, selected: false }, { data: {}, selected: false }];
@@ -301,7 +301,7 @@ describe('Component: SfcTableComponent', () => {
         expect(selectAllColumnEl.componentInstance.selected).toBeFalsy();
       });
 
-      fit('Should not be selected if one of the rows not selected', () => {
+      it('Should not be selected if one of the rows not selected', () => {
         component.columns = [{ columnName: '', fieldName: '', }];
         component.data = [{ data: {}, selected: true }, { data: {}, selected: false }];
         component.selectable = true;
@@ -313,7 +313,7 @@ describe('Component: SfcTableComponent', () => {
         expect(selectAllColumnEl.componentInstance.selected).toBeFalsy();
       });
 
-      fit('Should be selected if all rows selected', () => {
+      it('Should be selected if all rows selected', () => {
         component.columns = [{ columnName: '', fieldName: '', }];
         component.data = [{ data: {}, selected: true }, { data: {}, selected: true }];
         component.selectable = true;
@@ -327,14 +327,14 @@ describe('Component: SfcTableComponent', () => {
     });
 
     describe('Sequence column', () => {
-      fit('Should not exist be default', () => {
+      it('Should not exist be default', () => {
         component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
         fixture.detectChanges();
 
         expect(fixture.nativeElement.querySelectorAll('sfc-sorting').length).toEqual(component.columns.length);
       });
 
-      fit('Should exist if show sequence column is TRUE', () => {
+      it('Should exist if show sequence column is TRUE', () => {
         component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
         component.showSequence = true;
         fixture.detectChanges();
@@ -344,14 +344,14 @@ describe('Component: SfcTableComponent', () => {
     });
 
     describe('Column sorting', () => {
-      fit('Sorting component must be the same as columns', () => {
+      it('Sorting component must be the same as columns', () => {
         component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
         fixture.detectChanges();
 
         expect(fixture.nativeElement.querySelectorAll('sfc-sorting').length).toEqual(component.columns.length);
       });
 
-      fit('Sorting config when sorting config not present for column', () => {
+      it('Sorting config when sorting config not present for column', () => {
         component.columns = [{ columnName: '', fieldName: '' }];
         fixture.detectChanges();
 
@@ -360,7 +360,7 @@ describe('Component: SfcTableComponent', () => {
         expect(sortingEl.componentInstance.config).toEqual({ active: false, enabled: false, direction: SortingDirection.Ascending });
       });
 
-      fit('Sorting config when sorting config present for column', () => {
+      it('Sorting config when sorting config present for column', () => {
         const sortingAssertValue = { active: true, enabled: true, direction: SortingDirection.Descending };
         component.columns = [{ columnName: '', fieldName: '', sorting: sortingAssertValue }];
         fixture.detectChanges();
@@ -370,7 +370,7 @@ describe('Component: SfcTableComponent', () => {
         expect(sortingEl.componentInstance.config).toEqual(sortingAssertValue);
       });
 
-      fit('Sorting id should be equal to column fieldName', () => {
+      it('Sorting id should be equal to column fieldName', () => {
         component.columns = [{ columnName: '', fieldName: 'test-id' }];
         fixture.detectChanges();
 
@@ -383,14 +383,14 @@ describe('Component: SfcTableComponent', () => {
 
     describe('Column content', () => {
 
-      fit("Should created default column by default configuration", async(() => {
+      it("Should created default column by default configuration", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         fixture.detectChanges();
 
         expect(fixture.nativeElement.querySelector('sfc-default-table-column')).toBeDefined();
       }));
 
-      fit("Should not created default column when default-column-template is FALSE", async(() => {
+      it("Should not created default column when default-column-template is FALSE", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         component.defaultColumnTemplate = false;
         fixture.detectChanges();
@@ -398,7 +398,7 @@ describe('Component: SfcTableComponent', () => {
         expect(fixture.nativeElement.querySelector('sfc-default-table-column')).toBeNull();
       }));
 
-      fit("Default column config value", async(() => {
+      it("Default column config value", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         fixture.detectChanges();
 
@@ -410,7 +410,7 @@ describe('Component: SfcTableComponent', () => {
 
     describe('Rows content', () => {
 
-      fit("Should created default row by default configuration", async(() => {
+      it("Should created default row by default configuration", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         component.data = [{ data: {} }, { data: {} }];
         fixture.detectChanges();
@@ -418,7 +418,7 @@ describe('Component: SfcTableComponent', () => {
         expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(2);
       }));
 
-      fit("Should not created default row when default-row-template is FALSE", async(() => {
+      it("Should not created default row when default-row-template is FALSE", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         component.data = [{ data: {} }, { data: {} }];
         component.defaultRowTemplate = false;
@@ -427,7 +427,7 @@ describe('Component: SfcTableComponent', () => {
         expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(0);
       }));
 
-      fit("Default rows attributes", async(() => {
+      it("Default rows attributes", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         component.data = [{ data: { field: 1 } }, { data: { field: 2 } }];
         fixture.detectChanges();
@@ -446,7 +446,7 @@ describe('Component: SfcTableComponent', () => {
 
     describe('Cards content', () => {
 
-      fit("Should created default card by default configuration", async(() => {
+      it("Should created default card by default configuration", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         component.data = [{ data: {} }, { data: {} }];
         component.dataType = TableDataType.Cards;
@@ -455,7 +455,7 @@ describe('Component: SfcTableComponent', () => {
         expect(fixture.nativeElement.querySelectorAll('sfc-default-table-card').length).toEqual(2);
       }));
 
-      fit("Should not created default card when default-card-template is FALSE", async(() => {
+      it("Should not created default card when default-card-template is FALSE", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         component.data = [{ data: {} }, { data: {} }];
         component.dataType = TableDataType.Cards;
@@ -465,7 +465,7 @@ describe('Component: SfcTableComponent', () => {
         expect(fixture.nativeElement.querySelectorAll('sfc-default-table-card').length).toEqual(0);
       }));
 
-      fit("Default rows attributes", async(() => {
+      it("Default rows attributes", async(() => {
         component.columns = [{ columnName: '', fieldName: '' }];
         component.data = [{ data: { field: 1 } }, { data: { field: 2 } }];
         component.selectOnClick = true;
@@ -484,14 +484,14 @@ describe('Component: SfcTableComponent', () => {
   });
 
   describe('Data', () => {
-    fit("Sync data count", async(() => {
+    it("Sync data count", async(() => {
       component.data = [{ data: {} }, { data: {} }];
       fixture.detectChanges();
 
       expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(2);
     }));
 
-    fit("Sync data changed", async(() => {
+    it("Sync data changed", async(() => {
       component.data = [{ data: {} }, { data: {} }];
       fixture.detectChanges();
 
@@ -508,7 +508,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(2);
     }));
 
-    fit("Async data count", async(() => {
+    it("Async data count", async(() => {
       const dataSubject = new BehaviorSubject<any>([{ data: {} }, { data: {} }]);
       component.columns = [{ columnName: '', fieldName: 'field' }];
       component.data$ = dataSubject.asObservable();
@@ -523,7 +523,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(2);
     }));
 
-    fit("Async data changed", async(() => {
+    it("Async data changed", async(() => {
       const dataSubject = new BehaviorSubject<IDataModel[]>([{ data: {} }, { data: {} }]);
       component.columns = [{ columnName: '', fieldName: 'field' }];
       component.data$ = dataSubject.asObservable();
@@ -548,7 +548,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(3);
     }));
 
-    fit("Data should not be sorted", async(() => {
+    it("Data should not be sorted", async(() => {
       component.columns = [{ columnName: '', fieldName: 'field' }];
       component.data = [{ data: { field: 2 } }, { data: { field: 1 } }, { data: { field: 3 } }];
       fixture.detectChanges();
@@ -569,7 +569,7 @@ describe('Component: SfcTableComponent', () => {
       });
     }));
 
-    fit("Data should be sorted", async(() => {
+    it("Data should be sorted", async(() => {
       component.columns = [{ columnName: '', fieldName: 'field', sorting: { enabled: true, active: true } }];
       component.data = [{ data: { field: 2 } }, { data: { field: 1 } }, { data: { field: 3 } }];
       fixture.detectChanges();
@@ -608,7 +608,7 @@ describe('Component: SfcTableComponent', () => {
       });
     }));
 
-    fit("Data pagination by default", async(() => {
+    it("Data pagination by default", async(() => {
       component.columns = [{ columnName: '', fieldName: 'field' }];
       component.data = [{ data: { field: 2 } }, { data: { field: 1 } }, { data: { field: 3 } },
       { data: { field: 3 } }, { data: { field: 3 } }, { data: { field: 3 } }];
@@ -617,7 +617,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(5);
     }));
 
-    fit("Data pagination config defined", async(() => {
+    it("Data pagination config defined", async(() => {
       component.columns = [{ columnName: '', fieldName: 'field' }];
       component.data = [{ data: { field: 2 } }, { data: { field: 1 } }, { data: { field: 3 } },
       { data: { field: 3 } }, { data: { field: 3 } }];
@@ -633,7 +633,7 @@ describe('Component: SfcTableComponent', () => {
       expect(fixture.nativeElement.querySelectorAll('sfc-default-table-row').length).toEqual(1);
     }));
 
-    fit('Data sequence', () => {
+    it('Data sequence', () => {
       component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
       component.data = [{ data: { field: 2 } }, { data: { field: 1 } }, { data: { field: 3 } },
       { data: { field: 3 } }, { data: { field: 3 } }];
@@ -647,7 +647,7 @@ describe('Component: SfcTableComponent', () => {
       });
     });
 
-    fit('Data sequence with pagination', () => {
+    it('Data sequence with pagination', () => {
       component.columns = [{ columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }, { columnName: '', fieldName: '' }];
       component.data = [{ data: { field: 2 } }, { data: { field: 1 } }, { data: { field: 3 } },
       { data: { field: 3 } }, { data: { field: 3 } }];
@@ -666,7 +666,7 @@ describe('Component: SfcTableComponent', () => {
       });
     });
 
-    fit('Data with selectable', () => {
+    it('Data with selectable', () => {
       component.columns = [{ columnName: '', fieldName: '', }];
       component.data = [{ data: {}, selected: true }, { data: {}, selected: true }];
       component.selectable = true;
@@ -679,7 +679,7 @@ describe('Component: SfcTableComponent', () => {
       });
     });
 
-    fit('Data change selected rows', () => {
+    it('Data change selected rows', () => {
       component.columns = [{ columnName: '', fieldName: '', }];
       component.data = [{ data: {}, selected: true }, { data: {}, selected: true }];
       component.selectable = true;
@@ -766,7 +766,6 @@ class TestSfcTableComponent {
 describe('Component: SfcTableComponent (templates)', () => {
   let component: TestSfcTableComponent;
   let fixture: ComponentFixture<TestSfcTableComponent>;
-  let el: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -779,14 +778,13 @@ describe('Component: SfcTableComponent (templates)', () => {
     }).compileComponents().then(() => {
       fixture = TestBed.createComponent(TestSfcTableComponent);
       component = fixture.componentInstance;
-      el = fixture.debugElement;
       fixture.detectChanges();
     });
   }));
 
   describe('Column content', () => {
 
-    fit("Should add column from template reference", async(() => {
+    it("Should add column from template reference", async(() => {
       component.table.columns = [{ columnName: 'column-name-reference', fieldName: '' }];
       component.table.columnTemplateRef = component.columnTemplateRef;
       fixture.detectChanges();
@@ -796,7 +794,7 @@ describe('Component: SfcTableComponent (templates)', () => {
       expect(fixture.nativeElement.querySelector('sfc-default-table-column')).toBeNull();
     }));
 
-    fit("Should add column from template content", async(() => {
+    it("Should add column from template content", async(() => {
       component.table.columns = [{ columnName: 'column-name-content', fieldName: '' }];
       component.showContent = true;
       fixture.detectChanges();
@@ -809,7 +807,7 @@ describe('Component: SfcTableComponent (templates)', () => {
 
   describe('Row content', () => {
 
-    fit("Should add row from template reference", async(() => {
+    it("Should add row from template reference", async(() => {
       component.table.columns = [{ columnName: '', fieldName: '' }];
       component.table.data = [{ data: { field: 1 } }, { data: { field: 2 } }];
       component.table.rowTemplateRef = component.rowTemplateRef;
@@ -827,7 +825,7 @@ describe('Component: SfcTableComponent (templates)', () => {
       expect(fixture.nativeElement.querySelector('sfc-default-table-row')).toBeNull();
     }));
 
-    fit("Should add row from template content", async(() => {
+    it("Should add row from template content", async(() => {
       component.table.columns = [{ columnName: 'column-name-content', fieldName: '' }];
       component.table.data = [{ data: { field: 1 } }, { data: { field: 2 } }];
       component.showContent = true;
@@ -850,7 +848,7 @@ describe('Component: SfcTableComponent (templates)', () => {
 
   describe('Card content', () => {
 
-    fit("Should add card from template reference", async(() => {
+    it("Should add card from template reference", async(() => {
       component.table.columns = [{ columnName: '', fieldName: '' }];
       component.table.data = [{ data: { field: 1 } }, { data: { field: 2 } }];
       component.table.dataType = TableDataType.Cards;
@@ -867,7 +865,7 @@ describe('Component: SfcTableComponent (templates)', () => {
       expect(fixture.nativeElement.querySelector('sfc-default-table-card')).toBeNull();
     }));
 
-    fit("Should add card from template content", async(() => {
+    it("Should add card from template content", async(() => {
       component.table.columns = [{ columnName: 'column-name-content', fieldName: '' }];
       component.table.data = [{ data: { field: 1 } }, { data: { field: 2 } }];
       component.table.dataType = TableDataType.Cards;
@@ -884,7 +882,5 @@ describe('Component: SfcTableComponent (templates)', () => {
 
       expect(fixture.nativeElement.querySelector('sfc-default-table-card')).toBeNull();
     }));
-
   });
-
 });

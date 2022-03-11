@@ -1,0 +1,69 @@
+<div class="row-container">
+    <div [style.text-align]="columnPosition" class="column-checkmark" [ngStyle]="columnStyle">
+        <sfc-checkmark #columnCheckmark [checked]="data.selected || false"></sfc-checkmark>
+    </div>
+    <div [style.text-align]="columnPosition" class="row-columns-container" [ngStyle]="columnStyle">
+        <div class="row-content">
+            <div class="column-data">
+                <span class="column-name">Domain & Plan Name</span>
+                <div class="domain">
+                    <span>{{data.data.domain}}</span>
+                </div>
+                <div class="plan-name">
+                    <i [ngClass]="data.data.icon"></i>
+                    <span>{{data.data.planName}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [style.text-align]="columnPosition" class="row-columns-container" [ngStyle]="columnStyle">
+        <div class="row-content">
+            <div class="column-data">
+                <span class="column-name">Storage</span>
+                <div class="progress">
+                    <sfc-progress-line [progress]="36" [clear-end]="true"></sfc-progress-line>
+                    <span class="storage">{{data.data.storageMax}} GB of {{data.data.storageMin}}
+                        GB</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [style.text-align]="columnPosition" class="row-columns-container" [ngStyle]="columnStyle">
+        <div class="row-content">
+            <div class="column-data">
+                <span class="column-name">Monthly Visitor</span>
+                <div class="progress">
+                    <sfc-progress-line [progress]="76" [clear-end]="true"></sfc-progress-line>
+                    <span class="storage">{{data.data.monthlyVisitorMax}} GB of
+                        {{data.data.monthlyVisitorMin}}
+                        GB</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [style.text-align]="columnPosition" class="row-columns-container" [ngStyle]="columnStyle">
+        <div class="row-content">
+            <div class="column-data">
+                <span class="column-name">Domains</span>
+                <div class="progress">
+                    <sfc-progress-circle [progress]="data.data.domainsMin * 10" [custom-size]="40">
+                    </sfc-progress-circle>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [style.text-align]="columnPosition" class="row-columns-container" [ngStyle]="columnStyle">
+        <div class="row-content">
+            <div class="column-data">
+                <span class="column-name">Status</span>
+                <div class="status">
+                    <button>{{data.data.status}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,11 +12,33 @@
       <!-- REFERENCES -->
 
       <ng-template #badgeTemplateRef let-badge>
-        <table-badge [label]="badge.model.model.data.label" [icon]="badge.model.model.data.icon" [color]="badge.model.model.data.color">
+        <table-badge [label]="badge.model.model.data.label" [icon]="badge.model.model.data.icon"
+          [color]="badge.model.model.data.color">
         </table-badge>
       </ng-template>
 
+      <ng-template #expandedRowContentTemplateRef let-row>
+        <expanded-row-item [data]="row.data.model" [column-position]="row.columnPosition"
+          [column-width]="row.columnWidth" [expanded]="row.expanded" [index]="row.data.index"
+          (on-select)="expandedReferenceTable.selectRow($event)">
+        </expanded-row-item>
+      </ng-template>
+
+      <ng-template #expandedRowExpandedContentTemplateRef let-row>
+        <expanded-row-content-item [data]="row.data.model.data.items" [column-position]="row.columnPosition"
+          [column-width]="row.columnWidth"></expanded-row-content-item>
+      </ng-template>
+
       <!-- END REFERENCES -->
+
+      <div class="component-row">
+
+        <div style="flex-basis: 100%;">
+          <h4>Default table with columns and data</h4>
+          <sfc-table [columns]="columnsDefault" [data]="dataDefault"></sfc-table>
+        </div>
+
+      </div>
 
       <div class="component-row">
         <div style="flex-basis: 100%;">
@@ -127,6 +149,51 @@
             </ng-template>
           </sfc-table>
         </div>
+      </div>
+
+      <div class="component-row">
+
+        <div style="flex-basis: 100%;">
+          <h4>Expanded row (references)</h4>
+          <sfc-table #expandedReferenceTable [columns]="columnsExpanded" [data]="dataExpandedReference"
+            [expanded]="true" [selectable]="true">
+            <ng-template template="row" let-row>
+              <sfc-expanded-table-row [data]="row.model" [columns]="row.columns" [column-position]="row.columnPosition"
+                [column-width]="row.columnWidth"
+                [expanded-content-template-ref]="expandedRowExpandedContentTemplateRef"
+                [content-template-ref]="expandedRowContentTemplateRef">
+              </sfc-expanded-table-row>
+            </ng-template>
+          </sfc-table>
+        </div>
+
+        <div style="flex-basis: 100%;">
+          <h4>Expanded row (templates)</h4>
+          <sfc-table #expandedTemplateTable [columns]="columnsExpanded" [data]="dataExpandedTemplate" [expanded]="true"
+            [selectable]="true">
+            <ng-template template="row" let-row>
+
+              <sfc-expanded-table-row [data]="row.model" [columns]="row.columns" [column-position]="row.columnPosition"
+                [column-width]="row.columnWidth">
+
+                <ng-template template="row-content" let-row>
+                  <expanded-row-item [data]="row.data.model" [index]="row.data.index"
+                    [column-position]="row.columnPosition" [column-width]="row.columnWidth" [expanded]="row.expanded"
+                    (on-select)="expandedTemplateTable.selectRow($event)">
+                  </expanded-row-item>
+                </ng-template>
+
+                <ng-template template="row-expanded-content" let-row>
+                  <expanded-row-content-item [data]="row.data.model.data.items" [column-position]="row.columnPosition"
+                    [column-width]="row.columnWidth"></expanded-row-content-item>
+                </ng-template>
+
+              </sfc-expanded-table-row>
+
+            </ng-template>
+          </sfc-table>
+        </div>
+
       </div>
     </div>
   </div>
