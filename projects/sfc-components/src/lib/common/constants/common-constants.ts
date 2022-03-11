@@ -58,7 +58,9 @@ export class CommonConstants {
     TEMPLATE: {
       COLUMN: 'column',
       ROW: 'row',
-      CARD: 'card'
+      CARD: 'card',
+      ROW_CONTENT: 'row-content',
+      ROW_EXPANDED_CONTENT: 'row-expanded-content'
     },
     COLUMNS_TOGGLE: {
       SHOW: {
@@ -105,7 +107,8 @@ export enum StyleClass {
   Removed = 'removed',
   Hidden = 'hidden',
   Visible = 'visible',
-  Animated = 'animated'
+  Animated = 'animated',
+  Expanded = 'expanded'
 };
 
 export enum ButtonType {
@@ -212,7 +215,8 @@ export enum SortingDirection {
 export enum TableColumnType {
   Data = 'data',
   Sequence = 'sequence',
-  Selectable = 'selectable'
+  Selectable = 'selectable',
+  Expanded = 'expanded'
 }
 
 export enum TableDataType {

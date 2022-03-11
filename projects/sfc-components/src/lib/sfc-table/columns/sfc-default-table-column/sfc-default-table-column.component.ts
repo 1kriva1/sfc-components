@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IColumnConfig } from '../../../../common/interfaces/sfc-table/IColumnModel';
+import { IColumnConfig } from '../../../common/interfaces/sfc-table/IColumnModel';
 
 @Component({
   selector: 'sfc-default-table-column',

@@ -40,6 +40,8 @@ export class SfcTableComponent implements OnInit, AfterViewInit, AfterContentIni
 
   private readonly selectableColumn: IColumnConfig = { columnName: '', fieldName: '', type: TableColumnType.Selectable };
 
+  private readonly expandedColumn: IColumnConfig = { columnName: '', fieldName: '', type: TableColumnType.Expanded };
+
   public readonly TYPE_TOGGLE_CONFIG: IToggleConfig = {
     checkedItem: {
       label: 'Cards',
@@ -128,7 +130,10 @@ export class SfcTableComponent implements OnInit, AfterViewInit, AfterContentIni
   @Input('sequence')
   showSequence: boolean = false;
 
-  @Input('selectable')
+  @Input()
+  expanded: boolean = false;
+
+  @Input()
   selectable: boolean = false;
 
   @Input('select-on-click')
@@ -210,6 +215,9 @@ export class SfcTableComponent implements OnInit, AfterViewInit, AfterContentIni
 
         if (this.selectable)
           tableColumns.unshift(this.selectableColumn);
+
+        if(this.expanded)
+          tableColumns.push(this.expandedColumn);
 
         return tableColumns;
       })

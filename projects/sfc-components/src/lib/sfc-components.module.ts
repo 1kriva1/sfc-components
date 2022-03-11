@@ -70,13 +70,14 @@ import { SfcTabLabelComponent } from './sfc-tabs/tabs-base/sfc-tab-label.compone
 import { TemplateReferenceDirective } from './common/directives/template-reference/template-reference.directive';
 import { SfcPaginationComponent } from './common/components/pagination/sfc-pagination.component';
 import { SfcSortingComponent } from './common/components/sorting/sfc-sorting.component';
-import { SfcDefaultTableColumnComponent } from './sfc-table/defaults/columns/sfc-default-table-column/sfc-default-table-column.component';
-import { SfcDefaultTableRowComponent } from './sfc-table/defaults/rows/sfc-default-table-row/sfc-default-table-row.component';
+import { SfcDefaultTableColumnComponent } from './sfc-table/columns/sfc-default-table-column/sfc-default-table-column.component';
+import { SfcDefaultTableRowComponent } from './sfc-table/rows/sfc-default-table-row/sfc-default-table-row.component';
 import { SfcCheckmarkComponent } from './common/components/checkmark/sfc-checkmark.component';
-import { SfcSelectableTableColumnComponent } from './sfc-table/defaults/columns/sfc-selectable-table-column/sfc-selectable-table-column.component';
+import { SfcSelectableTableColumnComponent } from './sfc-table/columns/sfc-selectable-table-column/sfc-selectable-table-column.component';
 import { SfcColumnsToggleComponent } from './sfc-table/columns-toggle/sfc-columns-toggle.component';
 import { SfcToggleComponent } from './common/components/toggle/sfc-toggle.component';
-import { SfcDefaultTableCardComponent } from './sfc-table/defaults/cards/sfc-default-table-card/sfc-default-table-card.component';
+import { SfcDefaultTableCardComponent } from './sfc-table/cards/sfc-default-table-card/sfc-default-table-card.component';
+import { SfcExpandedTableRowComponent } from './sfc-table/rows/sfc-expanded-table-row/sfc-expanded-table-row.component';
 
 
 @NgModule({
@@ -134,7 +135,7 @@ import { SfcDefaultTableCardComponent } from './sfc-table/defaults/cards/sfc-def
     SfcCarouselItemComponent,
     SfcSchemeCarouselDotComponent, SfcSchemeCarouselFormationPipePipe, SfcSchemePlayerPointComponent, SfcSchemeModalBodyComponent, SfcSchemePlayerBadgeComponent, 
     AdHostDirective, SfcSchemePlayerComponent, ThrowElementOnHoverDirective, ShowHideElementDirective, SfcTableComponent, TemplateReferenceDirective, 
-    SfcPaginationComponent, SfcSortingComponent, SfcDefaultTableColumnComponent, SfcDefaultTableRowComponent, SfcCheckmarkComponent, SfcSelectableTableColumnComponent, SfcColumnsToggleComponent, SfcToggleComponent, SfcDefaultTableCardComponent,
+    SfcPaginationComponent, SfcSortingComponent, SfcDefaultTableColumnComponent, SfcDefaultTableRowComponent, SfcCheckmarkComponent, SfcSelectableTableColumnComponent, SfcColumnsToggleComponent, SfcToggleComponent, SfcDefaultTableCardComponent, SfcExpandedTableRowComponent,
     
   ],
   imports: [
@@ -176,7 +177,8 @@ import { SfcDefaultTableCardComponent } from './sfc-table/defaults/cards/sfc-def
     SfcTableComponent,
     TemplateReferenceDirective,
     SfcSortingComponent,
-    SfcCheckmarkComponent
+    SfcCheckmarkComponent,
+    SfcExpandedTableRowComponent
   ],
   entryComponents: [SfcCarouselItemDefaultComponent, SfcCarouselItemAvatarComponent]
 })

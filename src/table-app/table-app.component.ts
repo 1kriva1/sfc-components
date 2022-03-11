@@ -21,6 +21,7 @@ export class TableAppComponent extends BaseAppComponent implements OnInit {
     columnsModification = [];
     columnsBadges = [];
     columnsListItems = [];
+    columnsExpanded = [];
 
     dataDefault = [];
     dataSync = [];
@@ -28,6 +29,8 @@ export class TableAppComponent extends BaseAppComponent implements OnInit {
     dataColumnModifications = [];
     dataBadges = [];
     dataListItems = [];
+    dataExpandedTemplate = [];
+    dataExpandedReference = [];
 
     paginationConfig = { enabled: true, page: 2, pageSize: 2 };
     paginationBadgesConfig = { enabled: true, page: 1, pageSize: 5 };
@@ -116,6 +119,11 @@ export class TableAppComponent extends BaseAppComponent implements OnInit {
             column.sorting = { enabled: true, direction: 'ascending', icons: [{ direction: 'ascending', icon: 'fas fa-sort-amount-up' }, { direction: 'descending', icon: 'fas fa-sort-amount-down' }] }
         });
         this.dataListItems = this.getListItemsData();
+
+        // expanded
+        this.columnsExpanded = this.getExpandedColumns();
+        this.dataExpandedTemplate = this.getExpandedData();
+        this.dataExpandedReference = this.getExpandedData();
     }
 
     togglePagination() {
@@ -545,6 +553,410 @@ export class TableAppComponent extends BaseAppComponent implements OnInit {
                 },
                 selected: false
             },
+        ]
+    }
+
+    private getExpandedColumns() {
+        return [
+            {
+                columnName: 'Domain &  Plan Name',
+                fieldName: 'domainAndPlanName',
+                icon: ''
+            },
+            {
+                columnName: 'Storage',
+                fieldName: 'storage',
+                icon: ''
+            },
+            {
+                columnName: 'Monthly Visitor',
+                fieldName: 'monthlyVisitor'
+            },
+            {
+                columnName: 'Domains',
+                fieldName: 'domains'
+            },
+            {
+                columnName: 'Status',
+                fieldName: 'status'
+            }
+        ];
+    }
+
+    private getExpandedData() {
+        return [
+            {
+                data: {
+                    domain: 'paperpillar.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 5,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-object-group',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'stock.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Add-on',
+                            status: 'Active'
+                        },
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'samanthawillam.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 1,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-minus-square',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'testpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 5,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-magnet',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 5,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 2,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 3,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 4,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 6,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 7,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 8,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 9,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            },
+            {
+                data: {
+                    domain: 'mattpillow.com',
+                    planName: 'Professional Plan',
+                    storageMin: 1.2,
+                    storageMax: 35.36,
+                    monthlyVisitorMin: 1.2,
+                    monthlyVisitorMax: 35.36,
+                    domainsMin: 10,
+                    domainsMax: 10,
+                    status: 'Active',
+                    icon: 'fa fa-microchip',
+                    items: [
+                        {
+                            planName: 'papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: 1.5,
+                            domain: 'Primary',
+                            status: 'Active'
+                        },
+                        {
+                            planName: 'supply.papperpillar.com',
+                            storage: 1.5,
+                            monthlyVisitor: null,
+                            domain: 'Staging',
+                            status: 'Active'
+                        }
+                    ]
+                },
+                selected: false
+            }
         ]
     }
 

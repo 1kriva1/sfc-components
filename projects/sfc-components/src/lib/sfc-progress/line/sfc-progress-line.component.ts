@@ -14,6 +14,9 @@ export class SfcProgressLineComponent extends SfcProgressBase {
     @Input()
     total: number;
 
+    @Input()
+    progress: number;
+
     @Input('info-start')
     infoStart: string;
 

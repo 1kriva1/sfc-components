@@ -1,0 +1,88 @@
+:host {
+    width: 100%;
+    display: inline-block;
+}
+
+.row-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+.row-columns-container {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    user-select: none;
+}
+
+.row-content {
+    padding: 0.5em 0.5em;
+    white-space: initial;
+    word-wrap: break-word;
+}
+
+.column-name {
+    display: none;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #969696;
+}
+
+.domain {
+    font-size: 15px;
+    color: #393939;
+    margin-bottom: 5px;
+}
+
+.plan-name {
+    font-size: 12px;
+}
+
+.plan-name svg {
+    color: #7575d3;
+    margin-right: 3px;
+}
+
+.plan-name span {
+    color: #969696;
+}
+
+.progress {
+    padding: 0 5px;
+}
+
+.storage {
+    font-size: 12px;
+    color: #393939;
+}
+
+.status button {
+    color: #3b9376;
+    background: #beeddd;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* MEDIA */
+
+@media all and (max-width: 767px) {
+    .row-container {
+        align-items: center;
+    }
+
+    .row-content {
+        align-items: flex-start;
+    }
+
+    .column-name {
+        display: block;
+    }
+}
+
+/* END MEDIA */

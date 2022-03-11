@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SfcDefaultTableColumnComponent } from './sfc-default-table-column.component';
-import { SfcComponentsModule } from '../../../../sfc-components.module';
+import { SfcComponentsModule } from '../../../sfc-components.module';
 
 describe('Component: SfcDefaultTableColumnComponent', () => {
   let component: SfcDefaultTableColumnComponent;

@@ -26,6 +26,8 @@ import { BadgeComponent } from '../table-app/badge/badge.component';
 import { RowItemComponent } from '../table-app/row-item/row-item.component';
 import { CardItemComponent } from '../table-app/card-item/card-item.component';
 import { ColumnItemComponent } from '../table-app/column-item/column-item.component';
+import { ExpandedRowItemComponent } from '../table-app/expanded-row-item/expanded-row-item.component';
+import { ExpandedRowContentItemComponent } from '../table-app/expanded-row-item/expanded-row-content-item/expanded-row-content-item.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ColumnItemComponent } from '../table-app/column-item/column-item.compon
     BadgeComponent,
     RowItemComponent,
     CardItemComponent,
-    ColumnItemComponent
+    ColumnItemComponent,
+    ExpandedRowItemComponent,
+    ExpandedRowContentItemComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,9 @@ import SfcProgressBase from '../sfc-progress-base.component';
 export class SfcProgressCircleComponent extends SfcProgressBase {
 
     @Input()
+    progress: number;
+    
+    @Input()
     size: ComponentSize;
 
     @Input('custom-size')

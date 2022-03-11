@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IColumnConfig } from '../../../../common/interfaces/sfc-table/IColumnModel';
-import { PositionSideType } from '../../../../common/constants/common-constants';
-import { ISelectionEvent } from "../../../../common/interfaces/sfc-table/ISelectionEvent";
-import IDataModel from '../../../../common/interfaces/sfc-table/IDataConfig';
-import { CommonUtils } from '../../../../common/utils/common-utils';
-import SfcBaseDefaultTableDataComponent from '../../sfc-base-default-table-data.component';
+import { IColumnConfig } from '../../../common/interfaces/sfc-table/IColumnModel';
+import { PositionSideType } from '../../../common/constants/common-constants';
+import { ISelectionEvent } from "../../../common/interfaces/sfc-table/ISelectionEvent";
+import IDataConfig from '../../../common/interfaces/sfc-table/IDataConfig';
+import { CommonUtils } from '../../../common/utils/common-utils';
+import SfcBaseDefaultTableDataComponent from '../../base/sfc-base-default-table-data.component';
 
 @Component({
   selector: 'sfc-default-table-row',
@@ -14,7 +14,7 @@ import SfcBaseDefaultTableDataComponent from '../../sfc-base-default-table-data.
 export class SfcDefaultTableRowComponent extends SfcBaseDefaultTableDataComponent implements OnInit {
 
   @Input()
-  data: IDataModel = { model: { data: null }, index: undefined };
+  data: IDataConfig = { model: { data: null }, index: undefined };
 
   @Input()
   columns: IColumnConfig[] = [];

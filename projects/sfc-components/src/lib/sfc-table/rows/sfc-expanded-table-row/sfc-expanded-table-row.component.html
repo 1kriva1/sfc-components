@@ -1,0 +1,42 @@
+<div class="row-container" [class.even]="isEven">
+    <div class="row-inner-container">
+        <div class="row-content" (click)="expanded = !expanded">
+            <div class="content-template-container">
+                <div [ngStyle]="contentStyle">
+                    <ng-container *ngIf="contentTemplateRef">
+                        <ng-container *ngTemplateOutlet="contentTemplateRef;context:{$implicit: contentData}">
+                        </ng-container>
+                    </ng-container>
+
+                    <ng-container *ngIf="rowContentTemplate && !contentTemplateRef">
+                        <ng-container *ngTemplateOutlet="rowContentTemplate.template; context:{$implicit: contentData}">
+                        </ng-container>
+                    </ng-container>
+                </div>
+
+                <div [ngStyle]="togglerStyle" class="expand-toggler">
+                    <div *ngIf="expanded">
+                        <i class="fa fa-angle-up"></i>
+                    </div>
+                    <div *ngIf="!expanded">
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-expanded-content">
+            <div class="expanded-content-template-container">
+                <ng-container *ngIf="expandedContentTemplateRef">
+                    <ng-container *ngTemplateOutlet="expandedContentTemplateRef;context:{$implicit: contentData}">
+                    </ng-container>
+                </ng-container>
+
+                <ng-container *ngIf="rowExpandedContentTemplate && !expandedContentTemplateRef">
+                    <ng-container
+                        *ngTemplateOutlet="rowExpandedContentTemplate.template; context:{$implicit: contentData}">
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { TableSelectedService } from '../../../services/table-selected/table-selected.service';
-import { CommonConstants } from '../../../../common/constants/common-constants';
+import { TableSelectedService } from '../../services/table-selected/table-selected.service';
+import { CommonConstants } from '../../../common/constants/common-constants';
 
 @Component({
   selector: 'sfc-selectable-table-column',

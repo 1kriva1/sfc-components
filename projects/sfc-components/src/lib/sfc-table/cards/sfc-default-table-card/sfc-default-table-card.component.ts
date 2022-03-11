@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import SfcBaseDefaultTableDataComponent from '../../sfc-base-default-table-data.component';
-import IDataModel from '../../../../common/interfaces/sfc-table/IDataConfig';
-import { IColumnConfig } from '../../../../common/interfaces/sfc-table/IColumnModel';
-import { ISelectionEvent } from "../../../../common/interfaces/sfc-table/ISelectionEvent";
+import SfcBaseDefaultTableDataComponent from '../../base/sfc-base-default-table-data.component';
+import IDataModel from '../../../common/interfaces/sfc-table/IDataConfig';
+import { IColumnConfig } from '../../../common/interfaces/sfc-table/IColumnModel';
+import { ISelectionEvent } from "../../../common/interfaces/sfc-table/ISelectionEvent";
 
 @Component({
   selector: 'sfc-default-table-card',
